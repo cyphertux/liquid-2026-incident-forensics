@@ -1,0 +1,19 @@
+== 1. vchAssetCommitment as Elements builds it (explicit asset -> serialized generator)
+f24a:1        wire asset   len=33 prefix=0x01
+71c93d43:0    wire asset   len=33 prefix=0x01   same asset id as f24a:1 : YES
+derived generator f24a:1           0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d
+derived generator 71c93d43:0       0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d
+identical for both outputs:        YES
+G found inside attack proof P1:    YES (offset 4199)
+G found inside primer script S0:   YES (offset 35)
+
+== 2. structural identity of the attack rangeproof
+|P1|=4234  |P0|=4166  |C0|=33
+P1 == P0 || C0 || G || 0x6a || 0x43 : TRUE
+S0 == 0x6a || 0x43 || C1 || G || 0x6a : TRUE
+
+== 3. native secp256k1_rangeproof_verify on both contexts
+primer 71c93d43:0  (C0,P0,script=69B,G) -> TRUE  <-- stores cache entry   min=0 max=4503599627370495
+attack f24a:1      (C1,P1,script=1B ,G) -> FALSE  <-- never reached on a cache hit
+
+VERDICT: structural=1 script=1 primer_true=1 attack_false=1

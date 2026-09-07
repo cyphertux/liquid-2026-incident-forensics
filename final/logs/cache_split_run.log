@@ -1,0 +1,46 @@
+sha256 self-test = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+         expected  ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+
+=== PRE-FIX  key : H(salt || proof || value_commitment)
+    primer preimage 4199 B  key f462ee33ca4c7d56ba336ae04dc45c8d26e9113681db989ec5425871f8c9b9bb
+    attack preimage 4267 B  key 8a11f3f7ca49bc03623a662de2db15b0f263cf2086ea08a9eb70e81c6c0804cb
+    SAME CACHE ENTRY : no
+
+=== POST-FIX key : H(salt || proof || value_commitment || asset_commitment || scriptPubKey)
+    primer preimage 4301 B  key 8026a5bf5c2f55c9132bbe09b6f75dfa05a4509086b1b6bde0996481f04683d4
+    attack preimage 4301 B  key 8026a5bf5c2f55c9132bbe09b6f75dfa05a4509086b1b6bde0996481f04683d4
+    SAME CACHE ENTRY : YES
+
+=== FRAMED   key : H(salt || len:proof || len:value_commitment || len:asset_commitment || len:scriptPubKey)
+    primer preimage 4317 B  key b266607b0c5b74b2090d74c17c067cb54746a94afc19957860478b37ec5dde4b
+    attack preimage 4317 B  key f87c8b8656d0e4b2649b3565bdbd99341a137aa0edc48470276969ffefe7cb39
+    SAME CACHE ENTRY : no
+
+post-fix collision over 2000 independent per-process salts : 2000/2000
+
+---- node A  post-fix build, up since < 4050335, primer transited its mempool
+  ATMP    4050335 primer  store=true   -> TRUE   crypto TRUE, entry stored
+  ATMP    4050336 attack  store=true   -> TRUE   CACHE HIT (crypto skipped)
+  CONNECT 4050335 primer  store=false  -> TRUE   CACHE HIT (crypto skipped)
+  CONNECT 4050336 attack  store=false  -> TRUE   CACHE HIT (crypto skipped)
+  => block 4050336 : ACCEPTED
+
+---- node B  post-fix build, cold start / IBD, primer only seen inside a block
+  CONNECT 4050335 primer  store=false  -> TRUE   crypto TRUE
+  CONNECT 4050336 attack  store=false  -> FALSE  crypto FALSE
+  => block 4050336 : REJECTED
+
+---- node C  pre-fix build (elements-23.3.3), primer transited its mempool
+  ATMP    4050335 primer  store=true   -> TRUE   crypto TRUE, entry stored
+  ATMP    4050336 attack  store=true   -> FALSE  crypto FALSE
+  CONNECT 4050335 primer  store=false  -> TRUE   CACHE HIT (crypto skipped)
+  CONNECT 4050336 attack  store=false  -> FALSE  crypto FALSE
+  => block 4050336 : REJECTED
+
+---- node D  proposed length-framed key, primer transited its mempool
+  ATMP    4050335 primer  store=true   -> TRUE   crypto TRUE, entry stored
+  ATMP    4050336 attack  store=true   -> FALSE  crypto FALSE
+  CONNECT 4050335 primer  store=false  -> TRUE   CACHE HIT (crypto skipped)
+  CONNECT 4050336 attack  store=false  -> FALSE  crypto FALSE
+  => block 4050336 : REJECTED
+
