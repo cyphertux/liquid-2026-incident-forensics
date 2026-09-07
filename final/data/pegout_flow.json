@@ -1,0 +1,206 @@
+{
+  "mission": 22,
+  "chain_continuity_4050335_4050349": true,
+  "chain_artifact": "final/data/chain_4050335_4050349.json",
+  "f24a": {
+    "txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+    "block": 4050336,
+    "block_hash": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+    "outs": {
+      "0": {
+        "spent": true,
+        "spender": "3875a6d6ed4af708e6fd90d1c5504dc014e52c7093a566987252006d6cf1146b",
+        "spender_vin": 0,
+        "spender_block": 4050337
+      },
+      "1": {
+        "spent": false,
+        "note": "OP_RETURN confidential; unspent"
+      },
+      "2": {
+        "spent": true,
+        "spender": "c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267",
+        "spender_vin": 3,
+        "spender_block": 4050343
+      },
+      "3": {
+        "spent": false,
+        "note": "explicit fee output"
+      }
+    }
+  },
+  "branches": {
+    "f24a_0": [
+      "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f:0",
+      "3875a6d6ed4af708e6fd90d1c5504dc014e52c7093a566987252006d6cf1146b:0",
+      "c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267:0",
+      "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2"
+    ],
+    "f24a_1": [
+      "UNSPENT"
+    ],
+    "f24a_2": [
+      "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f:2",
+      "c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267:0",
+      "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2"
+    ],
+    "f24a_2_alt_via_c6ea_1": [
+      "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f:2",
+      "c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267:1",
+      "32892440646b3309a71ea5b0f6c87daebcb481f2d2f5434deaea515ef2933814:0",
+      "ce4caece413cd9d444ce7ed9f54e5b328b3da5e4af301aff59a3571f76e988f2"
+    ],
+    "note_convergence": "f24a:0 and f24a:2 both feed c6ea (vins 2 and 3); c6ea:0 feeds 46f117 vin11; c6ea:1 feeds 3289 then ce4 vin5"
+  },
+  "tx_46f117": {
+    "txid": "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2",
+    "block": 4050344,
+    "block_hash": "3a4afa5b5a01119f6ecd8073374fb1418fa220c00b1ac0cd582d6adfc0be6c68",
+    "timestamp": 1788703270,
+    "n_vin": 13,
+    "n_vout": 3,
+    "vin11": "c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267:0",
+    "out0_pegout_sats": 265138358,
+    "out0_btc_address": "bc1qkxwva32eh7mgezq5kladncd3n5wtcjmslh98my",
+    "out1_confidential_change": true,
+    "out1_address_liquid": "ex1qamnwmwueelwdywjkx7pxxzg9ur3znm6jq6r84v",
+    "fee": 225,
+    "out1_spent_by": {
+      "txid": "ce4caece413cd9d444ce7ed9f54e5b328b3da5e4af301aff59a3571f76e988f2",
+      "vin": 4,
+      "block": 4050349
+    }
+  },
+  "tx_ce4": {
+    "txid": "ce4caece413cd9d444ce7ed9f54e5b328b3da5e4af301aff59a3571f76e988f2",
+    "block": 4050349,
+    "block_hash": "90a8c1ae477530b1e50c30ab7dc709eacab5a68a8b3652c147441508b1244730",
+    "timestamp": 1788703570,
+    "n_vin": 6,
+    "n_vout": 3,
+    "vins": [
+      {
+        "i": 0,
+        "txid": "bda29202e454ecdbd961d1d35b273156b5f3bee62b6a4b21fbdee70a5ab35015",
+        "vout": 0,
+        "relation_to_f24a": "UNKNOWN/not demonstrated in this mission"
+      },
+      {
+        "i": 1,
+        "txid": "b81408f4d8034c3e5024c759577c42f2bc1192fa1c556d44e6117b91466169a1",
+        "vout": 1,
+        "relation_to_f24a": "UNKNOWN"
+      },
+      {
+        "i": 2,
+        "txid": "b55e10cd7bfb80ad6125547a41a6994258218bcfcf9f3ea285ad79a9f9c2c2c3",
+        "vout": 1,
+        "source_block": 4050345,
+        "relation_to_f24a": "UNKNOWN"
+      },
+      {
+        "i": 3,
+        "txid": "6269cfc7f6c190cd4d79a5659b6258287dee1ec042c2257d997204ff42ec41c4",
+        "vout": 0,
+        "relation_to_f24a": "UNKNOWN"
+      },
+      {
+        "i": 4,
+        "txid": "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2",
+        "vout": 1,
+        "relation": "DIRECT spend of 46f117 confidential change; 46f117 vin11 descends from f24a via c6ea"
+      },
+      {
+        "i": 5,
+        "txid": "32892440646b3309a71ea5b0f6c87daebcb481f2d2f5434deaea515ef2933814",
+        "vout": 0,
+        "source_block": 4050348,
+        "relation": "3289 spends c6ea:1; c6ea spends f24a:2 (and f24a:0 via 3875)"
+      }
+    ],
+    "out0_confidential_change_address": "ex1qsg0xx2plutvahv8atmd6qxxua6utjxm4t4khey",
+    "out1_pegout_sats": 399601834922,
+    "out1_btc_address": "bc1qgslsydz56d0ed6827hdemfmk5w2f6ldyc6wt7p",
+    "fee": 177,
+    "out0_spent_by": {
+      "txid": "731f8fdf0428c8ef5f2dc48d9347e458b101be2430f22ca6e5f376fd42e47d8a",
+      "vin": 1,
+      "block": 4050349,
+      "note": "user typo had 101eb; correct is 101be"
+    }
+  },
+  "tx_731f": {
+    "txid": "731f8fdf0428c8ef5f2dc48d9347e458b101be2430f22ca6e5f376fd42e47d8a",
+    "block": 4050349,
+    "pegout_sats": 399601658,
+    "btc_address": "bc1qk3cvk5599nydy8zwavlxaduke54pgf4vl0ckru",
+    "spends_ce4_out0": true,
+    "role": "additional Liquid peg-out (change consolidation), same block as ce4"
+  },
+  "amounts": {
+    "pegout_A_sats": 265138358,
+    "pegout_A_btc": "2.65138358",
+    "pegout_B_sats": 399601834922,
+    "pegout_B_btc": "3996.01834922",
+    "sum_A_B_sats": 399866973280,
+    "sum_A_B_btc": "3998.66973280",
+    "pegout_C_731f_sats": 399601658,
+    "pegout_C_btc": "3.99601658",
+    "sum_A_B_C_sats": 400266574938,
+    "sum_A_B_C_btc": "4002.66574938"
+  },
+  "bitcoin_8db751": {
+    "txid": "8db751a650ae2f12006b7e8c69a75e4df360e8afd6b9e05ae0b9fa6458a7b140",
+    "block_height": 965783,
+    "block_time": 1788704936,
+    "matching_outputs": [
+      {
+        "value": 399601834922,
+        "address": "bc1qgslsydz56d0ed6827hdemfmk5w2f6ldyc6wt7p",
+        "matches_liquid": "ce4 peg-out"
+      },
+      {
+        "value": 265138358,
+        "address": "bc1qkxwva32eh7mgezq5kladncd3n5wtcjmslh98my",
+        "matches_liquid": "46f117 peg-out"
+      },
+      {
+        "value": 399601658,
+        "address": "bc1qk3cvk5599nydy8zwavlxaduke54pgf4vl0ckru",
+        "matches_liquid": "731f peg-out"
+      }
+    ],
+    "link_type": "UTXO-level Liquid\u2192BTC not available; amount+scriptpubkey_address equality with Liquid pegout fields = CONFIRMED structural correspondence",
+    "fee": 34097,
+    "vin_count": 83
+  },
+  "pegout_scan": {
+    "window": "4050336-4050349",
+    "result": "ONLY_THREE_PEGOUTS",
+    "pegouts": [
+      {
+        "txid": "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2",
+        "block": 4050344,
+        "vout": 0,
+        "value": 265138358,
+        "address": "bc1qkxwva32eh7mgezq5kladncd3n5wtcjmslh98my"
+      },
+      {
+        "txid": "ce4caece413cd9d444ce7ed9f54e5b328b3da5e4af301aff59a3571f76e988f2",
+        "block": 4050349,
+        "vout": 1,
+        "value": 399601834922,
+        "address": "bc1qgslsydz56d0ed6827hdemfmk5w2f6ldyc6wt7p"
+      },
+      {
+        "txid": "731f8fdf0428c8ef5f2dc48d9347e458b101be2430f22ca6e5f376fd42e47d8a",
+        "block": 4050349,
+        "vout": 0,
+        "value": 399601658,
+        "address": "bc1qk3cvk5599nydy8zwavlxaduke54pgf4vl0ckru"
+      }
+    ],
+    "additional_pegouts_in_window": false,
+    "source": "subagent exhaustive scan cff0f65e-45db-455a-a37d-c4ce0e5629ca"
+  }
+}

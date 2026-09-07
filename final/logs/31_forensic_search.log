@@ -1,0 +1,434 @@
+=== c26d719 ===
+FULL:c26d719c29a40da280a825b25657e9c3d8bc7d99
+SHORT:c26d719c29
+AUTHOR:Byron Hambly <bhambly@blockstream.com>
+ADATE:2026-08-03T12:53:50+02:00
+CDATE:2026-09-01T11:39:02+02:00
+SUBJECT:fix: range proof cache bind to asset and scriptpubkey
+BODY:
+=== parents ===
+c26d719c29a40da280a825b25657e9c3d8bc7d99 b0aba619b6ff2846617b285274a954e0404137f5
+=== merge PR / containing ===
+c26d719c29 fix: range proof cache bind to asset and scriptpubkey
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+=== tags around ===
+(empty means no tags)
+elements-23.2.7rc2
+elements-23.2.7rc3
+elements-23.2.7rc4
+elements-23.2.7rc5
+elements-23.3.0
+elements-23.3.0rc3
+elements-23.3.0rc5
+elements-23.3.1
+elements-23.3.1rc1
+elements-23.3.1rc2
+elements-23.3.1rc3
+elements-23.3.2
+elements-23.3.2rc1
+elements-23.3.2rc2
+elements-23.3.3
+elements-23.3.3rc2
+elements-23.3.4rc1
+elements-23.4.0rc1
+elements-23.4.0rc2
+elements-23.4.0rc3
+=== 23.3.3 ===
+tag elements-23.3.3
+Tagger: Pablo Greco <psgreco@gmail.com>
+
+elements-23.3.3
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEvQ8wYvh4QkELBqBDL2VrBhBgRIIFAmnY770ACgkQL2VrBhBg
+RIIL2g/+Nmu267PFOn+pDtLFzOE3qnNhyW8XSGxP1n+Qs4V/vGFfyJ02ou4WiR6+
+6Nb1kLw+EqOvgoe/ypRBj9GjOAGSy7UDmjcoYOfXWHjCfCdsdDsxcyelGAgwyNa6
+V2Xaeai8ZPj/XMgOdW/6dI+hABV/qElRdVNUTs7yGwTF+oA5+fNHIjPBYXcZhpvX
+TQR9JNMf1dKvaEYKnbLqp4QSw4J84ib2p31vhas4tCQDhy3NU/O68iMTmH3hc+mY
+GnVYzdypoU7SWgsdyBm7fu8kohNjQiTFhm7uYgZjy6Weh3QUudM/Uz663I8BebHM
+K4PZv7UDq+Oddj3OLcbH24CDLb9xs/AMGmafvXBUxYjvRpnGw+SyCyZnJO9rqjPd
+bMCKbFIls5+96jxh/Nki8UoX4XMEgO3mnKux2qnl3QuAHUsQvyB7ehBR1+UF6elP
+3Sd51M6mwG9cbQokTO/TuP6hvKSANeqTYaUj0jDo8BqZX2yxfDsY9546/Gf/8UWd
+/QWgcNZKrWR+oPz4k/wU0M1G9/iDNLwP/6W0x5f9Lqs/8ZLaKLFN1S2yu8Zd0J1x
+zZvtTvgspliGhr0A0tnbexBT6cgWB9BThtiPVtwYRSJ9mtobiCqZbPrTlbF09ylY
+SRn4t6ksiHhj9ni3EyhNZb4lycNrTQ7oAuuj25GD1HUZ0k9ZisE=
+=t5LZ
+-----END PGP SIGNATURE-----
+1af7a4d9bea93b4d7f29a77f9751a0e6e03a4390 2026-04-10 09:50:16 +0200 Merge ElementsProject/elements#1544: Elem 23.3.3 final
+ancestor_in_2333=1
+ancestor_in_HEAD=0
+=== cherry-picks ===
+6253d7e103655ec015097de1505b5f3785ff6447 2026-09-02 16:14:36 +0100 fix: range proof cache bind to asset and scriptpubkey
+212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7 2026-09-03 10:36:30 -0700 fix: range proof cache bind to asset and scriptpubkey
+=== later tags after Sep 1 ===
+2026-08-12 elements-29.4.1rc1
+=== PR merges ===
+31e8f27f4b90b887d0da60eb735f3bc38861850d 2026-09-01 16:36:10 +0200 Merge ElementsProject/elements#1592: blind/blindpsbt fixes
+31e8f27f4b Merge ElementsProject/elements#1592: blind/blindpsbt fixes
+c26d719c29 fix: range proof cache bind to asset and scriptpubkey
+b0aba619b6 blindpsbt: return error instead of asserting on surjection proof failure
+f634a3a463 blindpsbt: reject off-curve blinding pubkey before ECDH
+066ecf6eb3 blindpsbt: refuse to blind a PSET output with no amount
+fef1a30b62 headerssync: retain Elements identity and proof fields
+bdedb12ee3 dynafed: require at least four-fifths approval for parameter transition
+c7ec63c583 validation: always validate and retain dynafed header block_height
+34be37f34d blindpsbt: require both range bounds to match claim in VerifyBlindValueProof
+6f1a51310b blindpsbt: require genuine commitments in VerifyBlindValueProof
+a7a88214f7 blind: reject empty surjection-target set in SurjectOutput
+31e8f27f4b Merge ElementsProject/elements#1592: blind/blindpsbt fixes
+c26d719c29 fix: range proof cache bind to asset and scriptpubkey
+88066059e9 Merge ElementsProject/elements#1556: Merges from Bitcoin up to the v29 branch point
+b573c24538 Merge 0a931a9787 into merged_master (Bitcoin PR bitcoin/bitcoin (#31599 #31403)
+0bb8a01810 Merge bitcoin/bitcoin#31880: cmake: Add optional sources to `minisketch` library directly
+28dec6c5f8 Merge bitcoin/bitcoin#31268: cmake: add optional source files to bitcoin_crypto and crc32c directly
+0a931a9787 Merge bitcoin/bitcoin#31599: qa: Improve framework.generate* enforcement (#31403 follow-up)
+2d46a89386 Squashed 'src/secp256k1/' changes from 2f2ccc46954..0cdc758a563
+949b673472 Merge bitcoin/bitcoin#28052: blockstorage: XOR blocksdir *.dat files
+98537a0212 Merge bitcoin/bitcoin#30499: lint: Use consistent out-of-tree build for python and test_runner
+b4b9854394 Merge bitcoin/bitcoin#30321: rest: don't copy data when sending binary response
+be4df59696 Merge bitcoin/bitcoin#30312: contrib: add R(UN)PATH check to ELF symbol-check
+4a903741b0 Merge bitcoin/bitcoin#28120: p2p: make block download logic aware of limited peers threshold
+874c8bdb9e Merge bitcoin/bitcoin#29144: init: handle empty settings file gracefully
+925a750d99 Merge bitcoin/bitcoin#28844: contrib: drop GCC MAX_VERSION to 4.3.0 in symbol-check
+7bc8c5312b Merge bitcoin/bitcoin#28969: fuzz: Avoid signed-integer-overflow in wallet_notifications fuzz target
+1803fee1cf Merge bitcoin/bitcoin#28637: doc: add release note for #27460 (new `importmempool` RPC)
+738ef44abb Merge bitcoin/bitcoin#28652: assumeutxo: fail early if snapshot block hash doesn't match AssumeUTXO parameters
+54bdb6e074 Merge bitcoin/bitcoin#27609: rpc: allow submitpackage to be called outside of regtest
+2cd71d3a13 Merge bitcoin/bitcoin#27937: doc: i2p documentation updates
+8d5b93cf54 Merge bitcoin/bitcoin#27922: ci: fix llvm-symbolizer in MSAN jobs
+3132ec64d9 Merge bitcoin/bitcoin#27177: test: fix intermittent issue in `feature_bip68_sequence`
+2f1403ae53 Merge bitcoin/bitcoin#27458: build: Detect USDT the same way how it is used in the code
+8d31d769b7 Merge bitcoin/bitcoin#27344: fuzz: Remove legacy int parse fuzz tests
+3e536ea9ac Merge bitcoin/bitcoin#26683: ci: Use `CONFIG_SITE` variable and `--prefix` option properly
+8f3021155e Merge bitcoin/bitcoin#26643: wallet: Move fee underpayment check to after all fee has been set
+d1e42659bb Merge bitcoin/bitcoin#25543: wallet: cleanup cached amount and input mine check code
+2bdce7f7ad Merge bitcoin/bitcoin#25514: net processing: Move CNode::nServices and CNode::nLocalServices to Peer
+ceae0eb7e3 Merge bitcoin/bitcoin#25437: guix: remove explicit glibc stack protector disabling
+581e2bdbac Merge bitcoin/bitcoin#24629: Bugfix: RPC/blockchain: pruneblockchain: Return the height of the actual last pruned block
+=== InitRangeproofCache size ===
+src/script/sigcache.cpp:110:bool InitRangeproofCache(size_t max_size_bytes)
+src/init.cpp:506:    argsman.AddArg("-dbcache=<n>", strprintf("Maximum database cache size <n> MiB (minimum %d, default: %d). Make sure you have enough RAM. In addition, unused memory allocated to the mempool is shared with this cache (see -maxmempool).", MIN_DB_CACHE >> 20, DEFAULT_DB_CACHE >> 20), ArgsManager::ALLOW_ANY, OptionsCategory::OPTIONS);
+src/init.cpp:638:    argsman.AddArg("-maxsigcachesize=<n>", strprintf("Limit sum of signature cache and script execution cache sizes to <n> MiB (default: %u)", DEFAULT_VALIDATION_CACHE_BYTES >> 20), ArgsManager::ALLOW_ANY | ArgsManager::DEBUG_ONLY, OptionsCategory::DEBUG_TEST);
+src/init.cpp:1515:    if (!InitRangeproofCache(validation_cache_sizes.rangeproof_cache_bytes)
+src/init.cpp:1518:        return InitError(strprintf(_("Unable to allocate memory for -maxsigcachesize: '%s' MiB"), args.GetIntArg("-maxsigcachesize", DEFAULT_VALIDATION_CACHE_BYTES >> 20)));
+src/indirectmap.h:48:    size_type max_size() const      { return m.max_size(); }
+src/txmempool.h:654:        return GetMinFee(m_opts.max_size_bytes);
+src/script/sigcache.h:77:    SignatureCache(size_t max_size_bytes);
+src/script/sigcache.h:114:[[nodiscard]] bool InitSignatureCache(size_t max_size_bytes);
+src/script/sigcache.h:145:[[nodiscard]] bool InitRangeproofCache(size_t max_size_bytes);
+src/script/sigcache.h:146:[[nodiscard]] bool InitSurjectionproofCache(size_t max_size_bytes);
+src/script/sigcache.cpp:20:SignatureCache::SignatureCache(const size_t max_size_bytes)
+src/script/sigcache.cpp:40:    const auto [num_elems, approx_size_bytes] = setValid.setup_bytes(max_size_bytes);
+src/script/sigcache.cpp:42:              approx_size_bytes >> 20, max_size_bytes >> 20, num_elems);
+src/script/sigcache.cpp:110:bool InitRangeproofCache(size_t max_size_bytes)
+src/script/sigcache.cpp:112:    auto setup_results = rangeProofCache.setup_bytes(max_size_bytes);
+src/script/sigcache.cpp:116:            approx_size_bytes >> 20, max_size_bytes >> 20, num_elems);
+src/script/sigcache.cpp:121:bool InitSurjectionproofCache(size_t max_size_bytes)
+src/script/sigcache.cpp:123:    auto setup_results = surjectionProofCache.setup_bytes(max_size_bytes);
+src/script/sigcache.cpp:127:            approx_size_bytes >> 20, max_size_bytes >> 20, num_elems);
+src/script/miniscript.h:278:        constexpr auto max_size{MAX_STANDARD_TX_WEIGHT - TX_BODY_LEEWAY_WEIGHT - MAX_TAPSCRIPT_SAT_SIZE};
+src/script/miniscript.h:279:        return max_size - GetSizeOfCompactSize(max_size);
+src/script/miniscript.h:1808:    size_t max_size{internal::MaxScriptSize(ctx.MsContext())};
+src/script/miniscript.h:1853:        if (script_size > max_size) return {};
+src/script/miniscript.h:1872:                if (script_size > max_size) return {};
+src/kernel/mempool_options.h:40:    int64_t max_size_bytes{DEFAULT_MAX_MEMPOOL_SIZE_MB * 1'000'000};
+src/secp256k1/include/secp256k1_rangeproof.h:214:SECP256K1_API SECP256K1_WARN_UNUSED_RESULT size_t secp256k1_rangeproof_max_size(
+src/util/bitdeque.h:271:    size_type max_size() const noexcept
+src/util/bitdeque.h:273:        if (m_deque.max_size() < std::numeric_limits<difference_type>::max() / BITS_PER_WORD) {
+src/util/bitdeque.h:274:            return m_deque.max_size() * BITS_PER_WORD;
+src/validation.cpp:290:    pool.TrimToSize(pool.m_opts.max_size_bytes, &vNoSpendsRemaining);
+src/validation.cpp:717:    // Does not call LimitMempoolSize(), so mempool max_size_bytes may be temporarily exceeded.
+src/validation.cpp:3204:        m_mempool ? m_mempool->m_opts.max_size_bytes : 0);
+src/secp256k1/src/scratch.h:21:    size_t max_size;
+src/secp256k1/src/scratch.h:26:static secp256k1_scratch* secp256k1_scratch_create(const secp256k1_callback* error_callback, size_t max_size);
+src/txmempool.cpp:417:    if (opts.max_size_bytes < 0 || opts.max_size_bytes < descendant_limit_bytes) {
+src/secp256k1/src/scratch_impl.h:21:        ret->max_size = size;
+src/secp256k1/src/scratch_impl.h:67:    if (scratch->max_size - scratch->alloc_size <= objects * (ALIGNMENT - 1)) {
+src/secp256k1/src/scratch_impl.h:70:    return scratch->max_size - scratch->alloc_size - objects * (ALIGNMENT - 1);
+src/secp256k1/src/scratch_impl.h:89:    if (size > scratch->max_size - scratch->alloc_size) {
+src/node/interfaces.cpp:289:    size_t getMempoolMaxUsage() override { return m_context->mempool ? m_context->mempool->m_opts.max_size_bytes : 0; }
+src/node/validation_cache_args.cpp:22:    if (auto max_size = argsman.GetIntArg("-maxsigcachesize")) {
+src/node/validation_cache_args.cpp:23:        // 1. When supplied with a max_size of 0, both InitSignatureCache and
+src/node/validation_cache_args.cpp:27:        size_t clamped_size_each = std::max<int64_t>(*max_size, 0) * (1 << 20) / 2;
+src/node/mempool_args.cpp:45:    if (auto mb = argsman.GetIntArg("-maxmempool")) mempool_opts.max_size_bytes = *mb * 1'000'000;
+=== branches for backports ===
+undefined
+undefined
+master~2^2
+=== 23.3.4rc1 vs fix ===
+fix_in_2334rc1=1
+backport_in_2334rc1=1
+7fd0885771 Merge ElementsProject/elements#1566: Prepare 23.3.4rc1
+87a57e7631 Update manpages
+14659b9289 Bump version to 23.3.4-rc1
+3a07baa173 fix: minor fixes
+945385862f Remove cirrus YML file
+411fffbd7a Migrate CI to GHA
+83b0fdff08 Revert "add 'src/rpc/blockchain.cpp:.*trim' to the KNOWN_VIOLATIONS lint checks"
+83059beff5 Revert "fix help man"
+3e6014484e Revert "fix help man"
+9584316db8 datacarrier: Undeprecate configuration option
+27f5a4e33c Merge bitcoin/bitcoin#32406: policy: uncap datacarrier by default
+bbc58b4fe6 Merge branch 'master' into elem-23.3.4rc1
+dee90f21c1 Merge pull request #1549 from RuslanProgrammer/man-help-update
+fecf4f1cf1 fix help man
+27c2fb6b7d Merge ElementsProject/elements#1554: Enable elip203 by default in liquidv1 and liquidtestnet
+=== validation cache split ===
+// Copyright (c) 2022 The Bitcoin Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <node/validation_cache_args.h>
+
+#include <kernel/validation_cache_sizes.h>
+
+#include <common/args.h>
+
+#include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <memory>
+#include <optional>
+
+using kernel::ValidationCacheSizes;
+
+namespace node {
+void ApplyArgsManOptions(const ArgsManager& argsman, ValidationCacheSizes& cache_sizes)
+{
+    if (auto max_size = argsman.GetIntArg("-maxsigcachesize")) {
+        // 1. When supplied with a max_size of 0, both InitSignatureCache and
+        //    InitScriptExecutionCache create the minimum possible cache (2
+        //    elements). Therefore, we can use 0 as a floor here.
+        // 2. Multiply first, divide after to avoid integer truncation.
+        size_t clamped_size_each = std::max<int64_t>(*max_size, 0) * (1 << 20) / 2;
+        cache_sizes = {
+            .signature_cache_bytes = clamped_size_each,
+            .script_execution_cache_bytes = clamped_size_each,
+        };
+    }
+}
+} // namespace node
+src/kernel/validation_cache_sizes.h:14:struct ValidationCacheSizes {
+src/kernel/validation_cache_sizes.h:15:    size_t signature_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/kernel/validation_cache_sizes.h:16:    size_t script_execution_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/kernel/validation_cache_sizes.h:18:    size_t rangeproof_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/kernel/validation_cache_sizes.h:19:    size_t surjectionproof_execution_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/script/sigcache.h:33:static constexpr size_t DEFAULT_VALIDATION_CACHE_BYTES{32 << 20};
+src/script/sigcache.h:34:static constexpr size_t DEFAULT_SIGNATURE_CACHE_BYTES{DEFAULT_VALIDATION_CACHE_BYTES / 2};
+src/script/sigcache.h:35:static constexpr size_t DEFAULT_SCRIPT_EXECUTION_CACHE_BYTES{DEFAULT_VALIDATION_CACHE_BYTES / 2};
+src/script/sigcache.h:36:static_assert(DEFAULT_VALIDATION_CACHE_BYTES == DEFAULT_SIGNATURE_CACHE_BYTES + DEFAULT_SCRIPT_EXECUTION_CACHE_BYTES);
+src/node/validation_cache_args.cpp:17:using kernel::ValidationCacheSizes;
+src/node/validation_cache_args.cpp:20:void ApplyArgsManOptions(const ArgsManager& argsman, ValidationCacheSizes& cache_sizes)
+src/node/validation_cache_args.h:10:struct ValidationCacheSizes;
+src/node/validation_cache_args.h:14:void ApplyArgsManOptions(const ArgsManager& argsman, kernel::ValidationCacheSizes& cache_sizes);
+src/test/blind_tests.cpp:31:    BOOST_CHECK(InitRangeproofCache(DEFAULT_VALIDATION_CACHE_BYTES / 4));
+src/test/blind_tests.cpp:32:    BOOST_CHECK(InitSurjectionproofCache(DEFAULT_VALIDATION_CACHE_BYTES / 4));
+src/test/fuzz/simplicity_tx.cpp:46:    kernel::ValidationCacheSizes validation_cache_sizes{};
+src/test/fuzz/simplicity_tx.cpp:47:    Assert(InitRangeproofCache(validation_cache_sizes.rangeproof_cache_bytes));
+src/init.cpp:129:using kernel::ValidationCacheSizes;
+src/init.cpp:638:    argsman.AddArg("-maxsigcachesize=<n>", strprintf("Limit sum of signature cache and script execution cache sizes to <n> MiB (default: %u)", DEFAULT_VALIDATION_CACHE_BYTES >> 20), ArgsManager::ALLOW_ANY | ArgsManager::DEBUG_ONLY, OptionsCategory::DEBUG_TEST);
+src/init.cpp:1514:    ValidationCacheSizes validation_cache_sizes{};
+src/init.cpp:1515:    if (!InitRangeproofCache(validation_cache_sizes.rangeproof_cache_bytes)
+src/init.cpp:1518:        return InitError(strprintf(_("Unable to allocate memory for -maxsigcachesize: '%s' MiB"), args.GetIntArg("-maxsigcachesize", DEFAULT_VALIDATION_CACHE_BYTES >> 20)));
+=== Get/Set erase ===
+bool SignatureCache::Get(const uint256& entry, const bool erase)
+{
+    std::shared_lock<std::shared_mutex> lock(cs_sigcache);
+    return setValid.contains(entry, erase);
+}
+
+void SignatureCache::Set(const uint256& entry)
+{
+    std::unique_lock<std::shared_mutex> lock(cs_sigcache);
+    setValid.insert(entry);
+}
+
+bool CachingTransactionSignatureChecker::VerifyECDSASignature(const std::vector<unsigned char>& vchSig, const CPubKey& pubkey, const uint256& sighash) const
+{
+    uint256 entry;
+    m_signature_cache.ComputeEntryECDSA(entry, sighash, vchSig, pubkey);
+    if (m_signature_cache.Get(entry, !store))
+        return true;
+    if (!TransactionSignatureChecker::VerifyECDSASignature(vchSig, pubkey, sighash))
+        return false;
+    if (store)
+        m_signature_cache.Set(entry);
+    return true;
+}
+
+bool CachingTransactionSignatureChecker::VerifySchnorrSignature(Span<const unsigned char> sig, const XOnlyPubKey& pubkey, const uint256& sighash) const
+{
+    uint256 entry;
+    m_signature_cache.ComputeEntrySchnorr(entry, sighash, sig, pubkey);
+    if (m_signature_cache.Get(entry, !store)) return true;
+    if (!TransactionSignatureChecker::VerifySchnorrSignature(sig, pubkey, sighash)) return false;
+    if (store) m_signature_cache.Set(entry);
+    return true;
+}
+
+// TODO: de-globalise
+
+// ELEMENTS CACHES
+namespace {
+    static SignatureCache rangeProofCache;
+    static SignatureCache surjectionProofCache;
+}
+// To be called once in AppInit2/TestingSetup to initialize the rangeproof cache
+bool InitRangeproofCache(size_t max_size_bytes)
+{
+    auto setup_results = rangeProofCache.setup_bytes(max_size_bytes);
+    if (!setup_results) return false;
+    const auto [num_elems, approx_size_bytes] = *setup_results;
+    LogPrintf("Using %zu MiB out of %zu Mib requested for rangeproof cache, able to store %zu elements\n",
+            approx_size_bytes >> 20, max_size_bytes >> 20, num_elems);
+    return true;
+}
+
+// To be called once in AppInit2/TestingSetup to initialize the surjectionrproof cache
+bool InitSurjectionproofCache(size_t max_size_bytes)
+{
+    auto setup_results = surjectionProofCache.setup_bytes(max_size_bytes);
+    if (!setup_results) return false;
+    const auto [num_elems, approx_size_bytes] = *setup_results;
+    LogPrintf("Using %zu MiB out of %zu Mib requested for surjectionproof cache, able to store %zu elements\n",
+            approx_size_bytes >> 20, max_size_bytes >> 20, num_elems);
+    return true;
+}
+
+bool CachingRangeProofChecker::VerifyRangeProof(const std::vector<unsigned char>& vchRangeProof, const std::vector<unsigned char>& vchValueCommitment, const std::vector<unsigned char>& vchAssetCommitment, const CScript& scriptPubKey, const secp256k1_context* secp256k1_ctx_verify_amounts) const
+{
+    uint256 entry;
+    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment, vchAssetCommitment, scriptPubKey);
+
+    if (rangeProofCache.Get(entry, !store)) {
+        return true;
+    }
+
+    if (vchRangeProof.size() == 0) {
+        return false;
+    }
+
+    uint64_t min_value, max_value;
+    secp256k1_pedersen_commitment commit;
+    if (secp256k1_pedersen_commitment_parse(secp256k1_ctx_verify_amounts, &commit, &vchValueCommitment[0]) != 1)
+            return false;
+
+    secp256k1_generator tag;
+    if (secp256k1_generator_parse(secp256k1_ctx_verify_amounts, &tag, &vchAssetCommitment[0]) != 1)
+        return false;
+
+    if (!secp256k1_rangeproof_verify(secp256k1_ctx_verify_amounts, &min_value, &max_value, &commit, vchRangeProof.data(), vchRangeProof.size(), scriptPubKey.size() ? &scriptPubKey.front() : nullptr, scriptPubKey.size(), &tag)) {
+        return false;
+    }
+
+    // An rangeproof is not valid if the output is spendable but the minimum number
+    // is 0. This is to prevent people passing 0-value tokens around, or conjuring
+    // reissuance tokens from nothing then attempting to reissue an asset.
+    // ie reissuance doesn't require revealing value of reissuance output
+    // Issuances proofs are always "unspendable" as they commit to an empty script.
+    if (min_value == 0 && !scriptPubKey.IsUnspendable()) {
+        return false;
+    }
+
+    if (store) {
+        rangeProofCache.Set(entry);
+    }
+
+    return true;
+}
+
+bool CachingSurjectionProofChecker::VerifySurjectionProof(secp256k1_surjectionproof& proof, std::vector<secp256k1_generator>& vTags, secp256k1_generator& gen, const secp256k1_context* secp256k1_ctx_verify_amounts, const uint256& wtxid) const
+{
+
+=== PR cherry-pick messages ===
+88066059e9 Merge ElementsProject/elements#1556: Merges from Bitcoin up to the v29 branch point
+b573c24538 Merge 0a931a9787 into merged_master (Bitcoin PR bitcoin/bitcoin (#31599 #31403)
+0bb8a01810 Merge bitcoin/bitcoin#31880: cmake: Add optional sources to `minisketch` library directly
+28dec6c5f8 Merge bitcoin/bitcoin#31268: cmake: add optional source files to bitcoin_crypto and crc32c directly
+0a931a9787 Merge bitcoin/bitcoin#31599: qa: Improve framework.generate* enforcement (#31403 follow-up)
+2d46a89386 Squashed 'src/secp256k1/' changes from 2f2ccc46954..0cdc758a563
+949b673472 Merge bitcoin/bitcoin#28052: blockstorage: XOR blocksdir *.dat files
+98537a0212 Merge bitcoin/bitcoin#30499: lint: Use consistent out-of-tree build for python and test_runner
+b4b9854394 Merge bitcoin/bitcoin#30321: rest: don't copy data when sending binary response
+be4df59696 Merge bitcoin/bitcoin#30312: contrib: add R(UN)PATH check to ELF symbol-check
+4a903741b0 Merge bitcoin/bitcoin#28120: p2p: make block download logic aware of limited peers threshold
+874c8bdb9e Merge bitcoin/bitcoin#29144: init: handle empty settings file gracefully
+925a750d99 Merge bitcoin/bitcoin#28844: contrib: drop GCC MAX_VERSION to 4.3.0 in symbol-check
+7bc8c5312b Merge bitcoin/bitcoin#28969: fuzz: Avoid signed-integer-overflow in wallet_notifications fuzz target
+1803fee1cf Merge bitcoin/bitcoin#28637: doc: add release note for #27460 (new `importmempool` RPC)
+738ef44abb Merge bitcoin/bitcoin#28652: assumeutxo: fail early if snapshot block hash doesn't match AssumeUTXO parameters
+54bdb6e074 Merge bitcoin/bitcoin#27609: rpc: allow submitpackage to be called outside of regtest
+2cd71d3a13 Merge bitcoin/bitcoin#27937: doc: i2p documentation updates
+8d5b93cf54 Merge bitcoin/bitcoin#27922: ci: fix llvm-symbolizer in MSAN jobs
+3132ec64d9 Merge bitcoin/bitcoin#27177: test: fix intermittent issue in `feature_bip68_sequence`
+fix: range proof cache bind to asset and scriptpubkey
+
+fix: range proof cache bind to asset and scriptpubkey
+
+(cherry picked from commit 6253d7e103655ec015097de1505b5f3785ff6447)
+
+Merge ElementsProject/elements#1592: blind/blindpsbt fixes
+
+c26d719c29a40da280a825b25657e9c3d8bc7d99 fix: range proof cache bind to asset and scriptpubkey (Byron Hambly)
+b0aba619b6ff2846617b285274a954e0404137f5 blindpsbt: return error instead of asserting on surjection proof failure (Byron Hambly)
+f634a3a4635550b881d3db3376c42d614ea1d9b4 blindpsbt: reject off-curve blinding pubkey before ECDH (Byron Hambly)
+066ecf6eb3bc54e6135d79864b969ac6ad84795e blindpsbt: refuse to blind a PSET output with no amount (Byron Hambly)
+fef1a30b62374d06e29bc8617dcf415c37993ffa headerssync: retain Elements identity and proof fields (Byron Hambly)
+bdedb12ee3996adab4959b63b51ccbe9575284bf dynafed: require at least four-fifths approval for parameter transition (Byron Hambly)
+c7ec63c58312c4581c763f02f4aa31ef608e12a8 validation: always validate and retain dynafed header block_height (Byron Hambly)
+34be37f34d25fde692d6c5559ee0ca13b1c48654 blindpsbt: require both range bounds to match claim in VerifyBlindValueProof (Byron Hambly)
+6f1a51310b85e8072e7ffe0983b515a86f397411 blindpsbt: require genuine commitments in VerifyBlindValueProof (Byron Hambly)
+a7a88214f740a23b49aec0a7b1125e03ac9227a4 blind: reject empty surjection-target set in SurjectOutput (Byron Hambly)
+
+Pull request description:
+
+  Fixes a number of small issues picked up during LLM scans
+
+ACKs for top commit:
+  tomt1664:
+    ACK c26d719c29a40da280a825b25657e9c3d8bc7d99 tested locally.
+
+Tree-SHA512: f38aa278a313124665e3f135b210f09604277d7edfb6236bd74607fe9eaed13c2ce7eb606a63403accabe4b821ce80b230648870b06436529e7289eed2ea7ecc
+
+=== PR1599 files / when 212c43f entered ===
+2026-09-03 10:36:30 -0700 212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7 fix: range proof cache bind to asset and scriptpubkey
+31e8f27f4b Merge ElementsProject/elements#1592: blind/blindpsbt fixes
+c26d719c29 fix: range proof cache bind to asset and scriptpubkey
+origin/elements-23.3.x
+remotes/origin/elements-23.3.x
+212c_in_233x=128
+c26_in_master=0
+=== DEFAULT_VALIDATION_CACHE ===
+src/kernel/validation_cache_sizes.h:14:struct ValidationCacheSizes {
+src/kernel/validation_cache_sizes.h:15:    size_t signature_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/kernel/validation_cache_sizes.h:16:    size_t script_execution_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/kernel/validation_cache_sizes.h:18:    size_t rangeproof_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/kernel/validation_cache_sizes.h:19:    size_t surjectionproof_execution_cache_bytes{DEFAULT_VALIDATION_CACHE_BYTES / 4};
+src/node/validation_cache_args.cpp:17:using kernel::ValidationCacheSizes;
+src/node/validation_cache_args.cpp:20:void ApplyArgsManOptions(const ArgsManager& argsman, ValidationCacheSizes& cache_sizes)
+src/script/sigcache.h:33:static constexpr size_t DEFAULT_VALIDATION_CACHE_BYTES{32 << 20};
+src/script/sigcache.h:34:static constexpr size_t DEFAULT_SIGNATURE_CACHE_BYTES{DEFAULT_VALIDATION_CACHE_BYTES / 2};
+src/script/sigcache.h:35:static constexpr size_t DEFAULT_SCRIPT_EXECUTION_CACHE_BYTES{DEFAULT_VALIDATION_CACHE_BYTES / 2};
+src/script/sigcache.h:36:static_assert(DEFAULT_VALIDATION_CACHE_BYTES == DEFAULT_SIGNATURE_CACHE_BYTES + DEFAULT_SCRIPT_EXECUTION_CACHE_BYTES);
+src/node/validation_cache_args.h:10:struct ValidationCacheSizes;
+src/node/validation_cache_args.h:14:void ApplyArgsManOptions(const ArgsManager& argsman, kernel::ValidationCacheSizes& cache_sizes);
+src/test/blind_tests.cpp:31:    BOOST_CHECK(InitRangeproofCache(DEFAULT_VALIDATION_CACHE_BYTES / 4));
+src/test/blind_tests.cpp:32:    BOOST_CHECK(InitSurjectionproofCache(DEFAULT_VALIDATION_CACHE_BYTES / 4));
+src/init.cpp:129:using kernel::ValidationCacheSizes;
+src/init.cpp:638:    argsman.AddArg("-maxsigcachesize=<n>", strprintf("Limit sum of signature cache and script execution cache sizes to <n> MiB (default: %u)", DEFAULT_VALIDATION_CACHE_BYTES >> 20), ArgsManager::ALLOW_ANY | ArgsManager::DEBUG_ONLY, OptionsCategory::DEBUG_TEST);
+src/init.cpp:1514:    ValidationCacheSizes validation_cache_sizes{};
+src/init.cpp:1515:    if (!InitRangeproofCache(validation_cache_sizes.rangeproof_cache_bytes)
+src/init.cpp:1518:        return InitError(strprintf(_("Unable to allocate memory for -maxsigcachesize: '%s' MiB"), args.GetIntArg("-maxsigcachesize", DEFAULT_VALIDATION_CACHE_BYTES >> 20)));
+src/test/fuzz/simplicity_tx.cpp:46:    kernel::ValidationCacheSizes validation_cache_sizes{};
+src/test/fuzz/simplicity_tx.cpp:47:    Assert(InitRangeproofCache(validation_cache_sizes.rangeproof_cache_bytes));
+
+=== Mission 31 search summary ===
+Docker Hub blockstream/elementsd:latest last_updated 2026-04-14 = 23.3.3 tag
+No post-c26d719 Docker tag found in first 50 tags
+Historical practice: some tags include commit hashes (e.g. 23.2.2-e215b73c1f11)
+PR1592 merged 2026-09-01T14:38:01Z; PR1595 2026-09-03; PR1599 2026-09-06T17:21:03Z (AFTER incident ~13:53Z)
+Public node version for acceptor of 4050336: NOT FOUND
+Mempool dumps for 71c9/2711 on functionaries: NOT FOUND
+cmp primers == f24a preimage: OK

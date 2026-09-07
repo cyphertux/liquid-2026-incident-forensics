@@ -1,0 +1,85 @@
+{
+  "mission": 31,
+  "events": [
+    {
+      "when": "2026-04-13",
+      "what": "elements-23.3.3 tagged/released",
+      "class": "CODE",
+      "post_c26d719": false
+    },
+    {
+      "when": "2026-04-14",
+      "what": "Docker blockstream/elementsd:latest / :23.3.3 updated",
+      "class": "PUBLIC_ARTIFACT",
+      "post_c26d719": false
+    },
+    {
+      "when": "2026-08-03T12:53:50+02:00",
+      "what": "c26d719c29 authored (AuthorDate)",
+      "class": "CODE",
+      "author": "Byron Hambly <bhambly@blockstream.com>"
+    },
+    {
+      "when": "2026-08-12",
+      "what": "elements-29.4.1rc1 tag (does not contain c26d719 in local clone check context)",
+      "class": "CODE"
+    },
+    {
+      "when": "2026-09-01T11:39:02+02:00",
+      "what": "c26d719c29 CommitDate on master lineage",
+      "class": "CODE"
+    },
+    {
+      "when": "2026-09-01T14:38:01Z",
+      "what": "PR #1592 merged (includes c26d719 among LLM-scan fixes)",
+      "class": "CODE",
+      "source": "gh api"
+    },
+    {
+      "when": "2026-09-02T15:14:36Z",
+      "what": "6253d7e103 cherry-pick on elements-23.x path",
+      "class": "CODE"
+    },
+    {
+      "when": "2026-09-03T17:13:42Z",
+      "what": "PR #1595 elements-23.x backports merged",
+      "class": "CODE"
+    },
+    {
+      "when": "2026-09-03T17:36:30Z",
+      "what": "212c43f475 on 23.3.x cherry-pick path",
+      "class": "CODE"
+    },
+    {
+      "when": "2026-09-06T13:52:10Z",
+      "what": "Block 4050335 mines 27114710 then 71c93d43",
+      "class": "ON-CHAIN"
+    },
+    {
+      "when": "2026-09-06T13:53:10Z",
+      "what": "Block 4050336 contains f24a",
+      "class": "ON-CHAIN"
+    },
+    {
+      "when": "2026-09-06T13:54:10Z",
+      "what": "Block 4050337 parents 4050336",
+      "class": "ON-CHAIN"
+    },
+    {
+      "when": "2026-09-06T17:21:03Z",
+      "what": "PR #1599 cherry-picks into 23.3.x MERGED (after incident)",
+      "class": "CODE",
+      "note": "commits dated Sep 3; PR merge after incident"
+    },
+    {
+      "when": "2026-09-07",
+      "what": "Whitehat OP_RETURN: fix first; risk at latest commit; patch every node",
+      "class": "PUBLIC_REPORTING"
+    }
+  ],
+  "gap_seconds_4050335_to_4050336": 60,
+  "docker_latest_as_of_mission31_check": {
+    "tag": "23.3.3",
+    "last_updated": "2026-04-14T14:22:40Z"
+  }
+}

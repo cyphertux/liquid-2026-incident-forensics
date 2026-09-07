@@ -1,0 +1,21 @@
+PRE keys equal? 0
+POST keys equal? 1
+POST key 76a88d14bfd649e28651c56a9c5d8e757e010bdcc95be86d6cade13e6c2bdb00
+
+=== NODE A: POST-FIX primed mempool then Connect erase then attack ===
+primer mempool store: ret=1 hit=0 crypto=1 cache_n=1
+primer ConnectBlock Get erase: ret=1 hit=1 reclaimable=1 still_present=1
+attack ConnectBlock: ret=1 hit=1 crypto=-1  => RANGEPROOF_CHECKER ACCEPT
+
+=== NODE B: POST-FIX cold (only block path, no mempool Set) ===
+primer Connect only: ret=1 hit=0 crypto=1 store=0 (no Set)
+attack: ret=0 hit=0 crypto=0 => REJECT
+
+=== NODE C: PRE-FIX primed ===
+primer store PRE: ret=1
+attack PRE: ret=0 hit=0 crypto=0 => REJECT
+
+=== NODE D: POST-FIX but framed lengths (hypothetical fixed keying) ===
+framed keys equal? 0 => collision BROKEN
+
+NOTE: ACCEPT above means CachingRangeProofChecker returned true for f24a:1 only — not full ConnectBlock/ActivateBestChain.

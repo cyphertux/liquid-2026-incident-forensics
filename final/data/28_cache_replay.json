@@ -1,0 +1,9 @@
+{
+  "scope": "CachingRangeProofChecker only \u2014 NOT full ConnectBlock/ActivateBestChain",
+  "erase_semantics": "cuckoocache.h contains(erase=true) calls allow_erase; element remains findable until later insert GC \u2014 PROVEN from upstream comments/code",
+  "NODE_A_POST_primed": "RANGEPROOF_CHECKER ACCEPT on f24a:1 after primer mempool Set + Connect Get(erase)",
+  "NODE_B_POST_cold": "REJECT",
+  "NODE_C_PRE_primed": "REJECT",
+  "NODE_D_framed_hypothetical": "keys differ \u2014 unframed concatenation is load-bearing",
+  "full_block_acceptance": "NOT DEMONSTRATED in this harness"
+}

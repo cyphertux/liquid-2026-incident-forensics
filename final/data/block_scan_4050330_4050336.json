@@ -1,0 +1,44 @@
+[
+  {
+    "height": 4050335,
+    "txid": "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5",
+    "c_hits": [
+      [
+        "spk",
+        0,
+        "6a43086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d80a0a488de4",
+        "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d"
+      ]
+    ],
+    "has_P1": false,
+    "size": 8882
+  },
+  {
+    "height": 4050335,
+    "txid": "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+    "c_hits": [
+      [
+        "spk",
+        0,
+        "6a43086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d80a0a488de4",
+        "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d"
+      ]
+    ],
+    "has_P1": false,
+    "size": 8883
+  },
+  {
+    "height": 4050336,
+    "txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+    "c_hits": [
+      [
+        "vout",
+        1,
+        "6a",
+        "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d"
+      ]
+    ],
+    "has_P1": true,
+    "size": 13151
+  }
+]

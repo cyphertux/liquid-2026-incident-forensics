@@ -1,0 +1,103 @@
+KEY COMPARISON (OLD = SHA256(proof||commit), salt omitted)
+f24a:1 7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+71c9:0 574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72 equal_f24a=0
+71c9:1 4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c equal_f24a=0
+2711:0 574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72 equal_f24a=0 equal_71c9_0=1
+2711:1 4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b equal_f24a=0
+
+======== A: 71c9 then 2711 then f24a ========
+cache empty n=0
+  [71c9:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [71c9:0] miss crypto=1 ret=1 cache_n=1 store=1
+  => 71c9:0 ACCEPT/STORE
+  [71c9:1] key=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c
+  [71c9:1] miss crypto=1 ret=1 cache_n=2 store=1
+  => 71c9:1 ACCEPT/STORE
+  [2711:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [2711:0] CACHE HIT -> ACCEPT (crypto skipped) store=1
+  => 2711:0 ACCEPT/STORE
+  [2711:1] key=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+  [2711:1] miss crypto=1 ret=1 cache_n=3 store=1
+  => 2711:1 ACCEPT/STORE
+  [f24a:1] key=7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+  [f24a:1] miss crypto=0 ret=0 cache_n=3 store=1
+RESULT f24a:1 REJECT | cache entries=3
+  cached[0]=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  cached[1]=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c
+  cached[2]=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+
+======== B: empty then f24a ========
+cache empty n=0
+  [f24a:1] key=7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+  [f24a:1] miss crypto=0 ret=0 cache_n=0 store=1
+RESULT f24a:1 REJECT | cache entries=0
+
+======== C: 71c9 only then f24a ========
+cache empty n=0
+  [71c9:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [71c9:0] miss crypto=1 ret=1 cache_n=1 store=1
+  => 71c9:0 ACCEPT/STORE
+  [71c9:1] key=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c
+  [71c9:1] miss crypto=1 ret=1 cache_n=2 store=1
+  => 71c9:1 ACCEPT/STORE
+  [f24a:1] key=7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+  [f24a:1] miss crypto=0 ret=0 cache_n=2 store=1
+RESULT f24a:1 REJECT | cache entries=2
+  cached[0]=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  cached[1]=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c
+
+======== D: 2711 only then f24a ========
+cache empty n=0
+  [2711:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [2711:0] miss crypto=1 ret=1 cache_n=1 store=1
+  => 2711:0 ACCEPT/STORE
+  [2711:1] key=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+  [2711:1] miss crypto=1 ret=1 cache_n=2 store=1
+  => 2711:1 ACCEPT/STORE
+  [f24a:1] key=7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+  [f24a:1] miss crypto=0 ret=0 cache_n=2 store=1
+RESULT f24a:1 REJECT | cache entries=2
+  cached[0]=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  cached[1]=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+
+======== E: 71c9+2711 then f24a (same as A) ========
+cache empty n=0
+  [71c9:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [71c9:0] miss crypto=1 ret=1 cache_n=1 store=1
+  => 71c9:0 ACCEPT/STORE
+  [71c9:1] key=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c
+  [71c9:1] miss crypto=1 ret=1 cache_n=2 store=1
+  => 71c9:1 ACCEPT/STORE
+  [2711:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [2711:0] CACHE HIT -> ACCEPT (crypto skipped) store=1
+  => 2711:0 ACCEPT/STORE
+  [2711:1] key=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+  [2711:1] miss crypto=1 ret=1 cache_n=3 store=1
+  => 2711:1 ACCEPT/STORE
+  [f24a:1] key=7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+  [f24a:1] miss crypto=0 ret=0 cache_n=3 store=1
+RESULT f24a:1 REJECT | cache entries=3
+  cached[0]=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  cached[1]=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c
+  cached[2]=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+
+======== F: reverse 2711 then 71c9 then f24a ========
+cache empty n=0
+  [2711:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [2711:0] miss crypto=1 ret=1 cache_n=1 store=1
+  => 2711:0 ACCEPT/STORE
+  [2711:1] key=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+  [2711:1] miss crypto=1 ret=1 cache_n=2 store=1
+  => 2711:1 ACCEPT/STORE
+  [71c9:0] key=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  [71c9:0] CACHE HIT -> ACCEPT (crypto skipped) store=1
+  => 71c9:0 ACCEPT/STORE
+  [71c9:1] key=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c
+  [71c9:1] miss crypto=1 ret=1 cache_n=3 store=1
+  => 71c9:1 ACCEPT/STORE
+  [f24a:1] key=7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+  [f24a:1] miss crypto=0 ret=0 cache_n=3 store=1
+RESULT f24a:1 REJECT | cache entries=3
+  cached[0]=574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+  cached[1]=4364e01e746ca2e820d8f193162dfe4d13617135deeb83c3b431a166619d028b
+  cached[2]=4d2bd6101acbbb00e117c6651e6a785a0ec6631125f2ec18c9f63dc46b32528c

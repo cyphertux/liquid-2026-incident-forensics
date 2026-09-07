@@ -1,0 +1,40 @@
+{
+  "note": "ConnectBlock full-node not executed; matrix from VerifyRangeProof Elements-faithful harness + source call graph",
+  "rows": [
+    {
+      "node": "A",
+      "cache": "empty",
+      "version": "vulnerable OLD key",
+      "f24a_out1": "REJECT",
+      "block_4050336": "REJECT expected (stock ConnectBlock)"
+    },
+    {
+      "node": "B",
+      "cache": "artificial Set(P1||C1) without prior verify",
+      "version": "vulnerable",
+      "f24a_out1": "ACCEPT (lab cache hit)",
+      "block_4050336": "ACCEPT expected IF only out1 blocked by RP \u2014 HISTORICAL Set impossible via Verify\u2192Set"
+    },
+    {
+      "node": "C",
+      "cache": "empty",
+      "version": "patched NEW key",
+      "f24a_out1": "REJECT",
+      "block_4050336": "REJECT expected"
+    },
+    {
+      "node": "D",
+      "cache": "artificial Set old-key style",
+      "version": "patched",
+      "f24a_out1": "REJECT (key includes asset+script; miss then crypto fail)",
+      "block_4050336": "REJECT expected"
+    },
+    {
+      "node": "E",
+      "cache": "any",
+      "version": "vulnerable + fScriptChecks=false",
+      "f24a_out1": "skipped",
+      "block_4050336": "ACCEPT possible in CODE \u2014 prod config UNPROVEN"
+    }
+  ]
+}

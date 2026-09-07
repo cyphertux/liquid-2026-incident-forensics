@@ -1,0 +1,388 @@
+{
+  "fails": [
+    [
+      "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+      1,
+      "FAIL"
+    ]
+  ],
+  "report": [
+    {
+      "txid": "b36f958937d194172c0a6b75b39c1e42bb78e5409d8de8ab3b1acd139714d568",
+      "outs": [
+        {
+          "i": 0,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "6a240a8ce26f360059086382",
+          "verify": "n/a"
+        },
+        {
+          "i": 1,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "76a914fc26751a5025129a2f",
+          "verify": "n/a"
+        },
+        {
+          "i": 2,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "6a24aa21a9edc0ac0ebaa867",
+          "verify": "n/a"
+        }
+      ]
+    },
+    {
+      "txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+      "outs": [
+        {
+          "i": 0,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 0,
+          "script": "0014f5906a8572cf826a9d73",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d"
+        },
+        {
+          "i": 1,
+          "confVal": true,
+          "rpLen": 4234,
+          "sjLen": 0,
+          "script": "6a",
+          "verify": "FAIL",
+          "detail": "verify=0 min=0 max=4503599627370495 gen=0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d"
+        },
+        {
+          "i": 2,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 67,
+          "script": "0014f5906a8572cf826a9d73",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0b0957be4cbd0d1cc30d2742988f84f931f4f47d4f8b81e40dc1db42cabf4aae7b"
+        },
+        {
+          "i": 3,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "",
+          "verify": "n/a"
+        }
+      ]
+    },
+    {
+      "txid": "09016269fc2b5c2673f51599c8c97027e343df430dc0514fdec8a7ed3fba998a",
+      "outs": [
+        {
+          "i": 0,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 67,
+          "script": "00144ec75419b26966722973",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a3da226c2bcf1803f5d04d833b23a758b9e5f37ac9e7cf71d831528c02be9271d"
+        },
+        {
+          "i": 1,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 67,
+          "script": "001463aa2d80869bd9a71f67",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0b59cb6cefc3b4abba70a31d4cc82b05a2018457f6d5a089f771807fcded226978"
+        },
+        {
+          "i": 2,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "",
+          "verify": "n/a"
+        }
+      ]
+    },
+    {
+      "txid": "c652a1047ff549698b09242a66e20f6e9a044d5c972419342fa552b0856ba674",
+      "outs": [
+        {
+          "i": 0,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 138,
+          "script": "00145525aec166b35c35ef49",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0bb6f74cd3e317d46fe5d697aa48e8399d571b5407f62e10a98313fd592f1ccbb4"
+        },
+        {
+          "i": 1,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 138,
+          "script": "0014d7ddc8b90411732fd981",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0ae5dcbd0735134f48e3a1c513d548f67601626573dd8b70d9905cce5ec03c5e06"
+        },
+        {
+          "i": 2,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 138,
+          "script": "001443eca6d6134f6d6bbcc7",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a5b64d78593b733837b96211b0e4145c8b3b0a7c9175d3d139420456e5b5d247e"
+        },
+        {
+          "i": 3,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 138,
+          "script": "00144cf51abf98fa80edfec9",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0b47404757c863c0edf3357fa2ed589ffbc21158f653d815ccaffbbdb28b97a4a7"
+        },
+        {
+          "i": 4,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 138,
+          "script": "0014b3675ce7ad7a67f8989e",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a9d69c69eff0040dcd43cbf4d64a405cd0216e959922d466e93f44466d37f3995"
+        },
+        {
+          "i": 5,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "",
+          "verify": "n/a"
+        }
+      ]
+    },
+    {
+      "txid": "efa5e6e63170b9c6ebf502b7dfbb4bb700d5ee639a70aa1caf0cbd67e2af2e3d",
+      "outs": [
+        {
+          "i": 0,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 67,
+          "script": "0014aceb1313c521a00f0f02",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a4bbefc430b92127917de847627915e44bc020d2f48d28bc58c8d6fe3a900abf6"
+        },
+        {
+          "i": 1,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "",
+          "verify": "n/a"
+        }
+      ]
+    },
+    {
+      "txid": "5707d0cedb1fe6976d8b88e794bc2d91260c93b19ca15fc2a15128434737cdc5",
+      "outs": [
+        {
+          "i": 0,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "0014a7d41a5bcd5de3aa808f",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0b72b49ba4841a434fabe553f74870763d1071d2c41e0ae91727d058c278f6548c"
+        },
+        {
+          "i": 1,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00142909ce9422afd8837f6d",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a84affb47d712ff2f65afe0504263c16dd2343ec93943cb6c8f0b0275492b4eaa"
+        },
+        {
+          "i": 2,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "a914a5365b973a9b43efa1ec",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0bacf4c8bdaa8aa13e395247525d810a9cb549c9461ae66988741852ee7ee8bb3d"
+        },
+        {
+          "i": 3,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "a91471d16fe4cdb504b197b2",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0b4be7ea75d6ac8ef109fd5659c86dd5f5e9877f4d3c23a71f2b2dac1b0a704dbf"
+        },
+        {
+          "i": 4,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00148d29fa1db619ef82df09",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a538e8ebd472b98a274cfb35c80143137a59e63773f6959c7fc5393a0d86e08d7"
+        },
+        {
+          "i": 5,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "0014ce5b154f922d7ec95da9",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0ba700f9559ec7ac163d82ecd1ceab28cd9f84d3d8bd15a2d80cd23682a831ea75"
+        },
+        {
+          "i": 6,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "0014861d5ac0fe8cdef9675f",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0aa8c2bd7dc32b44dd2ebd27147688cd4de3c47557e9848dc3f4652a96fb0c24f6"
+        },
+        {
+          "i": 7,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00142a0a122d06d311a43e9d",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a552958aa41f1f3daa5b61067eb5ac479834bd39169f8364d4a64e50c300d7938"
+        },
+        {
+          "i": 8,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "0014512c91332cc65946f461",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a35df99668a4e57a5427a471935c5f502ff5820c9f090797f011614a5b11c26ba"
+        },
+        {
+          "i": 9,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "0014c4dfb53189fa63fef921",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0b5472845021ba1be3565df0e6337e99fadd912031761e03b7a2209c0560de8b05"
+        },
+        {
+          "i": 10,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "001441670d320e52c0b55e85",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a9f276b81f95ee9cac097869236cafe53ce5e00799629800fad98e30abf74b4cb"
+        },
+        {
+          "i": 11,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00145981a044e70d130b0da1",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0b1d73792ba67063c71dc65ab1d5b0014e4cba6735f5e365b18c57122b94bf69ab"
+        },
+        {
+          "i": 12,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "001411783f21b913bca7f549",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a4b0eb1a18aaf8ea42f09f8111dc763140014f1c113bbcf7eedd6345c923a21ae"
+        },
+        {
+          "i": 13,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00140d50cf08af5bbe11fa65",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0ae38f1c08b25c839f12b8882e6275019896c34393f3f003d0cf233bc768b025a0"
+        },
+        {
+          "i": 14,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "",
+          "verify": "n/a"
+        }
+      ]
+    },
+    {
+      "txid": "2817e839a351f40c04567081f9ea33ed006dd7e5b8032c810187c64461e48d07",
+      "outs": [
+        {
+          "i": 0,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00144cf51abf98fa80edfec9",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a33be21e72db2903f6fe2edfcbd3ea007a5621627b75577338b3878aa93ca8e5b"
+        },
+        {
+          "i": 1,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00141727a078c8ca3114deb0",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0a1b8bc71d1c10fa80bf011dff7af6e58f4874620c367a4d356874861dbeaf0071"
+        },
+        {
+          "i": 2,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "00145525aec166b35c35ef49",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0bffe31902d00c0ab010fecd2512752f2bd653eb3a3dfd8f31718a52df975f9726"
+        },
+        {
+          "i": 3,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "0014d7ddc8b90411732fd981",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0bdd97b2677b272efe08000b4f10f0b924dc5103d1dd834e71f3da76ceb25ab1cd"
+        },
+        {
+          "i": 4,
+          "confVal": true,
+          "rpLen": 4174,
+          "sjLen": 99,
+          "script": "001419a722bc34f9825f9280",
+          "verify": "PASS",
+          "detail": "verify=1 min=1 max=4503599627370496 gen=0bb5a9aa58d058ee9de6bca4745b6951a5da77d1f1d60141ec2ece8825c09b103b"
+        },
+        {
+          "i": 5,
+          "confVal": false,
+          "rpLen": 0,
+          "sjLen": 0,
+          "script": "",
+          "verify": "n/a"
+        }
+      ]
+    }
+  ]
+}

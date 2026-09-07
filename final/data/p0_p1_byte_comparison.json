@@ -1,0 +1,34 @@
+{
+  "len_P0": 4166,
+  "len_P1": 4234,
+  "len_tail": 68,
+  "SHA256_P0": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+  "SHA256_P1": "6619fa29ce0967ae93baefef0bc6233972b05249a9861a96695a106bbcc098b2",
+  "P1_prefix_4166_equals_P0": true,
+  "P0_find_offset_in_P1": 0,
+  "tail_hex": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f50a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d6a43",
+  "tail_structure": {
+    "bytes_0_33_equals_C0": true,
+    "bytes_0_33_equals_C1": false,
+    "bytes_33_66_equals_GEN_from_71c9_script": true,
+    "byte_66": "0x6a",
+    "byte_67": "0x43",
+    "formula": "P1 == P0 || C0 || GEN || 0x6a || 0x43",
+    "GEN_hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+    "GEN_note": "33-byte secp256k1_generator serialization (prefix 0x0a); appears in 71c9/2711 OP_RETURN after C1"
+  },
+  "OP_RETURN_71c9_out0_structure": {
+    "script_hex": "6a43086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d80a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d6a",
+    "formula": "6a || 43 || C1 || GEN || 6a",
+    "C1_embedded": true,
+    "C0_embedded_in_script": false
+  },
+  "cache_implication": {
+    "F_P0_C0": "47b9fde7d8539c3544e4481c0edeaa66f4f1b85c17530dafb4d04f35b72d55f5",
+    "F_P1_C1": "86bc93c9c3eb514e71c5748e2318fe6ca8a41d1254f9e9258edeb69f158c37cc",
+    "collision": false,
+    "note": "Byte-level derivation of P1 from P0 does NOT imply OLD cache-key collision; keys use full proof||commitment bytes."
+  },
+  "verdict_derivation": "BYTE_LEVEL_DERIVATION_CONFIRMED",
+  "verdict_cache_from_derivation": "NO_CACHE_COLLISION"
+}

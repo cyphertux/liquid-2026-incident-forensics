@@ -1,0 +1,42 @@
+=== fix commits ===
+---- c26d719c29a40da280a825b25657e9c3d8bc7d99 ----
+commit c26d719c29a40da280a825b25657e9c3d8bc7d99
+Author:     Byron Hambly <bhambly@blockstream.com>
+AuthorDate: Mon Aug 3 12:53:50 2026 +0200
+Commit:     Byron Hambly <bhambly@blockstream.com>
+CommitDate: Tue Sep 1 11:39:02 2026 +0200
+
+    fix: range proof cache bind to asset and scriptpubkey
+master~2^2
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+---- 6253d7e103655ec015097de1505b5f3785ff6447 ----
+commit 6253d7e103655ec015097de1505b5f3785ff6447
+Author:     Byron Hambly <bhambly@blockstream.com>
+AuthorDate: Mon Aug 3 12:53:50 2026 +0200
+Commit:     Tom Trevethan <ttrevethan@blockstream.com>
+CommitDate: Wed Sep 2 16:14:36 2026 +0100
+
+    fix: range proof cache bind to asset and scriptpubkey
+undefined
+---- 212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7 ----
+commit 212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7
+Author:     Byron Hambly <bhambly@blockstream.com>
+AuthorDate: Mon Aug 3 12:53:50 2026 +0200
+Commit:     Pablo Greco <psgreco@gmail.com>
+CommitDate: Thu Sep 3 10:36:30 2026 -0700
+
+    fix: range proof cache bind to asset and scriptpubkey
+    
+    (cherry picked from commit 6253d7e103655ec015097de1505b5f3785ff6447)
+undefined
+=== release table ===
+elements-23.3.3 | date=2026-04-10 09:50:16 +0200 | fix=NO | 75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {;179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment);;
+elements-23.3.2 | date=2026-02-13 18:08:10 +0200 | fix=NO | 75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {;179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment);;
+elements-23.3.1 | date=2025-11-17 01:35:17 -0800 | fix=NO | 75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {;179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment);;
+elements-23.3.0 | date=2025-05-12 07:21:39 +0200 | fix=NO | 75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {;179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment);;
+elements-23.2.7 | date=2025-04-01 07:10:54 +0200 | fix=NO | 75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {;179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment);;
+elements-22.1.1 | date=2023-03-24 14:40:39 -0400 | fix=NO | 75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {;179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment);;
+=== master tip date ===
+2026-09-04 15:14:02 +0200 c7e856fab1b0c4d37005e25c0940184d812a26a0 Merge ElementsProject/elements#1597: build: fix depends Qt download link

@@ -1,0 +1,160 @@
+
+=== REAL context: L-BTC explicit asset generator + script OP_RETURN (0x6a) ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 016d521c38ec1ea15734ae22b7c46064412829c0d0579f0a713d1c04ede979026f
+extra_commit(script) (1): 6a
+proof_len=4234
+generator_ser (33): 0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: same L-BTC generator, empty extra_commit ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 016d521c38ec1ea15734ae22b7c46064412829c0d0579f0a713d1c04ede979026f
+extra_commit(script) (0): 
+proof_len=4234
+generator_ser (33): 0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: same L-BTC generator, spendable P2WPKH script ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 016d521c38ec1ea15734ae22b7c46064412829c0d0579f0a713d1c04ede979026f
+extra_commit(script) (22): 0014f5906a8572cf826a9d737ce1bc6a19a066868630
+proof_len=4234
+generator_ser (33): 0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: out2 blinded asset generator + OP_RETURN ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b0957be4cbd0d1cc30d2742988f84f931f4f47d4f8b81e40dc1db42cabf4aae7b
+extra_commit(script) (1): 6a
+proof_len=4234
+generator_ser (33): 0b0957be4cbd0d1cc30d2742988f84f931f4f47d4f8b81e40dc1db42cabf4aae7b
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: out2 blinded asset generator + P2WPKH ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b0957be4cbd0d1cc30d2742988f84f931f4f47d4f8b81e40dc1db42cabf4aae7b
+extra_commit(script) (22): 0014f5906a8572cf826a9d737ce1bc6a19a066868630
+proof_len=4234
+generator_ser (33): 0b0957be4cbd0d1cc30d2742988f84f931f4f47d4f8b81e40dc1db42cabf4aae7b
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[0] + OP_RETURN ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0abc38a76bc56788e46f7c911f7863aa4926e2718fd3823166fe5f7bd66f1278df
+extra_commit(script) (1): 6a
+proof_len=4234
+generator_ser (33): 0abc38a76bc56788e46f7c911f7863aa4926e2718fd3823166fe5f7bd66f1278df
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[0] + P2WPKH ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0abc38a76bc56788e46f7c911f7863aa4926e2718fd3823166fe5f7bd66f1278df
+extra_commit(script) (22): 0014f5906a8572cf826a9d737ce1bc6a19a066868630
+proof_len=4234
+generator_ser (33): 0abc38a76bc56788e46f7c911f7863aa4926e2718fd3823166fe5f7bd66f1278df
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[0] + empty script ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0abc38a76bc56788e46f7c911f7863aa4926e2718fd3823166fe5f7bd66f1278df
+extra_commit(script) (0): 
+proof_len=4234
+generator_ser (33): 0abc38a76bc56788e46f7c911f7863aa4926e2718fd3823166fe5f7bd66f1278df
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[1] + OP_RETURN ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b6df45dfc3e96bd5c49479f7ea74fc07726d81b984844405ffbec327b4b521896
+extra_commit(script) (1): 6a
+proof_len=4234
+generator_ser (33): 0b6df45dfc3e96bd5c49479f7ea74fc07726d81b984844405ffbec327b4b521896
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[1] + P2WPKH ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b6df45dfc3e96bd5c49479f7ea74fc07726d81b984844405ffbec327b4b521896
+extra_commit(script) (22): 0014f5906a8572cf826a9d737ce1bc6a19a066868630
+proof_len=4234
+generator_ser (33): 0b6df45dfc3e96bd5c49479f7ea74fc07726d81b984844405ffbec327b4b521896
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[1] + empty script ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b6df45dfc3e96bd5c49479f7ea74fc07726d81b984844405ffbec327b4b521896
+extra_commit(script) (0): 
+proof_len=4234
+generator_ser (33): 0b6df45dfc3e96bd5c49479f7ea74fc07726d81b984844405ffbec327b4b521896
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[2] + OP_RETURN ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b18d9aa24a701e2b27bd81c7f4fc1a537ccb59a81e55c566faa3c7dc6aaab3785
+extra_commit(script) (1): 6a
+proof_len=4234
+generator_ser (33): 0b18d9aa24a701e2b27bd81c7f4fc1a537ccb59a81e55c566faa3c7dc6aaab3785
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[2] + P2WPKH ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b18d9aa24a701e2b27bd81c7f4fc1a537ccb59a81e55c566faa3c7dc6aaab3785
+extra_commit(script) (22): 0014f5906a8572cf826a9d737ce1bc6a19a066868630
+proof_len=4234
+generator_ser (33): 0b18d9aa24a701e2b27bd81c7f4fc1a537ccb59a81e55c566faa3c7dc6aaab3785
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[2] + empty script ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0b18d9aa24a701e2b27bd81c7f4fc1a537ccb59a81e55c566faa3c7dc6aaab3785
+extra_commit(script) (0): 
+proof_len=4234
+generator_ser (33): 0b18d9aa24a701e2b27bd81c7f4fc1a537ccb59a81e55c566faa3c7dc6aaab3785
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[3] + OP_RETURN ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0bd0e7e6d5e5c0d1531bea2eec3aeb55134131d53356d2f934444268cf08592a6b
+extra_commit(script) (1): 6a
+proof_len=4234
+generator_ser (33): 0bd0e7e6d5e5c0d1531bea2eec3aeb55134131d53356d2f934444268cf08592a6b
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[3] + P2WPKH ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0bd0e7e6d5e5c0d1531bea2eec3aeb55134131d53356d2f934444268cf08592a6b
+extra_commit(script) (22): 0014f5906a8572cf826a9d737ce1bc6a19a066868630
+proof_len=4234
+generator_ser (33): 0bd0e7e6d5e5c0d1531bea2eec3aeb55134131d53356d2f934444268cf08592a6b
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+=== ALT: prevout assetcommitment[3] + empty script ===
+commit (33): 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+asset/gen in (33): 0bd0e7e6d5e5c0d1531bea2eec3aeb55134131d53356d2f934444268cf08592a6b
+extra_commit(script) (0): 
+proof_len=4234
+generator_ser (33): 0bd0e7e6d5e5c0d1531bea2eec3aeb55134131d53356d2f934444268cf08592a6b
+secp256k1_rangeproof_verify => 0
+RESULT: FALSE
+
+======== SUMMARY ========
+real_LBTC_OP_RETURN=0
+LBTC_empty_script=0
+LBTC_P2WPKH=0
+out2_asset_OP_RETURN=0
+out2_asset_P2WPKH=0

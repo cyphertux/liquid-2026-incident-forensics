@@ -1,0 +1,10 @@
+{
+  "A_P1_C1_in_valid_priming_tx": "NO \u2014 not found on-chain in scanned window; C1 as value commitment only in f24a; P1 only in f24a",
+  "B_P1_C1_in_mempool_only_data": "NO ARTIFACT FOUND \u2014 no production mempool/debug logs in repository; f24a.mempool.json is explorer JSON not a primer dump",
+  "C_P1_C1_can_produce_cache_hit_via_honest_Verify_Set": "NO / IMPOSSIBLE under tested+structural evidence \u2014 Verify(P1,...) fails including when truncated-valid prefix contexts are used with full plen=4234; Set requires prior success",
+  "D_artificial_cache_hit_makes_f24a_pass_OLD": "YES in lab (vulnerability property) \u2014 not a historical Elements insertion path for P1",
+  "E_explains_4050336": "NOT via honest (P1,C1) priming \u2014 UNPROVEN / REFUTED for that mechanism",
+  "F_cache_definitely_causal": "NO",
+  "final_verdict": "CACHE MECHANISM REFUTED AS INCIDENT CAUSE",
+  "final_verdict_nuance": "The incomplete-key vulnerability remains real and lab-exploitable for pairs that DO verify under some context. For f24a specifically, honest priming of exact (P1,C1) is not viable because full P1 does not verify; therefore that mechanism does not explain 4050336. Alternate paths (fScriptChecks=false, non-stock validation, unknown) remain open and UNPROVEN."
+}

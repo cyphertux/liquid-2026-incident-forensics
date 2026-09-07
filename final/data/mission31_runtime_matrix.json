@@ -1,0 +1,86 @@
+{
+  "mission": 31,
+  "c26d719": {
+    "full": "c26d719c29a40da280a825b25657e9c3d8bc7d99",
+    "author": "Byron Hambly",
+    "author_email": "bhambly@blockstream.com",
+    "author_date": "2026-08-03T12:53:50+02:00",
+    "commit_date": "2026-09-01T11:39:02+02:00",
+    "parent": "b0aba619b6ff2846617b285274a954e0404137f5",
+    "files": [
+      "src/script/sigcache.cpp",
+      "src/script/sigcache.h"
+    ],
+    "pr": {
+      "number": 1592,
+      "title": "blind/blindpsbt fixes",
+      "merged_at": "2026-09-01T14:38:01Z",
+      "body_summary": "Fixes a number of small issues picked up during LLM scans"
+    },
+    "ack": "tomt1664 ACK c26d719c29 tested locally (merge commit message)",
+    "tags_containing": [],
+    "in_elements_23_3_3": false,
+    "in_master_at_clone": true,
+    "cherry_picks": {
+      "6253d7e103": {
+        "date": "2026-09-02",
+        "branch_path": "elements-23.x / PR#1595"
+      },
+      "212c43f475": {
+        "date": "2026-09-03",
+        "branch_path": "elements-23.3.x / PR#1599 merged 2026-09-06T17:21:03Z AFTER incident"
+      }
+    }
+  },
+  "keying_change": {
+    "before": "H(salt||proof||value_commitment)",
+    "after": "H(salt||proof||value_commitment||asset_commitment||scriptPubKey) unframed"
+  },
+  "public_releases_pre_incident": {
+    "elements-23.3.3": "PRE-FIX",
+    "docker_latest": "23.3.3 PRE-FIX (updated 2026-04-14; still latest as of Mission 31 check)"
+  },
+  "unreleased_deploy_practice": {
+    "docker_has_historically_tagged_commits": true,
+    "examples": [
+      "23.2.2-e215b73c1f11",
+      "simplicity-rc-20241008-f957d3cde17c85afb18c6747f9c0b4fcb599f19a",
+      "4b22137159d9"
+    ],
+    "evidence_functionaries_ran_unreleased_c26d719": "NOT_FOUND",
+    "evidence_routine_policy": "NOT_FOUND in public docs \u2014 only historical Docker tag pattern"
+  },
+  "hypotheses": {
+    "H1_private_postfix_build": {
+      "status": "UNKNOWN",
+      "evidence": "none primary"
+    },
+    "H2_cherry_pick_production": {
+      "status": "UNKNOWN",
+      "note": "cherry-picks exist on public branches; production deploy unknown; 23.3.x PR merged after incident"
+    },
+    "H3_bridge_different_build": {
+      "status": "UNKNOWN"
+    },
+    "H4_mixed_versions": {
+      "status": "STRONGLY_COMPATIBLE_WITH_REPORTS",
+      "note": "public claims of explorer reject vs tip continue \u2014 not primary logs"
+    },
+    "H5_different_mechanism": {
+      "status": "OPEN"
+    },
+    "H6_mechanism_unrelated": {
+      "status": "OPEN"
+    }
+  },
+  "first_acceptor": "UNKNOWN",
+  "production_runtime_verdict": "MIXED/UNKNOWN",
+  "searches_negative": [
+    "No functionary version inventory for 2026-09-06",
+    "No debug.log / getnetworkinfo dump tying a node to ConnectBlock(4050336)",
+    "No mempool dump proving 71c9/2711 on an acceptor",
+    "No security advisory naming the exact production commit at incident time",
+    "No post-incident public statement naming the deployed patch commit (as of this search)",
+    "Docker Hub latest still 23.3.3 \u2014 no post-fix image published in checked tags"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "pegout_46f117_sats": 265138358,
+  "pegout_ce4a_sats": 399601834922,
+  "sum_sats": 399866973280,
+  "sum_btc": "3998.66973280",
+  "btc_txid": "8db751a650ae2f12006b7e8c69a75e4df360e8afd6b9e05ae0b9fa6458a7b140",
+  "ce_vin_from_46": [
+    [
+      4,
+      "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2",
+      1,
+      {
+        "scriptpubkey": "0014eee6edbb99cfdcd23a563782630905e0e229ef52",
+        "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 eee6edbb99cfdcd23a563782630905e0e229ef52",
+        "scriptpubkey_type": "v0_p2wpkh",
+        "scriptpubkey_address": "ex1qamnwmwueelwdywjkx7pxxzg9ur3znm6jq6r84v",
+        "valuecommitment": "096791c744af361c110ee0e5ac736692940c0eb61262b5b3cc0f17e0f25cca0e81",
+        "assetcommitment": "0a4e9e7f9215479b2be5e343d0492565607d469b5e3602751bc00e49a1e84382d4"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "outspends": [
+    {
+      "spent": true,
+      "txid": "3875a6d6ed4af708e6fd90d1c5504dc014e52c7093a566987252006d6cf1146b",
+      "vin": 0,
+      "status": {
+        "confirmed": true,
+        "block_height": 4050337,
+        "block_hash": "c212cdcb6b2e68d4f56a7ddfee48bd3c02b2bfbb703b9f4506ac1597a40d38be",
+        "block_time": 1788702850
+      }
+    },
+    {
+      "spent": false
+    },
+    {
+      "spent": true,
+      "txid": "c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267",
+      "vin": 3,
+      "status": {
+        "confirmed": true,
+        "block_height": 4050343,
+        "block_hash": "f7add9732519fd2737a1be40a86a96191db0ea126338cc934eb686834ddc98f8",
+        "block_time": 1788703210
+      }
+    },
+    {
+      "spent": false
+    }
+  ],
+  "reached_targets": [
+    [
+      "ce4caece413cd9d444ce7ed9f54e5b328b3da5e4af301aff59a3571f76e988f2",
+      3,
+      "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f:2 -> c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267:0 -> 46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2:1"
+    ],
+    [
+      "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2",
+      2,
+      "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f:2 -> c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267:0"
+    ]
+  ],
+  "n_seen": 8,
+  "overlap_with_46vins": [
+    "c6ea588ac26f5838b6acbb2a444a33b325bbfeb39bf16dfe27b47215ffd72267"
+  ]
+}

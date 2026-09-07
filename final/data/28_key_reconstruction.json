@@ -1,0 +1,32 @@
+{
+  "commit_c26d719": "c26d719c29a40da280a825b25657e9c3d8bc7d99",
+  "code": {
+    "file": "src/script/sigcache.cpp",
+    "function": "SignatureCache::ComputeEntryRangeProof",
+    "post_fix_write_order": [
+      "proof",
+      "commitment",
+      "asset_commitment",
+      "scriptPubKey"
+    ],
+    "no_framing": true
+  },
+  "asset_commitment_for_explicit": "secp256k1_generator_serialize(generator_generate(asset_id)) overwriting vchCommitment buffer \u2014 confidential_validation.cpp ~380-383",
+  "preimage": {
+    "post_fix_fields_order": "proof || value_commitment || asset_commitment(serialized_generator) || scriptPubKey",
+    "framing": "NONE \u2014 no length prefixes, tags, or separators between fields",
+    "attack_preimage_len": 4301,
+    "primer_preimage_len": 4301,
+    "preimages_byte_identical": true,
+    "SHA256_preimage": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+    "wire_asset_preimages_equal": false,
+    "G_hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+    "G_equals_generator_from_explicit_L_BTC": true
+  },
+  "pre_fix": {
+    "F_P0_C0": "47b9fde7d8539c3544e4481c0edeaa66f4f1b85c17530dafb4d04f35b72d55f5",
+    "F_P1_C1": "86bc93c9c3eb514e71c5748e2318fe6ca8a41d1254f9e9258edeb69f158c37cc",
+    "equal": false
+  },
+  "salt_trials_1000_equal": 1000
+}

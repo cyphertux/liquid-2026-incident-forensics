@@ -1,0 +1,29 @@
+{
+  "P1_construction": "P0 || C0 || GEN || 0x6a || 0x43",
+  "components": {
+    "P0": {
+      "len": 4166,
+      "role": "Valid rangeproof for (C0, L-BTC gen, 71c9 OP_RETURN script) \u2014 FACT from verify=1"
+    },
+    "C0": {
+      "hex": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "role": "Value commitment of the P0 output (71c9/2711 out0) \u2014 FACT"
+    },
+    "GEN": {
+      "hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+      "role": "33-byte secp256k1_generator serialization (prefix 0x0a); embedded in 71c9 OP_RETURN after C1 \u2014 FACT as bytes; whether used as prove-time generator for P0: STRONGLY SUPPORTED (P0 verifies with L-BTC explicit\u2192generator and also with GEN-as-asset in harness)"
+    },
+    "0x6a": {
+      "role": "OP_RETURN opcode byte \u2014 appears as script terminator in 71c9 OP_RETURN push and as penultimate tail byte"
+    },
+    "0x43": {
+      "role": "Push-length 67 (0x43) as used in 71c9 script after initial OP_RETURN \u2014 FACT as matching script opcode byte; NOT proven as rangeproof message field"
+    }
+  },
+  "NOT_proven": [
+    "tail bytes participate in bulletproof Fiat-Shamir transcript",
+    "tail is extra_commit for a valid 4234-byte proof",
+    "semantic intent beyond concatenating prior dry-run artifacts"
+  ],
+  "semantic_role_summary": "Construction/concatenation artifact reusing prior dry-run (P0,C0) and script framing bytes (GEN,6a,43). Not a valid standalone rangeproof extension. Cache priming role: NONE (full P1 fails verify)."
+}

@@ -1,0 +1,34 @@
+{
+  "P1_sha256": "6619fa29ce0967ae93baefef0bc6233972b05249a9861a96695a106bbcc098b2",
+  "P1_len": 4234,
+  "C1": "086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8",
+  "local_full_P1_files": [
+    "data/f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f.hex",
+    "data/out1_extracted.json",
+    "data/out1_rangeproof.hex",
+    "final/hex/f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f.hex",
+    "final/hex/out1_rangeproof.hex"
+  ],
+  "scan_cache_txs_with_full_P1": [],
+  "scan_cache_txs_with_C1_bytes": [
+    "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5",
+    "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411"
+  ],
+  "scan_cache_C1_byte_count": 2,
+  "scan_cache_rp_len_4234_count": 0,
+  "C1_as_value_commitment_in_scan_cache": [],
+  "C1_script_only_in_scan_cache": [
+    "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5",
+    "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411"
+  ],
+  "C1_as_value_commitment_known": [
+    "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f"
+  ],
+  "P1_full_only_in": [
+    "f24a\u2026183f and extracted hex copies"
+  ],
+  "context_tests_log": "final/logs/p1_context_search_m27.log",
+  "mempool_artifacts": {
+    "data/f24a.mempool.json": "explorer-style capture; not a foreign priming tx"
+  }
+}

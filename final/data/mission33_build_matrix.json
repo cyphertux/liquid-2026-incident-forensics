@@ -1,0 +1,81 @@
+{
+  "mission": 33,
+  "dependency_graph": {
+    "liquid-functionary": {
+      "builds": "Rust blocksigner/watchman/HSM tools",
+      "does_not_build": "elementsd / sidechaind",
+      "depends_on": [
+        "RPC sidechaind",
+        "RPC bitcoind (optional)",
+        "crates.io elements 0.24.1"
+      ]
+    },
+    "sidechaind": {
+      "identity": "Elements Core (elementsd) \u2014 operator-supplied",
+      "version_pin_in_public_functionary_repo": null,
+      "cache_implementation_location": "Elements C++ sigcache.cpp \u2014 NOT in liquid-functionary"
+    },
+    "bitcoin-images/elementsd": {
+      "builds": "Docker image from GitHub *release* tarball",
+      "default_version": "23.3.3",
+      "last_elementsd_bump": "2026-04-14",
+      "linked_to_functionary_deploy": "NOT_ESTABLISHED"
+    }
+  },
+  "source_cache_tests": {
+    "method": "git show source classification \u2014 not full elementsd binary rebuild",
+    "note": "liquid-functionary does not pin an Elements commit; no E_functionary_commit candidate identifiable from public repo",
+    "rows": [
+      {
+        "build_id": "A_elements-23.3.3",
+        "rev": "elements-23.3.3",
+        "cache_key_class": "PRE_FIX",
+        "mission28_alias_possible": false,
+        "snippet_sha256": "3aeb433e60bbf47a"
+      },
+      {
+        "build_id": "B_23.3.x_pre_incident",
+        "rev": "6c2c5626bafed503c673ec6f83be9bfec861d26f",
+        "cache_key_class": "POST_FIX_UNFRAMED",
+        "mission28_alias_possible": true,
+        "snippet_sha256": "a73cf0def170440a"
+      },
+      {
+        "build_id": "C_c26d719",
+        "rev": "c26d719c29",
+        "cache_key_class": "POST_FIX_UNFRAMED",
+        "mission28_alias_possible": true,
+        "snippet_sha256": "542ef57c82f87913"
+      },
+      {
+        "build_id": "D_6253d7e",
+        "rev": "6253d7e103",
+        "cache_key_class": "POST_FIX_UNFRAMED",
+        "mission28_alias_possible": true,
+        "snippet_sha256": "a73cf0def170440a"
+      },
+      {
+        "build_id": "E_212c43f",
+        "rev": "212c43f475",
+        "cache_key_class": "POST_FIX_UNFRAMED",
+        "mission28_alias_possible": true,
+        "snippet_sha256": "a73cf0def170440a"
+      },
+      {
+        "build_id": "F_29.x_tip",
+        "rev": "origin/elements-29.x",
+        "cache_key_class": "PRE_FIX",
+        "mission28_alias_possible": false,
+        "snippet_sha256": "4aed384d8fc94360"
+      },
+      {
+        "build_id": "G_master_pre_incident",
+        "rev": "c7e856fab1b0c4d37005e25c0940184d812a26a0",
+        "cache_key_class": "POST_FIX_UNFRAMED",
+        "mission28_alias_possible": true,
+        "snippet_sha256": "542ef57c82f87913"
+      }
+    ]
+  },
+  "full_binary_rebuilds": "NOT_PERFORMED \u2014 source classification sufficient for cache-key class; no functionary-pinned commit to build"
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "HEIGHT": 4050335,
+    "HASH": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+    "PREVHASH": "3b892680a538bdc4cef5b735176e541d79851cd1834fb32a071d86d01609ffe0",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13
+    ],
+    "NTX": 5,
+    "TIMESTAMP": 1788702730,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050336,
+    "HASH": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+    "PREVHASH": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      13,
+      14
+    ],
+    "NTX": 7,
+    "TIMESTAMP": 1788702790,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050337,
+    "HASH": "c212cdcb6b2e68d4f56a7ddfee48bd3c02b2bfbb703b9f4506ac1597a40d38be",
+    "PREVHASH": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14
+    ],
+    "NTX": 6,
+    "TIMESTAMP": 1788702850,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050338,
+    "HASH": "0b998712cb557e04f1780e6285509fd3c6ed94344bdeb9ad9c8f819bfd232250",
+    "PREVHASH": "c212cdcb6b2e68d4f56a7ddfee48bd3c02b2bfbb703b9f4506ac1597a40d38be",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13
+    ],
+    "NTX": 4,
+    "TIMESTAMP": 1788702910,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050339,
+    "HASH": "5ba1ea5defeebca7c4036c9242461be8cfd7e6de055156972c1c87d5b58e52cb",
+    "PREVHASH": "0b998712cb557e04f1780e6285509fd3c6ed94344bdeb9ad9c8f819bfd232250",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      13,
+      14
+    ],
+    "NTX": 3,
+    "TIMESTAMP": 1788702970,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050340,
+    "HASH": "4a308cc2b35e675a8df9cd04e1748625c8200dd169ff40b522b2e10f2ee5526d",
+    "PREVHASH": "5ba1ea5defeebca7c4036c9242461be8cfd7e6de055156972c1c87d5b58e52cb",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      14
+    ],
+    "NTX": 2,
+    "TIMESTAMP": 1788703030,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050341,
+    "HASH": "37a4edbe432dd6bb676aa8657e01a7aaaeab1c01e7fc267d02c1dc025f7147fb",
+    "PREVHASH": "4a308cc2b35e675a8df9cd04e1748625c8200dd169ff40b522b2e10f2ee5526d",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14
+    ],
+    "NTX": 4,
+    "TIMESTAMP": 1788703090,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050342,
+    "HASH": "90d1508b879a8f5ed832615785d653b0f2a6c06b485f1950665e93ea13e97aed",
+    "PREVHASH": "37a4edbe432dd6bb676aa8657e01a7aaaeab1c01e7fc267d02c1dc025f7147fb",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13
+    ],
+    "NTX": 2,
+    "TIMESTAMP": 1788703150,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  },
+  {
+    "HEIGHT": 4050343,
+    "HASH": "f7add9732519fd2737a1be40a86a96191db0ea126338cc934eb686834ddc98f8",
+    "PREVHASH": "90d1508b879a8f5ed832615785d653b0f2a6c06b485f1950665e93ea13e97aed",
+    "SIGNATURES": 11,
+    "SIGNER_POSITIONS": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13
+    ],
+    "NTX": 6,
+    "TIMESTAMP": 1788703210,
+    "SOURCE": "blockstream.info/liquid/api + ECDSA verify(blockhash_LE, SIGHASH_ALL)"
+  }
+]

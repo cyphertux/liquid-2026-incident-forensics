@@ -1,0 +1,100 @@
+{
+  "mission": 32,
+  "exploit_compatibility": [
+    {
+      "runtime": "Elements 23.3.3 tag / Docker latest",
+      "c26d719_behavior": "PRE-FIX",
+      "f24a_Mission28_alias_possible": false,
+      "existed": true,
+      "deployed_on_Liquid_evidence": "STRONGLY_SUPPORTED as public default; not proven for functionaries"
+    },
+    {
+      "runtime": "c26d719 exact (master)",
+      "c26d719_behavior": "POST-FIX UNFRAMED",
+      "f24a_Mission28_alias_possible": true,
+      "existed_before_incident": true,
+      "deployed_on_Liquid_evidence": "UNKNOWN"
+    },
+    {
+      "runtime": "6253d7e103 (elements-23.x)",
+      "c26d719_behavior": "POST-FIX UNFRAMED equivalent",
+      "f24a_Mission28_alias_possible": true,
+      "existed_before_incident": true,
+      "deployed_on_Liquid_evidence": "UNKNOWN"
+    },
+    {
+      "runtime": "212c43f475 (elements-23.3.x tip by Sep 4)",
+      "c26d719_behavior": "POST-FIX UNFRAMED equivalent",
+      "f24a_Mission28_alias_possible": true,
+      "existed_before_incident": true,
+      "deployed_on_Liquid_evidence": "UNKNOWN"
+    },
+    {
+      "runtime": "correctly framed fix (hypothetical)",
+      "c26d719_behavior": "PATCHED",
+      "f24a_Mission28_alias_possible": false,
+      "existed": "lab only",
+      "deployed": "UNKNOWN"
+    },
+    {
+      "runtime": "elements-29.x tip checked",
+      "c26d719_behavior": "PRE-FIX",
+      "f24a_Mission28_alias_possible": false,
+      "existed": true,
+      "deployed": "UNKNOWN"
+    }
+  ],
+  "hypotheses": {
+    "H1_private_postfix": {
+      "status": "UNKNOWN",
+      "evidence": "none primary",
+      "counter": "no logs"
+    },
+    "H2_cherry_pick_deployed": {
+      "status": "UNKNOWN",
+      "evidence": "public branches had equivalent by Sep 3\u20134",
+      "counter": "no deploy proof"
+    },
+    "H3_bridge_differs": {
+      "status": "UNKNOWN",
+      "evidence": "functionary sidechaind unpinned",
+      "counter": "none"
+    },
+    "H4_mixed_versions": {
+      "status": "COMPATIBLE_WITH_PUBLIC_REPORTS",
+      "evidence": "rejecting explorer vs continuing tip",
+      "counter": "not primary dual-node logs"
+    },
+    "H5_other_validation_bug": {
+      "status": "OPEN"
+    },
+    "H6_mission28_unrelated": {
+      "status": "OPEN",
+      "note": "public narrative focuses on PRE-FIX incomplete keying"
+    },
+    "H7_version_config_divergence": {
+      "status": "OPEN"
+    },
+    "H8_ConnectBlock_bypass": {
+      "status": "OPEN",
+      "evidence": "combineblocksigs path exists in code"
+    }
+  },
+  "evidence_levels_reached": {
+    "A_code_verified": true,
+    "B_branch_tag_relationship": true,
+    "C_production_deployment_strongly_supported": false,
+    "D_specific_production_node": false,
+    "E_historical_primer_cache": false,
+    "F_first_acceptor": false,
+    "G_causal_chain": false
+  },
+  "verdicts": {
+    "POST_C26D719_PRODUCTION_CODE": "UNKNOWN",
+    "LIQUID_DEPLOYMENT_PATH": "PARTIALLY IDENTIFIED",
+    "71C9_2711_HISTORICAL_USE": "CANDIDATE ONLY",
+    "FIRST_ACCEPTOR": "NOT IDENTIFIED",
+    "HISTORICAL_CAUSALITY": "NOT DEMONSTRATED",
+    "final_answer": "NO"
+  }
+}

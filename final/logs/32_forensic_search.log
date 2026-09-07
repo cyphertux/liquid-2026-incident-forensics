@@ -1,0 +1,488 @@
+=== Mission 32 forensic search 2026-09-07T13:59:34Z ===
+=== fetch all ===
+=== branches containing c26d719 ===
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+=== tags containing ===
+=== tags containing 6253d7e / 212c43f ===
+=== all remote branches ===
+  origin/HEAD -> origin/master
+  origin/master
+=== pickaxe equivalent ComputeEntryRangeProof signature ===
+c26d719c29 fix: range proof cache bind to asset and scriptpubkey
+c26d719c29 fix: range proof cache bind to asset and scriptpubkey
+=== pickaxe old 2-arg only removals ===
+c26d719c29 fix: range proof cache bind to asset and scriptpubkey
+=== Clone/inspect liquid-functionary ===
+Clonage dans 'liquid-functionary'...
+--- tree ---
+liquid-functionary/watchman/src/main.rs
+liquid-functionary/watchman/Cargo.toml
+liquid-functionary/parallel_port/src/socket_manager.rs
+liquid-functionary/parallel_port/src/socket_listener.rs
+liquid-functionary/parallel_port/src/socket_connections.rs
+liquid-functionary/parallel_port/src/socket_connection_listener.rs
+liquid-functionary/parallel_port/src/serial_port_listener.rs
+liquid-functionary/parallel_port/src/serial_manager.rs
+liquid-functionary/parallel_port/src/message.rs
+liquid-functionary/parallel_port/src/main.rs
+liquid-functionary/parallel_port/src/frame_reader.rs
+liquid-functionary/parallel_port/src/error.rs
+liquid-functionary/parallel_port/src/constants.rs
+liquid-functionary/parallel_port/src/config.rs
+liquid-functionary/parallel_port/build.rs
+liquid-functionary/parallel_port/Cargo.toml
+liquid-functionary/init_hsm/src/main.rs
+liquid-functionary/init_hsm/src/config.rs
+liquid-functionary/init_hsm/Cargo.toml
+liquid-functionary/hsm_update_tool/src/transfer_context.rs
+liquid-functionary/hsm_update_tool/src/packet.rs
+liquid-functionary/hsm_update_tool/src/message_error.rs
+liquid-functionary/hsm_update_tool/src/main.rs
+liquid-functionary/hsm_update_tool/src/lib.rs
+liquid-functionary/hsm_update_tool/Cargo.toml
+liquid-functionary/functionary_logs/src/rpc.rs
+liquid-functionary/functionary_logs/src/log_codes.rs
+liquid-functionary/functionary_logs/src/log.rs
+liquid-functionary/functionary_logs/src/lib.rs
+liquid-functionary/functionary_logs/src/io_log.rs
+liquid-functionary/functionary_logs/Cargo.toml
+liquid-functionary/functionary_common/src/util.rs
+liquid-functionary/functionary_common/src/rollouts.rs
+liquid-functionary/functionary_common/src/macros.rs
+liquid-functionary/functionary_common/src/lib.rs
+liquid-functionary/functionary_common/src/hsm.rs
+liquid-functionary/functionary_common/src/functionary.rs
+liquid-functionary/functionary_common/src/constants.rs
+liquid-functionary/functionary_common/src/blocksigner.rs
+liquid-functionary/functionary_common/src/blockchain.rs
+liquid-functionary/functionary_common/build.rs
+liquid-functionary/functionary_common/Cargo.toml
+liquid-functionary/functionary/src/utils.rs
+liquid-functionary/functionary/src/tweak.rs
+liquid-functionary/functionary/src/running_avg.rs
+liquid-functionary/functionary/src/rpc.rs
+liquid-functionary/functionary/src/rotator.rs
+liquid-functionary/functionary/src/peer.rs
+liquid-functionary/functionary/src/message.rs
+liquid-functionary/functionary/src/macros.rs
+liquid-functionary/functionary/src/lib.rs
+liquid-functionary/functionary/src/dynafed.rs
+liquid-functionary/functionary/src/descriptor.rs
+liquid-functionary/functionary/src/config.rs
+liquid-functionary/functionary/sample_configs/blockchains.json
+liquid-functionary/functionary/sample_configs/blockchains-job1135680.json
+liquid-functionary/functionary/Cargo.toml
+liquid-functionary/blocksigner/src/main.rs
+liquid-functionary/blocksigner/Cargo.toml
+liquid-functionary/Cargo.toml
+--- search elements/version/docker ---
+liquid-functionary/blocksigner/Cargo.toml:3:version = "2.4.0"
+liquid-functionary/blocksigner/Cargo.toml:5:description = "Liquid/Elements Blocksigner"
+liquid-functionary/blocksigner/Cargo.toml:15:version = "2.4.0"
+liquid-functionary/hsm_update_tool/Cargo.toml:3:version = "2.0.0"
+liquid-functionary/blocksigner/src/main.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/blocksigner/src/main.rs:7://(at your option) any later version.
+liquid-functionary/blocksigner/src/main.rs:80:        git_commit: functionary::common::constants::GIT_COMMIT_ID,
+liquid-functionary/blocksigner/src/main.rs:81:        functionary_version: env!("CARGO_PKG_VERSION"),
+liquid-functionary/functionary_common/Cargo.toml:3:version = "2.4.0"
+liquid-functionary/functionary_common/Cargo.toml:15:use-serde = [ "serde", "serde_derive", "bitcoin/serde", "elements/serde" ]
+liquid-functionary/functionary_common/Cargo.toml:22:elements = "0.24.1"
+liquid-functionary/functionary_common/Cargo.toml:24:serde = { version = "1.0", optional = true }
+liquid-functionary/functionary_common/Cargo.toml:25:serde_derive = { version = "1.0", optional = true }
+liquid-functionary/functionary/Cargo.toml:3:version = "2.4.0"
+liquid-functionary/functionary/Cargo.toml:6:description = "Functionary utilities for Sidechain Elements"
+liquid-functionary/functionary/Cargo.toml:25:bitcoin = { version = "0.31.1", features = [ "serde", "rand" ] }
+liquid-functionary/functionary/Cargo.toml:26:elements = { version = "0.24.1", features = ["serde"] }
+liquid-functionary/functionary/Cargo.toml:27:miniscript = { version = "11.0.0", features = [ "serde" ] }
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:7://(at your option) any later version.
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:183:    firmware_version: &mut Vec<u8>
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:185:    let mut packet = GetFirmwareVersionOpPacket::new();
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:190:            log!(Info, "GetFirmwareVersionOp succeeded");
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:195:            *firmware_version = body;
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:198:            log!(Error, "GetFirmwareVersionOp failed: {}", e);
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:326:fn get_firmware_version_test(context: &mut TransferContext, firmware_version: &mut Vec<u8>) -> bool {
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:327:    send_get_firmware_query_packet(context, firmware_version)
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:510:    // GetFirmwareVersion test
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:511:    print! {"Get Firmware Version test .... "}
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:512:    let mut firmware_version = vec![8];
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:513:    let result = get_firmware_version_test(context, &mut firmware_version);
+liquid-functionary/hsm_update_tool/src/bin/update_tests.rs:518:    let value = match std::str::from_utf8(firmware_version.as_slice()) {
+liquid-functionary/hsm_update_tool/src/transfer_context.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/hsm_update_tool/src/transfer_context.rs:7://(at your option) any later version.
+liquid-functionary/hsm_update_tool/src/message_error.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/hsm_update_tool/src/message_error.rs:7://(at your option) any later version.
+liquid-functionary/hsm_update_tool/src/message_error.rs:36:    ConversionError(std::num::TryFromIntError),
+liquid-functionary/hsm_update_tool/src/message_error.rs:50:            MessageError::ConversionError(ref err) => write!(f, "Int Conversion Error: {}", err),
+liquid-functionary/hsm_update_tool/src/message_error.rs:67:        MessageError::ConversionError(err)
+liquid-functionary/hsm_update_tool/src/lib.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/hsm_update_tool/src/lib.rs:7://(at your option) any later version.
+liquid-functionary/init_hsm/Cargo.toml:3:version = "2.0.0"
+liquid-functionary/functionary_common/build.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/functionary_common/build.rs:7://(at your option) any later version.
+liquid-functionary/functionary_common/build.rs:37:        let commit_id = if !git_revparse_id.is_empty() {
+liquid-functionary/functionary_common/build.rs:40:            env::var("GIT_COMMIT_ID").unwrap_or_default().trim().to_owned()
+liquid-functionary/functionary_common/build.rs:48:            pub static GIT_COMMIT_ID: &'static str = \"{}\";
+liquid-functionary/functionary_common/build.rs:50:            commit_id,
+liquid-functionary/init_hsm/src/config.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/init_hsm/src/config.rs:7://(at your option) any later version.
+liquid-functionary/functionary/sample_configs/blockchains-job1135680.json:1:{"txindex":{"txindex":[["f69ea68d6baad1e8f9b2e9ae59e499e0c5e2f9f9d3730b5cac25d0557c18acf4",{"tx":{"version":1,"lock_time":0,"input":[{"previous_output":"3059a4bf54d9a6cfc4827161f36056e0d5e67921c106f9a4b5065927a316e896:0","script_sig":"2200203fd20466510f3aa1aea9c470423cfa99f19d81e7b986cbaaee4f96d3033c6ced","sequence":4294967295,"witness":[[],[48,68,2,32,18,128,150,85,99,69,20,145,219,170,64,160,113,12,25,108,185,161,200,24,135,135,229,101,32,120,247,216,163,189,161,73,2,32,8,18,127,211,29,152,93,77,88,238,216,67,51,4,218,97,212,158,236,110,98,9,232,50,168,19,228,3,89,19,202,82,1],[48,69,2,33,0,166,88,156,53,56,218,97,203,188,126,135,12,202,52,9,101,248,230,134,217,74,200,251,9,215,191,117,223,147,48,160,17,2,32,39,42,22,136,119,186,37,57,62,138,109,203,61,192,121,115,22,126,3,77,68,242,168,60,99,89,235,222,138,179,153,241,1],[48,69,2,33,0,202,76,108,194,214,140,84,226,237,239,182,171,168,85,126,118,51,139,152,113,15,56,134,186,151,251,60,159,41,163,71,6,2,32,81,18,21,244,197,0,224,245,54,113,56,82,98,38,125,99,141,13,228,225,227,68,146,96,165,103,7,168,253,236,121,93,1],[116,84,135,99,83,33,2,19,241,157,253,251,33,77,233,80,251,151,140,254,122,50,171,110,115,110,237,65,219,36,111,236,17,201,191,253,197,133,124,33,2,140,34,222,209,159,115,146,181,69,90,171,129,116,3,90,17,206,53,126,100,4,138,58,231,31,247,225,114,123,181,244,226,33,2,24,197,39,127,133,200,65,73,125,86,137,50,175,202,232,229,75,169,141,39,82,234,243,59,117,184,187,153,248,109,131,135,83,103,2,224,7,178,117,81,33,2,51,3,222,220,81,185,210,39,177,124,159,180,113,15,150,184,68,225,204,220,44,119,110,27,114,116,189,78,36,107,98,2,33,3,2,76,59,79,131,8,84,214,210,109,110,52,217,42,255,76,112,59,245,126,133,205,66,171,227,40,217,40,224,29,66,134,33,3,255,78,140,141,153,185,220,187,82,154,135,213,79,96,107,174,1,73,163,64,24,50,85,71,250,12,34,57,224,56,161,201,83,104,174]]},{"previous_output":"106e22ca7a60b66ae6fd814c20bfadcb9ea6db5b1ce906f8568f310ac4644a40:0","script_sig":"2200201819ae59e8f8cd247b2f3272f00c3d03f266c718874f05d06362a8cc4a4e5365","sequence":4294967295,"witness":[[],[48,68,2,32,60,219,130,193,84,20,118,182,61,6,189,250,18,155,77,248,79,36,158,231,251,179,81,250,164,29,87,173,94,67,193,152,2,32,23,37,143,19,160,232,81,227,69,90,14,201,230,83,13,131,252,237,56,89,90,10,163,253,106,211,28,172,35,198,210,206,1],[48,68,2,32,105,249,117,0,73,65,29,207,113,48,9,143,107,166,237,28,89,233,130,88,175,224,39,233,98,89,119,34,54,180,224,224,2,32,81,170,68,126,28,111,82,34,251,194,180,177,72,129,19,243,163,85,72,22,193,172,119,147,213,35,215,249,56,72,167,53,1],[48,69,2,33,0,246,227,131,29,73,144,158,113,58,3,204,217,139,223,228,189,187,32,170,211,117,254,211,159,90,187,189,155,26,94,151,118,2,32,49,228,34,240,187,111,10,2,65,198,78,71,96,93,47,171,235,97,64,197,224,37,183,87,189,68,180,9,11,58,92,92,1],[116,84,135,99,83,33,2,31,13,134,56,196,19,239,119,105,205,113,28,232,76,143,25,47,90,133,240,253,109,142,99,221,180,210,207,103,64,178,59,33,2,150,219,117,193,30,163,162,146,163,114,246,201,79,80,19,234,235,55,159,112,24,87,167,2,243,184,63,136,218,33,190,111,33,3,202,223,241,142,146,129,51,223,46,103,10,55,21,196,231,168,29,53,125,227,109,218,165,1,102,40,231,10,62,106,69,47,83,103,2,224,7,178,117,81,33,2,51,3,222,220,81,185,210,39,177,124,159,180,113,15,150,184,68,225,204,220,44,119,110,27,114,116,189,78,36,107,98,2,33,3,2,76,59,79,131,8,84,214,210,109,110,52,217,42,255,76,112,59,245,126,133,205,66,171,227,40,217,40,224,29,66,134,33,3,255,78,140,141,153,185,220,187,82,154,135,213,79,96,107,174,1,73,163,64,24,50,85,71,250,12,34,57,224,56,161,201,83,104,174]]}],"output":[{"value":899967,"script_pubkey":"001413eee951230653e429de42e3a0cda9db25b02422"},{"value":999920760,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},{"value":1000019756,"script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"}]},"status":{"ConfirmedIn":{"height":133,"hash":"094bb9bac3b501bc01cc1ddc1307b951db248bc2dd3d3995ab0e51e0534ac2dd"}},"output_meta":[{"Pegout":"[elements]f37b33d30a81a7c834da524f16952ea4e43a9e0ee741a9058dfef000d5472f76:0"},"Change","Change","Change","Change","Change","Change","Change","Change","Change","Change"]}]],"block_index":[{"blockref":{"height":129,"hash":"5274cf20ea99ddeaafb310f88deae5102bead4aa835e2e1f694605613ebaf6ca"},"relevant_txs":[]},{"blockref":{"height":130,"hash":"66180a6dbc2e13d1536cc89b32e85f13a59dc2e153bc8fc18293c3ee7c541b08"},"relevant_txs":[]},{"blockref":{"height":131,"hash":"4fe3696580ccd9b16e43763dbfc76b998a1eb62f0af19866ef69ba053efcd28d"},"relevant_txs":[]},{"blockref":{"height":132,"hash":"6ee5e15dc7d902bdeeb9f2373bf1b26af9d8e58a5cb748a926be1727adb4a18c"},"relevant_txs":[]},{"blockref":{"height":133,"hash":"094bb9bac3b501bc01cc1ddc1307b951db248bc2dd3d3995ab0e51e0534ac2dd"},"relevant_txs":["f69ea68d6baad1e8f9b2e9ae59e499e0c5e2f9f9d3730b5cac25d0557c18acf4"]},{"blockref":{"height":134,"hash":"67cdfd3da743b7e8fa0b41d74d1a1ae212b54b4e551f14285fcf3c4f10c3e7ab"},"relevant_txs":[]},{"blockref":{"height":135,"hash":"58342779fa7d55847774d18b2fa3578bf7e26aaaac6ec607b882105eea9d7fed"},"relevant_txs":[]},{"blockref":{"height":136,"hash":"0c7c00fefee3c268e30371678a4044c17054ce8ff7f9721abf816f4fc4776699"},"relevant_txs":[]},{"blockref":{"height":137,"hash":"2152cf6b10bfef7cf4dfeba9030d2f0d9e6c3d673ad6563f9080fdf3d863e9c7"},"relevant_txs":[]}],"depth":8,"skip_height":0,"commitment_height":135,"finalized_height":128},"fee_pool":{"maximum_fee":10000000,"fee_rate":2000,"fallback_fee_rate":2000,"available_funds":9999998531,"fee_map":{"f69ea68d6baad1e8f9b2e9ae59e499e0c5e2f9f9d3730b5cac25d0557c18acf4":1469},"conflicting_transactions":{"inputs_map":[["f69ea68d6baad1e8f9b2e9ae59e499e0c5e2f9f9d3730b5cac25d0557c18acf4",["106e22ca7a60b66ae6fd814c20bfadcb9ea6db5b1ce906f8568f310ac4644a40:0","3059a4bf54d9a6cfc4827161f36056e0d5e67921c106f9a4b5065927a316e896:0"]]]},"signed_input_weight":746},"utxos":{"main_utxos":[["106e22ca7a60b66ae6fd814c20bfadcb9ea6db5b1ce906f8568f310ac4644a40:0",{"outpoint":"106e22ca7a60b66ae6fd814c20bfadcb9ea6db5b1ce906f8568f310ac4644a40:0","tweak":"0000000000000000000000000000000000000000000000000000000000000000","value":10000000000,"height":111,"descriptor":"sh(wsh(or_d(multi(3,[65de22222222]021f0d8638c413ef7769cd711ce84c8f192f5a85f0fd6d8e63ddb4d2cf6740b23b,[1cd57f111111]0296db75c11ea3a292a372f6c94f5013eaeb379f701857a702f3b83f88da21be6f,[638d33333333]03cadff18e928133df2e670a3715c4e7a81d357de36ddaa5016628e70a3e6a452f),and_v(v:older(2016),multi(1,[untweaked]023303dedc51b9d227b17c9fb4710f96b844e1ccdc2c776e1b7274bd4e246b6202,[untweaked]03024c3b4f830854d6d26d6e34d92aff4c703bf57e85cd42abe328d928e01d4286,[untweaked]03ff4e8c8d99b9dcbb529a87d54f606bae0149a34018325547fa0c2239e038a1c9)))))#2ggnpl7y"}],["3059a4bf54d9a6cfc4827161f36056e0d5e67921c106f9a4b5065927a316e896:0",{"outpoint":"3059a4bf54d9a6cfc4827161f36056e0d5e67921c106f9a4b5065927a316e896:0","tweak":"fb8006a066a866dd70337ce8192c366c1afd8e0627c6a4ef851f4c98e3fd587c","value":1000000,"height":119,"descriptor":"sh(wsh(or_d(multi(3,[65de22222222]0213f19dfdfb214de950fb978cfe7a32ab6e736eed41db246fec11c9bffdc5857c,[1cd57f111111]028c22ded19f7392b5455aab8174035a11ce357e64048a3ae71ff7e1727bb5f4e2,[638d33333333]0218c5277f85c841497d568932afcae8e54ba98d2752eaf33b75b8bb99f86d8387),and_v(v:older(2016),multi(1,[untweaked]023303dedc51b9d227b17c9fb4710f96b844e1ccdc2c776e1b7274bd4e246b6202,[untweaked]03024c3b4f830854d6d26d6e34d92aff4c703bf57e85cd42abe328d928e01d4286,[untweaked]03ff4e8c8d99b9dcbb529a87d54f606bae0149a34018325547fa0c2239e038a1c9)))))#e8gzgad7"}]],"pegout_map":[["[elements]f37b33d30a81a7c834da524f16952ea4e43a9e0ee741a9058dfef000d5472f76:0",{"request":"[elements]f37b33d30a81a7c834da524f16952ea4e43a9e0ee741a9058dfef000d5472f76:0","previous_request":null,"n_previous_requests":0,"dest_output":{"value":899967,"script_pubkey":"001413eee951230653e429de42e3a0cda9db25b02422"},"height":40,"dest_pubkey":"021505d9f7d540ce74059b9b71512f2c81b94c533bb33fe5ec51b7285b1cc3a145","authorization_proof":"028b9ab6da974a38a243a96c4b36308cc9e610ba338803fde2c2004490116fbae0aab4790947dd7c3ab8ea65a656a988f784f83e36a2d72ba6499ba266bdf6fe364dd0db621fe750ccffbd533f504fef9902e582d834b1db76210be91233a3aa47","required_conflicts":["3059a4bf54d9a6cfc4827161f36056e0d5e67921c106f9a4b5065927a316e896:0","106e22ca7a60b66ae6fd814c20bfadcb9ea6db5b1ce906f8568f310ac4644a40:0"],"fee":100000}]],"reverse_map":[[{"value":899967,"script_pubkey":"001413eee951230653e429de42e3a0cda9db25b02422"},["[elements]f37b33d30a81a7c834da524f16952ea4e43a9e0ee741a9058dfef000d5472f76:0"]]],"conflict_map":[["3059a4bf54d9a6cfc4827161f36056e0d5e67921c106f9a4b5065927a316e896:0",["[elements]f37b33d30a81a7c834da524f16952ea4e43a9e0ee741a9058dfef000d5472f76:0"]],["106e22ca7a60b66ae6fd814c20bfadcb9ea6db5b1ce906f8568f310ac4644a40:0",["[elements]f37b33d30a81a7c834da524f16952ea4e43a9e0ee741a9058dfef000d5472f76:0"]]],"our_pubkey":"0296db75c11ea3a292a372f6c94f5013eaeb379f701857a702f3b83f88da21be6f","change_script_pubkey":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887"},"side_height_iter":{"next_finalized_height":53,"max_height":54,"confirm_count":2,"last_finalized_height":52},"latest_mainchain_commitment":[135,"58342779fa7d55847774d18b2fa3578bf7e26aaaac6ec607b882105eea9d7fed"],"genesis_hash":"0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206","pegged_asset":[1,"b3c87710a09d9d1c6fb5a3f34ea55210e3e49d230a0dcfd6b1c54c04a855e604"],"target_n_outputs":50,"last_confirmed_hash":null,"account":{"change_spk":"a914a92adfa98123b94a7bffd241f2338f41fbe7c8e887","pegged_in":100033,"non_user_funds":10000000000,"controlled_funds":[["3059a4bf54d9a6cfc4827161f36056e0d5e67921c106f9a4b5065927a316e896:0",1000000],["106e22ca7a60b66ae6fd814c20bfadcb9ea6db5b1ce906f8568f310ac4644a40:0",10000000000]],"requested_pegout":[[{"value":899967,"script_pubkey":"001413eee951230653e429de42e3a0cda9db25b02422"},1]]},"descriptor":"sh(wsh(or_d(multi(3,[65de22222222]021f0d8638c413ef7769cd711ce84c8f192f5a85f0fd6d8e63ddb4d2cf6740b23b,[1cd57f111111]0296db75c11ea3a292a372f6c94f5013eaeb379f701857a702f3b83f88da21be6f,[638d33333333]03cadff18e928133df2e670a3715c4e7a81d357de36ddaa5016628e70a3e6a452f),and_v(v:older(2016),multi(1,[untweaked]023303dedc51b9d227b17c9fb4710f96b844e1ccdc2c776e1b7274bd4e246b6202,[untweaked]03024c3b4f830854d6d26d6e34d92aff4c703bf57e85cd42abe328d928e01d4286,[untweaked]03ff4e8c8d99b9dcbb529a87d54f606bae0149a34018325547fa0c2239e038a1c9)))))#2ggnpl7y","round_time":{"secs":60,"nanos":500000000},"cache_file":"/builds/stevenroose/functionary/tests-PiVKJp/Peer1111/watchman/blockchains.json"}
+liquid-functionary/hsm_update_tool/src/main.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/hsm_update_tool/src/main.rs:7://(at your option) any later version.
+liquid-functionary/hsm_update_tool/src/main.rs:88:    println!("   -v/--version : ");
+liquid-functionary/hsm_update_tool/src/main.rs:89:    println!("               retrieve the current firmware version from the HSM print it as BE hex encoded bytes");
+liquid-functionary/hsm_update_tool/src/main.rs:95:    println!("   To query current firmware version:");
+liquid-functionary/hsm_update_tool/src/main.rs:114:    GetVersion,
+liquid-functionary/hsm_update_tool/src/main.rs:164:            Opt::Short('v') | Opt::Long("version") => {
+liquid-functionary/hsm_update_tool/src/main.rs:168:                update_args.operation = GUIOperations::GetVersion;
+liquid-functionary/hsm_update_tool/src/main.rs:488:fn get_version_operation(options: &UpdateArgs) -> Result<(), Box<dyn std::error::Error>>{
+liquid-functionary/hsm_update_tool/src/main.rs:490:    let mut packet = GetFirmwareVersionOpPacket::new();
+liquid-functionary/hsm_update_tool/src/main.rs:494:            log!(Info, "Get Firmware Version ACK'ed");
+liquid-functionary/hsm_update_tool/src/main.rs:495:            // The version is transmitted as 8 bytes (hex encoded 4 byte unsigned int) in Big-Endian order.
+liquid-functionary/hsm_update_tool/src/main.rs:499:                    println!("FAILED, Could not unpack firmware version response.");
+liquid-functionary/hsm_update_tool/src/main.rs:500:                    return Err("Could not unpack firmware version response".into());
+liquid-functionary/hsm_update_tool/src/main.rs:506:            log!(Error, "Get Firmware Version operation Failed: {}", e);
+liquid-functionary/hsm_update_tool/src/main.rs:507:            return Err("Get Firmare Version operation Failed.".into());
+liquid-functionary/hsm_update_tool/src/main.rs:559:        GUIOperations::GetVersion => {
+liquid-functionary/hsm_update_tool/src/main.rs:560:            return get_version_operation(&options);
+liquid-functionary/init_hsm/src/main.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/init_hsm/src/main.rs:7://(at your option) any later version.
+liquid-functionary/init_hsm/src/main.rs:51:use functionary::common::constants::GIT_COMMIT_ID;
+liquid-functionary/init_hsm/src/main.rs:121:    log!(Info, "Starting up with configuration {}, revision {}, log_level {:?}", config_path, GIT_COMMIT_ID, config.init_hsm.log_level);
+liquid-functionary/hsm_update_tool/src/packet.rs:6://the Free Software Foundation, either version 3 of the License, or
+liquid-functionary/hsm_update_tool/src/packet.rs:7://(at your option) any later version.
+liquid-functionary/hsm_update_tool/src/packet.rs:44:const UPDATE_MESSAGE_PROTOCOL_VERSION: u8 = 1;
+liquid-functionary/hsm_update_tool/src/packet.rs:174:    GetFirmwareVersion = 0x10,
+liquid-functionary/hsm_update_tool/src/packet.rs:224:///////////// Common Header Elements ////////////////
+liquid-functionary/hsm_update_tool/src/packet.rs:227:    pub version: u8,
+liquid-functionary/hsm_update_tool/src/packet.rs:235:            version: UPDATE_MESSAGE_PROTOCOL_VERSION,
+=== bitcoin-images elementsd ===
+Clonage dans 'bitcoin-images'...
+bitcoin-images/elementsd
+bitcoin-images/elementsd/elements.service
+bitcoin-images/elementsd/build-and-push-to-dockerhub.sh:4:export VER=${VER:-23.3.3}
+bitcoin-images/elementsd/build-and-push-to-dockerhub.sh:7:  --cache-from blockstream/elementsd:latest \
+bitcoin-images/elementsd/build-and-push-to-dockerhub.sh:8:  --build-arg ELEMENTS_VERSION=${VER} \
+bitcoin-images/elementsd/build-and-push-to-dockerhub.sh:11:  -t blockstream/elementsd:${VER} . || { echo -e "\nSomething broke"; exit 1; }
+bitcoin-images/elementsd/build-and-push-to-dockerhub.sh:15:  docker buildx imagetools create -t blockstream/elementsd:latest blockstream/elementsd:${VER}
+bitcoin-images/elementsd/Dockerfile:4:ARG ELEMENTS_VERSION
+bitcoin-images/elementsd/Dockerfile:5:ARG GH_REPO=ElementsProject/elements
+bitcoin-images/elementsd/Dockerfile:7:ENV ELEMENTS_VERSION=$ELEMENTS_VERSION
+bitcoin-images/elementsd/Dockerfile:19:    wget ${GH_DOWNLOAD}/elements-${ELEMENTS_VERSION}/elements-${ELEMENTS_VERSION}-aarch64-linux-gnu.tar.gz; \
+bitcoin-images/elementsd/Dockerfile:21:    wget ${GH_DOWNLOAD}/elements-${ELEMENTS_VERSION}/elements-${ELEMENTS_VERSION}-x86_64-linux-gnu.tar.gz; \
+bitcoin-images/elementsd/Dockerfile:23: && wget ${GH_DOWNLOAD}/elements-${ELEMENTS_VERSION}/SHA256SUMS.asc
+bitcoin-images/elementsd/Dockerfile:28:      grep elements-${ELEMENTS_VERSION}-aarch64-linux-gnu.tar.gz SHA256SUMS | sha256sum -c; \
+bitcoin-images/elementsd/Dockerfile:30:      grep elements-${ELEMENTS_VERSION}-x86_64-linux-gnu.tar.gz SHA256SUMS | sha256sum -c; \
+bitcoin-images/elementsd/Dockerfile:33:RUN mkdir elements \
+bitcoin-images/elementsd/Dockerfile:35:      tar xzvf elements-${ELEMENTS_VERSION}-aarch64-linux-gnu.tar.gz --strip-components=1 -C elements; \
+bitcoin-images/elementsd/Dockerfile:37:      tar xzvf elements-${ELEMENTS_VERSION}-x86_64-linux-gnu.tar.gz --strip-components=1 -C elements; \
+bitcoin-images/elementsd/Dockerfile:39:  && mkdir /root/.elements \
+bitcoin-images/elementsd/Dockerfile:40:  && mv elements/bin/* /usr/local/bin/ \
+bitcoin-images/elementsd/Dockerfile:41:  && mv elements/lib/* /usr/local/lib/ \
+bitcoin-images/elementsd/Dockerfile:42:  && mv elements/share/* /usr/local/share/
+bitcoin-images/elementsd/elements.service:1:/etc/systemd/system/elements.service
+bitcoin-images/elementsd/elements.service:4:Description=elementsd pseudo node
+bitcoin-images/elementsd/elements.service:11:ExecStartPre=/usr/bin/docker pull blockstream/elementsd:latest
+bitcoin-images/elementsd/elements.service:15:    --name=elements \
+bitcoin-images/elementsd/elements.service:16:    -v /mnt/data/elements/elements.conf:/root/.elements/elements.conf:ro \
+bitcoin-images/elementsd/elements.service:17:    -v /mnt/data/elements:/root/.elements:rw \
+bitcoin-images/elementsd/elements.service:18:    blockstream/elementsd:latest elementsd -printtoconsole
+bitcoin-images/elementsd/elements.service:19:ExecStop=/usr/bin/docker exec elements elements-cli stop
+bitcoin-images/elementsd/elements.service:21:ExecStopPost=/usr/bin/docker rm -f elements
+bitcoin-images/elementsd/README.md:1:## Elementsd
+bitcoin-images/elementsd/README.md:2:* `Dockerfile` downloads the compiled binaries from https://github.com/ElementsProject/elements/releases
+bitcoin-images/elementsd/README.md:3:* Whereas `Dockerfile.gitian` uses [gitian](https://github.com/devrandom/gitian-builder) to build from [source](https://github.com/ElementsProject/elements)
+bitcoin-images/elementsd/README.md:5:You can update Elements' version in the `Dockerfile` and/or `run-gitian.sh` based on the version you want to build (e.g. `v0.18.1` or `commit_hash`).
+bitcoin-images/elementsd/README.md:10:docker run -itd --name ub -v `pwd`/elementsd:/opt/elementsd -v /var/run/docker.sock:/var/run/docker.sock ubuntu:bionic sleep infinity
+bitcoin-images/elementsd/README.md:22:cd /opt/elementsd 
+bitcoin-images/elementsd/README.md:25:You can watch the install or build logs by running `docker exec ub tail -f /opt/elementsd/gitian/var/install|build.log` in another terminal window.
+bitcoin-images/elementsd/README.md:28:Lastly, you can build the Docker image(s) with the Elements binaries by specifying the appropriate Dockerfile:
+bitcoin-images/elementsd/README.md:30:docker build -t blockstream/elementsd:tag_or_commit -f Dockerfile.gitian .
+bitcoin-images/elementsd/run-gitian.sh:5:ELEMENTS_VERSION=elements-0.21.0
+bitcoin-images/elementsd/run-gitian.sh:6:ELEMENTS_DIR=0.21.0
+bitcoin-images/elementsd/run-gitian.sh:10:git clone https://github.com/ElementsProject/elements -b ${ELEMENTS_VERSION} gitian/inputs/elements
+bitcoin-images/elementsd/run-gitian.sh:14:sed -i 's#HOSTS=.*#HOSTS="x86_64-linux-gnu"#' inputs/elements/contrib/gitian-descriptors/gitian-linux.yml
+bitcoin-images/elementsd/run-gitian.sh:15:sed -i 's#CONFIGFLAGS=.*#CONFIGFLAGS="--without-gui --enable-glibc-back-compat --enable-reduce-exports --disable-bench --disable-gui-tests"#' inputs/elements/contrib/gitian-descriptors/gitian-linux.yml
+bitcoin-images/elementsd/run-gitian.sh:16:sed -i 's#.*QT_RCC.*##g' inputs/elements/contrib/gitian-descriptors/gitian-linux.yml
+bitcoin-images/elementsd/run-gitian.sh:19:bin/gbuild --skip-fetch --num-make 2 --memory 4000 --url elements=inputs/elements --commit elements=${ELEMENTS_VERSION} inputs/elements/contrib/gitian-descriptors/gitian-linux.yml
+bitcoin-images/elementsd/run-gitian.sh:20:mkdir ../elements && tar -xzvf build/out/elements-${ELEMENTS_DIR}-x86_64-linux-gnu.tar.gz --strip-components 1 -C ../elements
+=== fetch maintenance branches ===
+=== functionary elementsd RPC references ===
+/tmp/liquid-functionary/functionary_common/src/hsm.rs:58:    BlocksignerValidateBlock = 0x02,
+/tmp/liquid-functionary/functionary_common/src/hsm.rs:169:            0x02 => Ok(Command::BlocksignerValidateBlock),
+/tmp/liquid-functionary/functionary_common/src/hsm.rs:235:            Command::BlocksignerValidateBlock => "bs_validate_block",
+/tmp/liquid-functionary/functionary/src/rpc.rs:119:    /// CPE info from getblockchaininfo
+/tmp/liquid-functionary/functionary/src/rpc.rs:179:        let res = self.jsonrpc_query::<Response>("getnetworkinfo", &[])?;
+/tmp/liquid-functionary/functionary/src/rpc.rs:465:        let res = self.jsonrpc_query::<Response>("getblockchaininfo", &[])?;
+/tmp/liquid-functionary/functionary/src/rpc.rs:652:    let request = client.build_request("getblockchaininfo", &[]);
+/tmp/liquid-functionary/functionary/src/hsm/liquid.rs:92:            let message = message::blocksigner::ValidateBlock::new(header);
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:107:    /// Representation of a `ValidateBlock` HSM message
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:109:    pub struct ValidateBlock {
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:114:    impl ValidateBlock {
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:116:        pub fn new(header: &elements::BlockHeader) -> ValidateBlock {
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:118:            ValidateBlock {
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:122:                                             Command::BlocksignerValidateBlock,
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:129:    impl Message for ValidateBlock {
+/tmp/liquid-functionary/functionary/src/hsm/message.rs:488:        check_enum!(Command, BlocksignerSignBlock, BlocksignerBlockSig, BlocksignerValidateBlock,
+=== rust elements crate ===
+=== copy deployment artifacts ===
+=== Docker Hub inspect 23.3.3 ===
+Depuis https://github.com/ElementsProject/elements
+ * branch                  elements-23.x -> FETCH_HEAD
+ * branch                  elements-23.3.x -> FETCH_HEAD
+ * branch                  elements-23.2.x -> FETCH_HEAD
+ * branch                  elements-29.x -> FETCH_HEAD
+ * branch                  master     -> FETCH_HEAD
+--- origin/elements-23.x ---
+c26d719_ancestor_exit=128
+6253_ancestor_exit=128
+212c_ancestor_exit=128
+fatal: argument 'origin/elements-23.x' ambigu : révision inconnue ou chemin inexistant.
+Utilisez '--' pour séparer les chemins des révisions, comme ceci :
+'git <commande> [<révision>...] -- [<chemin>...]'
+fatal: bad revision 'origin/elements-23.x'
+--- origin/elements-23.3.x ---
+c26d719_ancestor_exit=128
+6253_ancestor_exit=128
+212c_ancestor_exit=128
+fatal: argument 'origin/elements-23.3.x' ambigu : révision inconnue ou chemin inexistant.
+Utilisez '--' pour séparer les chemins des révisions, comme ceci :
+'git <commande> [<révision>...] -- [<chemin>...]'
+fatal: bad revision 'origin/elements-23.3.x'
+--- origin/elements-29.x ---
+c26d719_ancestor_exit=128
+6253_ancestor_exit=128
+212c_ancestor_exit=128
+fatal: argument 'origin/elements-29.x' ambigu : révision inconnue ou chemin inexistant.
+Utilisez '--' pour séparer les chemins des révisions, comme ceci :
+'git <commande> [<révision>...] -- [<chemin>...]'
+fatal: bad revision 'origin/elements-29.x'
+=== first appearance on each branch ===
+fatal: argument 'origin/elements-23.x' ambigu : révision inconnue ou chemin inexistant.
+Utilisez '--' pour séparer les chemins des révisions, comme ceci :
+'git <commande> [<révision>...] -- [<chemin>...]'
+fatal: argument 'origin/elements-23.3.x' ambigu : révision inconnue ou chemin inexistant.
+Utilisez '--' pour séparer les chemins des révisions, comme ceci :
+'git <commande> [<révision>...] -- [<chemin>...]'
+fatal: argument 'origin/elements-29.x' ambigu : révision inconnue ou chemin inexistant.
+Utilisez '--' pour séparer les chemins des révisions, comme ceci :
+'git <commande> [<révision>...] -- [<chemin>...]'
+=== when did 212c43f land relative to tip of 23.3.x ===
+212c43f475 fix: range proof cache bind to asset and scriptpubkey
+fatal: Not a valid object name origin/elements-23.3.x
+212c_in_233x=128
+{
+    "creator": 4637666,
+    "id": 1130661799,
+    "images": [
+        {
+            "architecture": "amd64",
+            "features": "",
+            "variant": null,
+            "digest": "sha256:4f7b939a07e285a02fecb1c5e017f78ebd3bb338417564b543e9a7d3da23cf17",
+            "os": "linux",
+            "os_features": "",
+            "os_version": null,
+            "size": 164270042,
+            "status": "active",
+            "last_pulled": "2026-09-07T13:55:56.987311713Z",
+            "last_pushed": "2026-04-14T14:22:36.684157583Z"
+        },
+        {
+            "architecture": "arm64",
+            "features": "",
+            "variant": null,
+            "digest": "sha256:1c4fe9744c2c509e7a425f47dd2dd46b784040f1f6beb51fbc2b483da52dc0c0",
+            "os": "linux",
+            "os_features": "",
+            "os_version": null,
+            "size": 159751751,
+            "status": "active",
+            "last_pulled": "2026-09-07T13:35:23.458737271Z",
+            "last_pushed": "2026-04-14T14:22:37.10620387Z"
+        },
+        {
+            "architecture": "unknown",
+            "features": "",
+            "variant": null,
+            "digest": "sha256:084f5874727da9d408e89080da881a6cd47b0a0841df5f82ad56b6404b8d1d49",
+            "os": "unknown",
+            "os_features": "",
+            "os_version": null,
+            "size": 1259,
+            "status": "active",
+=== search SideSwap / liquidexplorer version ===
+=== liquid-functionary README / docs ===
+//{{ Liquid }}
+//Copyright (C) {{ 2015,2016,2017,2018 }}  {{ Blockstream }}
+
+//This program is free software: you can redistribute it and/or modify
+//it under the terms of the GNU Affero General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU Affero General Public License for more details.
+
+//You should have received a copy of the GNU Affero General Public License
+//along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+//! # Functionary
+//! This is the library used by the blocksigner and withdrawal watcher to maintain
+//! a rotating consensus system. It is separated into its own library mainly for
+//! ease of testing; it is not expected to be used outside of this project.
+//!
+
+// Coding conventions
+#![deny(non_upper_case_globals)]
+#![deny(non_camel_case_types)]
+#![deny(non_snake_case)]
+#![deny(unused)]
+#![deny(unused_mut)]
+#![warn(missing_docs)]
+
+// External libs
+extern crate bitcoin;
+extern crate byteorder;
+#[cfg(test)]
+#[macro_use] extern crate hex_literal;
+#[cfg(test)]
+extern crate jsonrpc;
+extern crate elements;
+extern crate miniscript;
+extern crate serde;
+#[macro_use] extern crate serde_derive;
+extern crate serde_json;
+extern crate time;
+
+#[macro_use]
+pub extern crate functionary_logs as logs;
+#[macro_use]
+pub extern crate functionary_common as common;
+
+#[macro_use] pub mod macros;
+#[macro_use] pub mod rotator;
+pub mod blocksigner;
+pub mod config;
+pub mod descriptor;
+pub mod dynafed;
+pub mod hsm;
+pub mod message;
+pub mod network;
+pub mod peer;
+pub mod rpc;
+pub mod tweak;
+pub mod utils;
+pub mod watchman;
+pub mod running_avg;
+
+/tmp/liquid-functionary/functionary_common/src/constants.rs:128:    /// Do we use the economical fee rate estimate from bitcoind or the conservative?
+/tmp/liquid-functionary/functionary/src/blocksigner/config.rs:59:    /// http://url:port of the bitcoind RPC
+/tmp/liquid-functionary/functionary/src/blocksigner/config.rs:60:    pub bitcoind_rpc_url: Option<String>,
+/tmp/liquid-functionary/functionary/src/blocksigner/config.rs:61:    /// RPC username for bitcoind
+/tmp/liquid-functionary/functionary/src/blocksigner/config.rs:62:    pub bitcoind_rpc_user: Option<String>,
+/tmp/liquid-functionary/functionary/src/blocksigner/config.rs:63:    /// RPC password for bitcoind
+/tmp/liquid-functionary/functionary/src/blocksigner/config.rs:64:    pub bitcoind_rpc_pass: Option<String>,
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:223:    /// Handle to bitcoind
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:224:    bitcoind: Option<rpc::Bitcoin>,
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:258:        let bitcoind = config.local.bitcoind_rpc_url.as_ref().map(|url| {
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:261:                Some(config.local.bitcoind_rpc_user.as_ref().expect("no bitcoin rpc user provided").clone()),
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:262:                Some(config.local.bitcoind_rpc_pass.as_ref().expect("no bitcoin rpc pass provided").clone()),
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:278:            let is_bitcoind_warming_up = bitcoind.as_ref()
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:279:                .map(|rpc| rpc.is_warming_up("bitcoind").expect("bitcoind connection"))
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:282:            if !(is_bitcoind_warming_up || is_sidechaind_warming_up) {
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:311:            bitcoind: bitcoind,
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:337:        let mut block = if let Some(ref bitcoind) = self.bitcoind {
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:338:            let mainchain_tip = bitcoind.tip()?;
+/tmp/liquid-functionary/functionary/src/utils.rs:432:    /// Block is unknown to the bitcoind
+/tmp/liquid-functionary/functionary/src/utils.rs:434:    /// Block is known to the bitcoind but not in the highest-work chain
+/tmp/liquid-functionary/functionary/src/rpc.rs:18://! Support for interacting with bitcoind and sidechaind RPC interfaces
+/tmp/liquid-functionary/functionary/src/message.rs:576:        /// Fee rate from bitcoind estimatesmartfee
+/tmp/liquid-functionary/functionary/src/message.rs:609:        /// Fee rate from bitcoind estimatesmartfee
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:58:    /// http://url:port of the bitcoind RPC
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:59:    pub bitcoind_rpc_url: String,
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:60:    /// RPC username for bitcoind
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:61:    pub bitcoind_rpc_user: String,
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:62:    /// RPC password for bitcoind
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:63:    pub bitcoind_rpc_pass: String,
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:133:    /// We get the mainchain confirmation threshold from the sidechain node.
+/tmp/liquid-functionary/functionary/src/watchman/config.rs:134:    /// However older sidechain nodes (<= 0.14.x) don't provide the required
+/tmp/liquid-functionary/functionary_logs/src/functionary/fee.rs:35:/// Obtained new fee estimate from bitcoind
+/tmp/liquid-functionary/functionary_logs/src/functionary/fee.rs:50:/// Failed to get a fee estimate from bitcoind
+/tmp/liquid-functionary/functionary/src/watchman/blockchain/fee.rs:55:            Error::NoFeeEstimate(ref errors) => write!(f, "bitcoind is not able to provide a fee estimate: {}", errors.join(". ")),
+/tmp/liquid-functionary/functionary/src/watchman/blockchain/fee.rs:158:    pub fn update_rate_rpc(&mut self, bitcoind: &impl BitcoinRpc) -> Result<(), Error> {
+/tmp/liquid-functionary/functionary/src/watchman/blockchain/fee.rs:159:        let conservative_estimate = bitcoind.estimate_smart_fee(constants::TX_CONFIRM_TARGET, EstimationMode::Conservative)?;
+/tmp/liquid-functionary/functionary/src/watchman/blockchain/fee.rs:168:        let economical_estimate = bitcoind.estimate_smart_fee(constants::TX_CONFIRM_TARGET, EstimationMode::Economical)?;
+/tmp/liquid-functionary/functionary/src/watchman/blockchain/mod.rs:713:    fn scan_mainchain(&mut self, bitcoind: &impl BitcoinRpc) -> Result<bool, Error> {
+/tmp/liquid-functionary/functionary/src/watchman/blockchain/mod.rs:724:            self.txindex.update_from_rpc(bitcoind, self.latest_mainchain_commitment.0,
+/tmp/liquid-functionary/functionary/src/watchman/blockchain/mod.rs:765:        bitcoind: &impl BitcoinRpc,
+=== HN / primary citations ===
+=== 23.x state at incident time ===
+323fc71625 2026-09-04 15:15:48 +0200 Merge ElementsProject/elements#1598: build: fix depends Qt download link
+INCIDENT_23X=323fc71625755917a54a5759875939805eee53c1
+6253_in_23x_at_incident=0
+75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment, const std::vector<unsigned char>& asset_commitment, const CScript& scriptPubKey) {
+179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment, vchAssetCommitment, scriptPubKey);
+=== 23.3.x state at incident time ===
+6c2c5626ba 2026-09-04 04:56:27 -0700 build: fix depends Qt download link
+INCIDENT_233X=6c2c5626bafed503c673ec6f83be9bfec861d26f
+212c_in_233x_at_incident=0
+75:    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment, const std::vector<unsigned char>& asset_commitment, const CScript& scriptPubKey) {
+179:    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment, vchAssetCommitment, scriptPubKey);
+=== master at incident ===
+INCIDENT_MASTER=c7e856fab1b0c4d37005e25c0940184d812a26a0
+c26_in_master_at_incident=0
+c7e856fab1 2026-09-04 15:14:02 +0200 Merge ElementsProject/elements#1597: build: fix depends Qt download link
+=== PR1595 merge time ===
+2026-09-03 18:13:34 +0100 871781b375bdc0984da2c5c6d51ff08347cf7fd7 Merge ElementsProject/elements#1595: elements-23.x: backports from master
+=== when 212c entered 23.3.x ===
+6257051594 dynafed: require at least four-fifths approval for parameter transition
+53302be0ae blindpsbt: refuse to blind a PSET output with no amount
+dd97f1336b blindpsbt: reject off-curve blinding pubkey before ECDH
+87327c76a9 blindpsbt: return error instead of asserting on surjection proof failure
+212c43f475 fix: range proof cache bind to asset and scriptpubkey
+2026-09-06 19:20:55 +0200 3b3f01eac9 Merge ElementsProject/elements#1599: Cherry picks from 23.x into 23.3.x
+2026-09-04 04:56:27 -0700 6c2c5626ba build: fix depends Qt download link
+2026-09-03 13:00:10 -0700 3c8b453438 Merge ElementsProject/elements#1593: Fix RPC return errors for psbt and invalid rangeproofs
+2026-09-03 13:00:03 -0700 45af24e808 DecomposePeginWitness: fix deserialization flags for MerkleBlock proof
+2026-09-03 10:43:47 -0700 60488fa994 Merge ElementsProject/elements#1589: simplicity: update subtree to abede47e
+2026-09-03 10:41:00 -0700 f1f9a3fe79 blind: reject empty surjection-target set in SurjectOutput
+2026-09-03 10:40:59 -0700 11f8ac6b17 blindpsbt: require genuine commitments in VerifyBlindValueProof
+2026-09-03 10:40:59 -0700 db055239ba blindpsbt: require both range bounds to match claim in VerifyBlindValueProof
+2026-09-03 10:40:24 -0700 6257051594 dynafed: require at least four-fifths approval for parameter transition
+2026-09-03 10:40:24 -0700 53302be0ae blindpsbt: refuse to blind a PSET output with no amount
+2026-09-03 10:40:24 -0700 dd97f1336b blindpsbt: reject off-curve blinding pubkey before ECDH
+2026-09-03 10:40:24 -0700 87327c76a9 blindpsbt: return error instead of asserting on surjection proof failure
+2026-09-03 10:36:30 -0700 212c43f475 fix: range proof cache bind to asset and scriptpubkey
+remotes/origin/elements-23.3.x^2~11
+2026-09-06 19:20:55 +0200 3b3f01eac9 Merge ElementsProject/elements#1599: Cherry picks from 23.x into 23.3.x
+2026-09-04 04:56:27 -0700 6c2c5626ba build: fix depends Qt download link
+2026-09-03 13:00:10 -0700 3c8b453438 Merge ElementsProject/elements#1593: Fix RPC return errors for psbt and invalid rangeproofs
+2026-09-03 13:00:03 -0700 45af24e808 DecomposePeginWitness: fix deserialization flags for MerkleBlock proof
+2026-09-03 10:43:47 -0700 60488fa994 Merge ElementsProject/elements#1589: simplicity: update subtree to abede47e
+2026-09-03 10:41:00 -0700 f1f9a3fe79 blind: reject empty surjection-target set in SurjectOutput
+2026-09-03 10:40:59 -0700 11f8ac6b17 blindpsbt: require genuine commitments in VerifyBlindValueProof
+2026-09-03 10:40:59 -0700 db055239ba blindpsbt: require both range bounds to match claim in VerifyBlindValueProof
+2026-09-03 10:40:24 -0700 6257051594 dynafed: require at least four-fifths approval for parameter transition
+2026-09-03 10:40:24 -0700 53302be0ae blindpsbt: refuse to blind a PSET output with no amount
+2026-09-03 10:40:24 -0700 dd97f1336b blindpsbt: reject off-curve blinding pubkey before ECDH
+2026-09-03 10:40:24 -0700 87327c76a9 blindpsbt: return error instead of asserting on surjection proof failure
+2026-09-03 10:36:30 -0700 212c43f475 fix: range proof cache bind to asset and scriptpubkey
+=== verify 6c2c5626ba contains 4-arg ===
+exit:0
+11
+212c43f475 fix: range proof cache bind to asset and scriptpubkey
+  remotes/origin/elements-23.3.x
+YES_REACHABLE
+2026-09-03 10:36:30 -0700 212c43f475 fix: range proof cache bind to asset and scriptpubkey
+
+=== Mission 32 conclusions sketch ===
+At 2026-09-06 13:52Z tip of elements-23.x, elements-23.3.x, master ALL contain 4-arg ComputeEntryRangeProof
+Tagged releases and Docker latest remain 23.3.3 PRE-FIX
+liquid-functionary does not pin elementsd commit; uses sidechaind RPC
+No production node version dump found for 4050336 acceptor

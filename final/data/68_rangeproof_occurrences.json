@@ -1,0 +1,773 @@
+{
+  "scan_method": "Full raw-tx hex scan of every transaction in Liquid blocks 4049384\u20134050335 via Blockstream Liquid API (liquid.network failover). Matched P0 by 64-hex prefix then verified full 8332 hex chars / SHA256. Block 4050336 covered from local prior Elements parse + local f24a tx hex (live API rate-limited / liquid.network tip stuck at 4050335). Cross-checked: grepped all 3031 cached tx hex files for P0 prefix.",
+  "window": "4049384-4050336",
+  "p0_sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+  "p0_len": 4166,
+  "p0_prefix": "4033d8c5cf01ae0ab57b7e9e7c4a82672e0981b0db5a8c2980647c8977d4c5bc",
+  "c0": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+  "occurrences": [
+    {
+      "txid": "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5",
+      "height": 4050335,
+      "block_hash": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+      "timestamp_if_known": 1788702730,
+      "proof_sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+      "proof_len": 4166,
+      "value_commitment_if_known": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "notes": "standalone out0 rangeproof; byte-identical to P0; C0 present"
+    },
+    {
+      "txid": "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+      "height": 4050335,
+      "block_hash": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+      "timestamp_if_known": 1788702730,
+      "proof_sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+      "proof_len": 4166,
+      "value_commitment_if_known": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "notes": "standalone out0 rangeproof; byte-identical to P0; C0 present"
+    },
+    {
+      "txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+      "height": 4050336,
+      "block_hash": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+      "timestamp_if_known": 1788702790,
+      "proof_sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+      "proof_len": 4166,
+      "value_commitment_if_known": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "notes": "P0 byte sequence is the first 4166 bytes of a LONGER out1 rangeproof (compact-size fd8a10 = 4234). Exact match to P0; field length is 4234 not 4166. C0 hex also appears in same tx."
+    }
+  ],
+  "count": 3,
+  "count_standalone_4166_field": 2,
+  "count_including_embedded_prefix_of_longer_proof": 3,
+  "unique_proof_hashes": [
+    "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a"
+  ],
+  "all_p0_byte_identical": true,
+  "first_height": 4050335,
+  "last_height": 4050336,
+  "claim_window_4049384_4050246": {
+    "p0_exact_count": 0,
+    "bitquery_claimed_approx_68": 68,
+    "different_4166_proof_repeated_68_times": {
+      "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+      "proof_len": 4166,
+      "prefix64": "4033a6921800336e292f15b8f60a441b04a7fbc994d03550eb33370afddd0126",
+      "count": 68,
+      "unique_txs": 68,
+      "first_height": 4049384,
+      "last_height": 4050246,
+      "heights": [
+        4049384,
+        4049419,
+        4049437,
+        4049442,
+        4049443,
+        4049447,
+        4049448,
+        4049449,
+        4049450,
+        4049451,
+        4049984,
+        4049985,
+        4050009,
+        4050010,
+        4050016,
+        4050023,
+        4050244,
+        4050246
+      ],
+      "note": "Likely explanation for Bitquery ~68: a different 4166-byte rangeproof (SHA256=8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f) appears once per tx in 68 txs in this window. It starts with 4033\u2026 but is NOT byte-identical to P0 (P0 SHA256=0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a).",
+      "occurrences": [
+        {
+          "txid": "15befd50a8ec869e865a7a0024174c991c7ea22b7135f2f92c633e3e651ee077",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "1df31f522754d1a3e6430d8d5ac1c1cbcdf27d6e4075d87050a72f86a4680c45",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "3faea6c32ba72819f154a48aa11744353517bfb7b65b9837486034a2c66c22c8",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "4706d9b4324088aca62aa3200389e14a8f4c4e17241ae92cc10f4b08164dc38a",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "56f2bdfa8a0eac47d7f61142bb61ae7b3db9bd90d007ad98a196fdcc064362ee",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "5913091d657edea64c960e6c4f4b6e2f13db4246a2b59c713ac9ee1e674b3358",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "5e17272217eeaff4e90dd814ff9968525e0ae268e41a8d10395c8c7a64c2b739",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "75748b0add8765261c2bb3e7e3979302f0b3c7be215503a8171637e5fc0f8d78",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "80f3a86740e9b73428918ba20909e4cbfbd1148ea5e7279aea6f5cd5fb685c8e",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "883eee2e833ce408380dff7a0e25412fec3c16126c079d1fdd2f84b06016ec06",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "9ce09bff3915ee1e5730c92bf1ed74c170b92ca5b2b4cf600026e63540c587bc",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "c10f32c894aa6f8c36d5d3662be2b4c1cd088a62d678308c16229e35872c391c",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "dbb23b11ee180e1b9d33af29093ff9b2f71585a090b2319816b9b9618125b90b",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "fb1fd9ad16ce2e11c0580d18aaff80e2f63b90e644a0b00ce11a6b3bb2a690e6",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "fcec7f2680223a46b3462f5c2d16a12e2383c11846d1ca4c0abd03cbb36b11db",
+          "height": 4049384,
+          "block_hash": "5af85be382b09292132ad566f9eda782119303abba3256bd58cb94430eac3eac",
+          "timestamp_if_known": 1788645670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "0c31d24f99d013d4cbe9c66c666f556f1526c45a3610821c1a5f381ca46032fc",
+          "height": 4049419,
+          "block_hash": "c543a827903db347f9a21c1a2fc785534f9b395a40eb57d8f3c6bbd9b2f3aa22",
+          "timestamp_if_known": 1788647770,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "344426fd3cc75c3cc1eba3fad7bc1ce9d3996c061e1f0eceb56d56f5a5d3d14d",
+          "height": 4049419,
+          "block_hash": "c543a827903db347f9a21c1a2fc785534f9b395a40eb57d8f3c6bbd9b2f3aa22",
+          "timestamp_if_known": 1788647770,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "5a7c2236a379717106910ad8943014234e0271645bf67341a147418cb3076864",
+          "height": 4049419,
+          "block_hash": "c543a827903db347f9a21c1a2fc785534f9b395a40eb57d8f3c6bbd9b2f3aa22",
+          "timestamp_if_known": 1788647770,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "60e320a4ffaebfff3353e690d571debdb0a873f86de683ddaff5ac29cd4f1d7a",
+          "height": 4049419,
+          "block_hash": "c543a827903db347f9a21c1a2fc785534f9b395a40eb57d8f3c6bbd9b2f3aa22",
+          "timestamp_if_known": 1788647770,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "8bf6a73e17237ea31e4d9bb348fed4625fb9439c13db7bed117096132ae4deb4",
+          "height": 4049419,
+          "block_hash": "c543a827903db347f9a21c1a2fc785534f9b395a40eb57d8f3c6bbd9b2f3aa22",
+          "timestamp_if_known": 1788647770,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "b18ec6ab7a219400e1d523d83a76ed16d94a272686a4168ab09fbca879a8162d",
+          "height": 4049419,
+          "block_hash": "c543a827903db347f9a21c1a2fc785534f9b395a40eb57d8f3c6bbd9b2f3aa22",
+          "timestamp_if_known": 1788647770,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "7b96d618314f69b3c035fc2b05c7aa39dca396cf214ba2a35d31ed86fafac52e",
+          "height": 4049437,
+          "block_hash": "efb3ce436b265efc6d31c736130d68934f1ffd7ef4c275ef44199ce4f8811c7d",
+          "timestamp_if_known": 1788648850,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "93bb3c5c629a8777a018f7293ce7b531c3605ffa005e004208dde9dc001cc277",
+          "height": 4049437,
+          "block_hash": "efb3ce436b265efc6d31c736130d68934f1ffd7ef4c275ef44199ce4f8811c7d",
+          "timestamp_if_known": 1788648850,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "ad9662235d49278f77efc1e72468dadf463c928ef3619372fe796dae839db480",
+          "height": 4049437,
+          "block_hash": "efb3ce436b265efc6d31c736130d68934f1ffd7ef4c275ef44199ce4f8811c7d",
+          "timestamp_if_known": 1788648850,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "e45a8e702b544cc76d0de5eb54481847aa4a0f68b44de434a87162a174ff789d",
+          "height": 4049437,
+          "block_hash": "efb3ce436b265efc6d31c736130d68934f1ffd7ef4c275ef44199ce4f8811c7d",
+          "timestamp_if_known": 1788648850,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "f75fb193c7ff052f2cd78d7adbf35611614d1e2d4e9f7614c24c5f965eec73c1",
+          "height": 4049437,
+          "block_hash": "efb3ce436b265efc6d31c736130d68934f1ffd7ef4c275ef44199ce4f8811c7d",
+          "timestamp_if_known": 1788648850,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "f9070c88c723af102a9b2b2411d4c1e5e99b1e5ceb422493fdc68726de1bb074",
+          "height": 4049437,
+          "block_hash": "efb3ce436b265efc6d31c736130d68934f1ffd7ef4c275ef44199ce4f8811c7d",
+          "timestamp_if_known": 1788648850,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "00a46f5d024392620e5e99e4c04969faf89b1755353434ab50d703014c0b54b7",
+          "height": 4049442,
+          "block_hash": "fd8353327d6bcefa9d67ce2a3139a9a8459a2c4764509284cd96cd73f9e1d5db",
+          "timestamp_if_known": 1788649150,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "af4f344d978145cf375ec8539a4c6779933aa45b66f245d5017a9f93bc37ac10",
+          "height": 4049442,
+          "block_hash": "fd8353327d6bcefa9d67ce2a3139a9a8459a2c4764509284cd96cd73f9e1d5db",
+          "timestamp_if_known": 1788649150,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "e0a7842123364abffebf86d74d8f34e08e7320757a186ab7e41358d6bbee41d3",
+          "height": 4049442,
+          "block_hash": "fd8353327d6bcefa9d67ce2a3139a9a8459a2c4764509284cd96cd73f9e1d5db",
+          "timestamp_if_known": 1788649150,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "3da4b7e179d4c85824b55c861ccd7e210471d560037b5ff37d772ad49913c561",
+          "height": 4049443,
+          "block_hash": "8baaa0102f1caa50d4f41384d65533b5b6f87a949e1cf1739a1bfd54a444b4c5",
+          "timestamp_if_known": 1788649210,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "4bfbaae30733789f7ced11c562ef461f85ad0590dc3477b78368436480718d3b",
+          "height": 4049443,
+          "block_hash": "8baaa0102f1caa50d4f41384d65533b5b6f87a949e1cf1739a1bfd54a444b4c5",
+          "timestamp_if_known": 1788649210,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "c129eda2c9beba9b1abe68994f6df9c0814c4b2df632abc5e0b9c9f4ac02d6fb",
+          "height": 4049443,
+          "block_hash": "8baaa0102f1caa50d4f41384d65533b5b6f87a949e1cf1739a1bfd54a444b4c5",
+          "timestamp_if_known": 1788649210,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "0ca82c90f4004a0b1f4e5a615b743e29c7044b6a37bbe79775d28ea24f9be4d3",
+          "height": 4049447,
+          "block_hash": "edcb20d99ad7ea4f23a0dca240773e359db7885ccf5c75996c2d5a6ca58958b7",
+          "timestamp_if_known": 1788649450,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "580583c6b3ef295ecb5254bf4203cf5ad3e718d0839486076608b8e1dbb9a37f",
+          "height": 4049447,
+          "block_hash": "edcb20d99ad7ea4f23a0dca240773e359db7885ccf5c75996c2d5a6ca58958b7",
+          "timestamp_if_known": 1788649450,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "59cf3f11e2b3dda7c67b4c61ad79b9293de1256a69d7db1d4eaeed4aca090ac5",
+          "height": 4049447,
+          "block_hash": "edcb20d99ad7ea4f23a0dca240773e359db7885ccf5c75996c2d5a6ca58958b7",
+          "timestamp_if_known": 1788649450,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "2e8092d65fea2e0e30d7ec1df088ea716d140e6300301b2a00f485a466ac6abb",
+          "height": 4049448,
+          "block_hash": "2e6b565d5aefcf68584b3e1a26fb448588a3b775a4cf191ec360d570925ed821",
+          "timestamp_if_known": 1788649510,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "36445a37fa4597da101608d9ac128fabea3c20b522d0ce900f5cb6140b3a883b",
+          "height": 4049448,
+          "block_hash": "2e6b565d5aefcf68584b3e1a26fb448588a3b775a4cf191ec360d570925ed821",
+          "timestamp_if_known": 1788649510,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "50b8ba25b909ac9c3ee60f5c34842ed57f5fca90fc5e2ced5ccb6f741411d8cf",
+          "height": 4049448,
+          "block_hash": "2e6b565d5aefcf68584b3e1a26fb448588a3b775a4cf191ec360d570925ed821",
+          "timestamp_if_known": 1788649510,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "2317507d9acb8b5d61942dbe12cc14a4fd9f53ce194fb22fcf25ebfbaee8bc57",
+          "height": 4049449,
+          "block_hash": "2ad6dfe15b267bc15b043af39a4d25e6674355a6abcb864819f770a2c033cd7a",
+          "timestamp_if_known": 1788649570,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "5310c523d2077be21300c07ed1b8fc6c3514cb4d087feb11240fb3274d92519b",
+          "height": 4049449,
+          "block_hash": "2ad6dfe15b267bc15b043af39a4d25e6674355a6abcb864819f770a2c033cd7a",
+          "timestamp_if_known": 1788649570,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "968fb1efde6180beb59aca8f4667a6b41de7be03afe1e7993d6c60fb4c3a662e",
+          "height": 4049449,
+          "block_hash": "2ad6dfe15b267bc15b043af39a4d25e6674355a6abcb864819f770a2c033cd7a",
+          "timestamp_if_known": 1788649570,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "02bdcac237bf3234ff4dbcc31d2e17411d58024913006dfbd4f9bbb041ecca97",
+          "height": 4049450,
+          "block_hash": "50f93c1aef78ecfd9333cc063e868b2b355be552113c24e3edbc5eb3a5c0605e",
+          "timestamp_if_known": 1788649630,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "b2c60fbda3fe8223666c36316f3b8590932a9c0e03e4a73ce7bf83f972af4ffa",
+          "height": 4049450,
+          "block_hash": "50f93c1aef78ecfd9333cc063e868b2b355be552113c24e3edbc5eb3a5c0605e",
+          "timestamp_if_known": 1788649630,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "bee5acc181db3d763d032bb002c14f30ceb92df8ed9122e8f9b9b92407ddea8c",
+          "height": 4049450,
+          "block_hash": "50f93c1aef78ecfd9333cc063e868b2b355be552113c24e3edbc5eb3a5c0605e",
+          "timestamp_if_known": 1788649630,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "6a13c46fc8d6121345d9c8cd20f0220dbf73ff85a832e53fa89b76dd71912508",
+          "height": 4049451,
+          "block_hash": "db5eab80e7a827e557d6ce3fb5de35f630d8d141af24e5e4dfdd0be12a7298bb",
+          "timestamp_if_known": 1788649690,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "8577bcd60f3a1613babbc2f2de210b21c6a4750715f5dc92e40f314af932b9b7",
+          "height": 4049451,
+          "block_hash": "db5eab80e7a827e557d6ce3fb5de35f630d8d141af24e5e4dfdd0be12a7298bb",
+          "timestamp_if_known": 1788649690,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "b13be1373f2d0ae1225d153a8c5e30c540191193a5c00a29c3f02c0cb817ebf6",
+          "height": 4049451,
+          "block_hash": "db5eab80e7a827e557d6ce3fb5de35f630d8d141af24e5e4dfdd0be12a7298bb",
+          "timestamp_if_known": 1788649690,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "01a3bfa376f494c8c5382f1e66ad6c1b036ff7009e1d5dbd98652bf71755dd87",
+          "height": 4049984,
+          "block_hash": "900bce4eac4d7a3a899a889e8289ba680656c87815d175e2c046282071f0693d",
+          "timestamp_if_known": 1788681670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "1c969977d5261dbacf678f257cce8d8464512a75b7881fff3516d4483b69e3c5",
+          "height": 4049984,
+          "block_hash": "900bce4eac4d7a3a899a889e8289ba680656c87815d175e2c046282071f0693d",
+          "timestamp_if_known": 1788681670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "32e580a80c926a4bd28a69de5e59454ff88c809538be963f0cddb4b768bb0a98",
+          "height": 4049984,
+          "block_hash": "900bce4eac4d7a3a899a889e8289ba680656c87815d175e2c046282071f0693d",
+          "timestamp_if_known": 1788681670,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "0db5c9d795cb3c083f8d4ef71860f49415a26370797af1a979a27d16599c54cd",
+          "height": 4049985,
+          "block_hash": "f3a4d6c4675f9b6f3626c9905adae9c9b3cf869acc825c226e08cb414377192c",
+          "timestamp_if_known": 1788681730,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "66d9fb6b7be69120f1d1c597d23cce521fab28481988b574f042f82a574690e0",
+          "height": 4049985,
+          "block_hash": "f3a4d6c4675f9b6f3626c9905adae9c9b3cf869acc825c226e08cb414377192c",
+          "timestamp_if_known": 1788681730,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "bb31b4bdd805c593be339a74ebf85e27ec6b55b3c3d492e5b3345c82056188b3",
+          "height": 4049985,
+          "block_hash": "f3a4d6c4675f9b6f3626c9905adae9c9b3cf869acc825c226e08cb414377192c",
+          "timestamp_if_known": 1788681730,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "6f23d2d88f10857a8e5d2986f742e5d71a55619380fb4758ac0d4726e2e18303",
+          "height": 4050009,
+          "block_hash": "d60b19e01b267f29fd4f376d16e30b8c5b21adf973ac305eb5cacd16e2e7341b",
+          "timestamp_if_known": 1788683170,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "76bd55a56a79d815cef5b359da61f6d04d8651f377f20c2871df8dae66a3b533",
+          "height": 4050009,
+          "block_hash": "d60b19e01b267f29fd4f376d16e30b8c5b21adf973ac305eb5cacd16e2e7341b",
+          "timestamp_if_known": 1788683170,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "df254750c1390423ad52ab7e4330b8b9afd38952f3a784f54b42381ae675ea45",
+          "height": 4050009,
+          "block_hash": "d60b19e01b267f29fd4f376d16e30b8c5b21adf973ac305eb5cacd16e2e7341b",
+          "timestamp_if_known": 1788683170,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "51646b502997e26a56933f62aaf6b157ccb79ccb068b1355212507e1e6a75b89",
+          "height": 4050010,
+          "block_hash": "dc0439436ceedf267da1523487caa4e289948b26f97114ce03c66faa57c54787",
+          "timestamp_if_known": 1788683230,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "8a011e339cb049c58de9f1efa46bc29bf60efce6a0deab4cc51f0e7ae587d3d4",
+          "height": 4050010,
+          "block_hash": "dc0439436ceedf267da1523487caa4e289948b26f97114ce03c66faa57c54787",
+          "timestamp_if_known": 1788683230,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "8f4971b611af5fc63669d408726e6223f0599b9fdcf7c93ed1e4b30fd509a733",
+          "height": 4050010,
+          "block_hash": "dc0439436ceedf267da1523487caa4e289948b26f97114ce03c66faa57c54787",
+          "timestamp_if_known": 1788683230,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "6f1a9a9cc36242ca9192f92c06a122b93cb3fcbfd593dd9cc8bee4f41f396d5d",
+          "height": 4050016,
+          "block_hash": "6b461d271ca4984ce655f46c32936332a94dd99c2db41295fde2c7d48b57ebf1",
+          "timestamp_if_known": 1788683590,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "f47f6e7345d3dde5017a7e21a8676ac4ee9f4852657c3f730005e9a8d4b2d3c8",
+          "height": 4050016,
+          "block_hash": "6b461d271ca4984ce655f46c32936332a94dd99c2db41295fde2c7d48b57ebf1",
+          "timestamp_if_known": 1788683590,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "f97251a51713fda9a97eb0ed3a6570622060a2540dd90b35db3b333927077daf",
+          "height": 4050016,
+          "block_hash": "6b461d271ca4984ce655f46c32936332a94dd99c2db41295fde2c7d48b57ebf1",
+          "timestamp_if_known": 1788683590,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "8273bd4d332d53628cb93f9d98ab627abf55c0f6c57e8cebc0ea2783e1aff6aa",
+          "height": 4050023,
+          "block_hash": "3a3db53d69e6404c9437bf58abf3ef429f10340ec62d9efbacb49c8bc03547d0",
+          "timestamp_if_known": 1788684010,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "8f47bcbcc7e116d2fd33feadb92679fe00ab11ef603b9fb9cae9da9cf297694f",
+          "height": 4050023,
+          "block_hash": "3a3db53d69e6404c9437bf58abf3ef429f10340ec62d9efbacb49c8bc03547d0",
+          "timestamp_if_known": 1788684010,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "cbd7c5e3096bc3d1dae87fd445be055b4158260a639edc12fc09552810a871bc",
+          "height": 4050023,
+          "block_hash": "3a3db53d69e6404c9437bf58abf3ef429f10340ec62d9efbacb49c8bc03547d0",
+          "timestamp_if_known": 1788684010,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "3d00b94c94633f4c29305bfbbe073f27c81f44c7a933e997b626e0b06f6bd6e8",
+          "height": 4050244,
+          "block_hash": "3f6ff4fbe84669a8252f2dd7582380a2aa64265c9cfe0345e201f741c31a1cf4",
+          "timestamp_if_known": 1788697270,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        },
+        {
+          "txid": "17364df921aed6b743cf49227a20e621dc7faa407594f23d523a86379a9a36c7",
+          "height": 4050246,
+          "block_hash": "57f0dcf7cd378127555ed3d324526e6dc2d223c88119a5f6130a44deb089d180",
+          "timestamp_if_known": 1788697390,
+          "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+          "proof_len": 4166,
+          "value_commitment_if_known": null,
+          "notes": "different 4166-byte proof (not P0)"
+        }
+      ],
+      "first_diff_hex_offset": 4
+    }
+  },
+  "heights_scanned_count": 953,
+  "api_errors": [
+    "Blockstream HTTP 429 after heavy scan (700 req/hour unauthenticated cap).",
+    "liquid.network tip frozen at 4050335 \u2192 404 for /block-height/4050336.",
+    "Alternate explorers (mempool.space/liquid, blockchair) not usable for electrs-style API."
+  ],
+  "limitations": "Primary result: exact P0 bytes. In 4049384\u20134050246 there are ZERO exact P0 copies; Bitquery 68 matches a different repeated 4166-byte proof. f24a (4050336) contains P0 as the leading 4166 bytes of a 4234-byte rangeproof. 4050336 not re-fetched live due to API limits; local hex/parse used. No scan outside 4049384\u20134050336."
+}

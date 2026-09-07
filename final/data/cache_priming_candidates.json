@@ -1,0 +1,32 @@
+{
+  "mission": 26,
+  "families": [
+    {
+      "name": "Q0_bitquery_68",
+      "proof_sha256": "8cdcb80895572fabbd4b93ce4aeda95c86be51d4e6cea22501d48d480917cc1f",
+      "count": 68,
+      "window": "4049384-4050246",
+      "value_commitment": "0879be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798",
+      "old_key_fingerprint": "e1722355382a47649206ff1a3c1c16e61979c841cef27b2144aca634dae1017e",
+      "collides_with_f24a_P1C1": false,
+      "primes_f24a": false
+    },
+    {
+      "name": "P0_71c9_2711",
+      "proof_sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+      "count_standalone": 2,
+      "height": 4050335,
+      "value_commitment": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "old_key_fingerprint": "47b9fde7d8539c3544e4481c0edeaa66f4f1b85c17530dafb4d04f35b72d55f5",
+      "collides_with_f24a_P1C1": false,
+      "primes_f24a": false,
+      "note": "P1 begins with P0 bytes but cache key uses full P1||C1"
+    }
+  ],
+  "f24a_out1": {
+    "proof_sha256": "6619fa29ce0967ae93baefef0bc6233972b05249a9861a96695a106bbcc098b2",
+    "value_commitment": "086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8",
+    "old_key_fingerprint": "86bc93c9c3eb514e71c5748e2318fe6ca8a41d1254f9e9258edeb69f158c37cc"
+  },
+  "historical_priming_of_P1_C1_on_chain": "NOT_FOUND_IN_SCANNED_WINDOW"
+}

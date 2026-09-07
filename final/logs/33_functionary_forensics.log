@@ -1,0 +1,746 @@
+=== Mission 33 2026-09-07T14:08:01Z ===
+Clonage dans 'liquid-functionary-full'...
+=== remotes/branches/tags ===
+origin	https://github.com/Blockstream/liquid-functionary.git (fetch)
+origin	https://github.com/Blockstream/liquid-functionary.git (push)
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/master-2.4.1
+v2.1.3
+v2.2.0
+v2.3.0
+v2.3.1
+v2.4.0
+tag_count=5
+=== HEAD ===
+d3ccee17d92758afe6f6efac9d4153fa4f09c9a6 2024-03-22 15:53:02 -0700 Version 2.4.0
+=== submodules ===
+NO_GITMODULES
+=== search elements/sidechaind/docker/commit ===
+blocksigner/Cargo.toml:3:version = "2.4.0"
+blocksigner/Cargo.toml:5:description = "Liquid/Elements Blocksigner"
+blocksigner/Cargo.toml:15:version = "2.4.0"
+parallel_port/Cargo.toml:3:version = "2.3.0"
+parallel_port/Cargo.toml:15:bitcoin = { version = "0.31.1" }
+hsm_update_tool/Cargo.toml:3:version = "2.0.0"
+parallel_port/build.rs:6://the Free Software Foundation, either version 3 of the License, or
+parallel_port/build.rs:7://(at your option) any later version.
+parallel_port/build.rs:22:    // Read the Functionary version from the the cargo.toml in the functionary crate
+parallel_port/build.rs:23:    let version_toml = include_str!("../functionary/Cargo.toml");
+parallel_port/build.rs:24:    let regex = Regex::new("version = \"(.*?)\"")?;
+parallel_port/build.rs:26:    let version = match regex.captures(version_toml) {
+parallel_port/build.rs:28:            panic!("Could not read version from the functionary crate");
+parallel_port/build.rs:36:        if line.contains("FUNCTIONARY_VERSION") {
+parallel_port/build.rs:38:                format!("pub const FUNCTIONARY_VERSION: &str = \"{}\";\n", version).as_str(),
+blocksigner/src/main.rs:6://the Free Software Foundation, either version 3 of the License, or
+blocksigner/src/main.rs:7://(at your option) any later version.
+blocksigner/src/main.rs:80:        git_commit: functionary::common::constants::GIT_COMMIT_ID,
+blocksigner/src/main.rs:81:        functionary_version: env!("CARGO_PKG_VERSION"),
+watchman/Cargo.toml:3:version = "2.4.0"
+watchman/Cargo.toml:5:description = "Liquid/Elements Watchman"
+watchman/Cargo.toml:15:version = "2.4.0"
+functionary_common/Cargo.toml:3:version = "2.4.0"
+functionary_common/Cargo.toml:15:use-serde = [ "serde", "serde_derive", "bitcoin/serde", "elements/serde" ]
+functionary_common/Cargo.toml:22:elements = "0.24.1"
+functionary_common/Cargo.toml:24:serde = { version = "1.0", optional = true }
+functionary_common/Cargo.toml:25:serde_derive = { version = "1.0", optional = true }
+watchman/src/main.rs:6://the Free Software Foundation, either version 3 of the License, or
+watchman/src/main.rs:7://(at your option) any later version.
+watchman/src/main.rs:20://! This implements a 5-of-7 rotating consensus for transferring coins to and from an Elements sidechain
+watchman/src/main.rs:79:        git_commit: functionary::common::constants::GIT_COMMIT_ID,
+watchman/src/main.rs:80:        functionary_version: env!("CARGO_PKG_VERSION"),
+functionary_common/build.rs:6://the Free Software Foundation, either version 3 of the License, or
+functionary_common/build.rs:7://(at your option) any later version.
+functionary_common/build.rs:37:        let commit_id = if !git_revparse_id.is_empty() {
+functionary_common/build.rs:40:            env::var("GIT_COMMIT_ID").unwrap_or_default().trim().to_owned()
+functionary_common/build.rs:48:            pub static GIT_COMMIT_ID: &'static str = \"{}\";
+functionary_common/build.rs:50:            commit_id,
+hsm_update_tool/src/main.rs:6://the Free Software Foundation, either version 3 of the License, or
+hsm_update_tool/src/main.rs:7://(at your option) any later version.
+hsm_update_tool/src/main.rs:88:    println!("   -v/--version : ");
+hsm_update_tool/src/main.rs:89:    println!("               retrieve the current firmware version from the HSM print it as BE hex encoded bytes");
+hsm_update_tool/src/main.rs:95:    println!("   To query current firmware version:");
+hsm_update_tool/src/main.rs:114:    GetVersion,
+hsm_update_tool/src/main.rs:164:            Opt::Short('v') | Opt::Long("version") => {
+hsm_update_tool/src/main.rs:168:                update_args.operation = GUIOperations::GetVersion;
+hsm_update_tool/src/main.rs:488:fn get_version_operation(options: &UpdateArgs) -> Result<(), Box<dyn std::error::Error>>{
+hsm_update_tool/src/main.rs:490:    let mut packet = GetFirmwareVersionOpPacket::new();
+hsm_update_tool/src/main.rs:494:            log!(Info, "Get Firmware Version ACK'ed");
+hsm_update_tool/src/main.rs:495:            // The version is transmitted as 8 bytes (hex encoded 4 byte unsigned int) in Big-Endian order.
+hsm_update_tool/src/main.rs:499:                    println!("FAILED, Could not unpack firmware version response.");
+hsm_update_tool/src/main.rs:500:                    return Err("Could not unpack firmware version response".into());
+hsm_update_tool/src/main.rs:506:            log!(Error, "Get Firmware Version operation Failed: {}", e);
+hsm_update_tool/src/main.rs:507:            return Err("Get Firmare Version operation Failed.".into());
+hsm_update_tool/src/main.rs:559:        GUIOperations::GetVersion => {
+hsm_update_tool/src/main.rs:560:            return get_version_operation(&options);
+hsm_update_tool/src/packet.rs:6://the Free Software Foundation, either version 3 of the License, or
+hsm_update_tool/src/packet.rs:7://(at your option) any later version.
+hsm_update_tool/src/packet.rs:44:const UPDATE_MESSAGE_PROTOCOL_VERSION: u8 = 1;
+hsm_update_tool/src/packet.rs:174:    GetFirmwareVersion = 0x10,
+hsm_update_tool/src/packet.rs:224:///////////// Common Header Elements ////////////////
+hsm_update_tool/src/packet.rs:227:    pub version: u8,
+hsm_update_tool/src/packet.rs:235:            version: UPDATE_MESSAGE_PROTOCOL_VERSION,
+hsm_update_tool/src/packet.rs:244:        let mut size = self.version.marshal(w)?;
+hsm_update_tool/src/packet.rs:252:            version: u8::unmarshal(r)?,
+hsm_update_tool/src/packet.rs:328:pub struct GetFirmwareVersionOpPacket {
+hsm_update_tool/src/packet.rs:332:impl GetFirmwareVersionOpPacket {
+hsm_update_tool/src/packet.rs:333:    pub fn new() -> GetFirmwareVersionOpPacket {
+hsm_update_tool/src/packet.rs:334:        let packet = GetFirmwareVersionOpPacket {
+hsm_update_tool/src/packet.rs:335:            header: CommonUpdatePacketHeader::new(PacketType::GetFirmwareVersion),
+hsm_update_tool/src/packet.rs:341:impl MarshalingIntf for GetFirmwareVersionOpPacket {
+hsm_update_tool/src/packet.rs:353:impl UpdatePacketIntf for GetFirmwareVersionOpPacket {
+hsm_update_tool/src/packet.rs:616:    fn test_packet_type_u8_conversion() -> Result<(), MessageError> {
+hsm_update_tool/src/message_error.rs:6://the Free Software Foundation, either version 3 of the License, or
+hsm_update_tool/src/message_error.rs:7://(at your option) any later version.
+hsm_update_tool/src/message_error.rs:36:    ConversionError(std::num::TryFromIntError),
+hsm_update_tool/src/message_error.rs:50:            MessageError::ConversionError(ref err) => write!(f, "Int Conversion Error: {}", err),
+hsm_update_tool/src/message_error.rs:67:        MessageError::ConversionError(err)
+hsm_update_tool/src/lib.rs:6://the Free Software Foundation, either version 3 of the License, or
+hsm_update_tool/src/lib.rs:7://(at your option) any later version.
+hsm_update_tool/src/transfer_context.rs:6://the Free Software Foundation, either version 3 of the License, or
+hsm_update_tool/src/transfer_context.rs:7://(at your option) any later version.
+functionary_common/src/lib.rs:6://the Free Software Foundation, either version 3 of the License, or
+functionary_common/src/lib.rs:7://(at your option) any later version.
+functionary_common/src/lib.rs:27:extern crate elements;
+functionary_common/src/lib.rs:212:/// Type that implements concise logging for an elements header.
+functionary_common/src/lib.rs:213:pub struct PrintableElementsHeader<'a>(&'a elements::BlockHeader);
+functionary_common/src/lib.rs:215:impl<'a> fmt::Display for PrintableElementsHeader<'a> {
+functionary_common/src/lib.rs:217:        let mut d = f.debug_struct("elements::BlockHeader");
+functionary_common/src/lib.rs:218:        d.field("version", &self.0.version);
+functionary_common/src/lib.rs:223:        if let elements::BlockExtData::Dynafed { ref current, ref proposed, .. } = self.0.ext {
+functionary_common/src/lib.rs:236:impl<'a> ConcisePrintable<'a> for elements::BlockHeader {
+functionary_common/src/lib.rs:237:    type Printable = PrintableElementsHeader<'a>;
+functionary_common/src/lib.rs:239:        PrintableElementsHeader(self)
+functionary/Cargo.toml:3:version = "2.4.0"
+functionary/Cargo.toml:6:description = "Functionary utilities for Sidechain Elements"
+functionary/Cargo.toml:25:bitcoin = { version = "0.31.1", features = [ "serde", "rand" ] }
+functionary/Cargo.toml:26:elements = { version = "0.24.1", features = ["serde"] }
+functionary/Cargo.toml:27:miniscript = { version = "11.0.0", features = [ "serde" ] }
+init_hsm/Cargo.toml:3:version = "2.0.0"
+=== workflows ===
+=== all branches / recent activity ===
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/master-2.4.1
+ee77c89 Version 2.4.1
+d3ccee1 Version 2.4.0
+cca218f Version 2.3.1
+ee77c89f775dca2d915196d256a63b4c3387e882 2024-04-19 14:55:26 -0700 Version 2.4.1
+d3ccee17d92758afe6f6efac9d4153fa4f09c9a6 2024-03-22 15:53:02 -0700 Version 2.4.0
+cca218f0effa056dcabcf5a0089235e193fd0eed 2024-02-26 08:04:55 -0800 Version 2.3.1
+=== commits Aug-Sep 2026 ===
+=== Cargo.lock elements ===
+3:version = 3
+7:version = "0.1.4"
+8:source = "registry+https://github.com/rust-lang/crates.io-index"
+17:version = "0.1.5"
+18:source = "registry+https://github.com/rust-lang/crates.io-index"
+224:name = "elements"
+225-version = "0.24.1"
+226-source = "registry+https://github.com/rust-lang/crates.io-index"
+227-checksum = "dd6b8388053196e6b2702a45418078a654680ce9e1fd91799f51f67a40118ff5"
+228-dependencies = [
+229- "bitcoin",
+230- "secp256k1-zkp",
+=== sidechaind references ===
+functionary/src/blocksigner/config.rs:51:    /// http://url:port of the sidechaind RPC
+functionary/src/blocksigner/config.rs:52:    pub sidechaind_rpc_url: String,
+functionary/src/blocksigner/config.rs:53:    /// RPC username for sidechaind
+functionary/src/blocksigner/config.rs:54:    pub sidechaind_rpc_user: String,
+functionary/src/blocksigner/config.rs:55:    /// RPC password for sidechaind
+functionary/src/blocksigner/config.rs:56:    pub sidechaind_rpc_pass: String,
+functionary/src/hsm/local.rs:47:    /// Handle to sidechaind
+functionary/src/hsm/local.rs:80:    /// Handle to sidechaind
+functionary/src/blocksigner/mod.rs:225:    /// Handle to sidechaind
+functionary/src/blocksigner/mod.rs:226:    sidechaind: rpc::Elements,
+functionary/src/blocksigner/mod.rs:265:        let sidechaind = rpc::Elements::new(
+functionary/src/blocksigner/mod.rs:266:            config.local.sidechaind_rpc_url.clone(),
+functionary/src/blocksigner/mod.rs:267:            Some(config.local.sidechaind_rpc_user.clone()),
+functionary/src/blocksigner/mod.rs:268:            Some(config.local.sidechaind_rpc_pass.clone()),
+functionary/src/blocksigner/mod.rs:281:            let is_sidechaind_warming_up = sidechaind.is_warming_up("sidechaind").expect("sidechaind connection");
+functionary/src/blocksigner/mod.rs:282:            if !(is_bitcoind_warming_up || is_sidechaind_warming_up) {
+functionary/src/blocksigner/mod.rs:288:        match sidechaind.blockchain_info() {
+functionary/src/blocksigner/mod.rs:295:                        let header = sidechaind.raw_header_at(height).expect("to get sidechain header");
+functionary/src/blocksigner/mod.rs:312:            sidechaind: sidechaind,
+functionary/src/blocksigner/mod.rs:333:        log!(Debug, "Requesting hex block from sidechaind.");
+functionary/src/blocksigner/mod.rs:341:            log_try!(Error, self.sidechaind.new_block_with_commitments(&commitments))
+functionary/src/blocksigner/mod.rs:343:            log_try!(Error, self.sidechaind.new_block())
+functionary/src/blocksigner/mod.rs:374:                        block = log_try!(Error, self.sidechaind.new_block_with_commitments(&commitments));
+functionary/src/blocksigner/mod.rs:391:                        block = log_try!(Error, self.sidechaind.new_block_with_commitments(&commitments));
+functionary/src/blocksigner/mod.rs:518:    /// Try submitting the new block to sidechaind and check if it was accepted.
+functionary/src/blocksigner/mod.rs:521:        if let Some(problem) = log_try!(Error, self.sidechaind.submit_block(block)) {
+functionary/src/blocksigner/mod.rs:530:        let tip = log_try!(Warn, self.sidechaind.tip());
+functionary/src/blocksigner/mod.rs:594:        match self.sidechaind.precious_block(sidechain_tip) {
+functionary/src/blocksigner/mod.rs:601:        match self.sidechaind.tip() {
+functionary/src/blocksigner/mod.rs:614:        let params = match self.sidechaind.blockchain_info() {
+functionary/src/blocksigner/mod.rs:739:        match self.sidechaind.block_at_depth(1) {
+functionary/src/blocksigner/mod.rs:743:                match self.sidechaind.raw_header(hash) {
+functionary/src/blocksigner/mod.rs:753:        let sidechaind = &self.sidechaind; // borrowck trick
+functionary/src/blocksigner/mod.rs:759:            match sidechaind.block_at(*height) {
+functionary/src/blocksigner/mod.rs:1049:                match self.sidechaind.test_proposed_block(&block) {
+functionary/src/rpc.rs:18://! Support for interacting with bitcoind and sidechaind RPC interfaces
+functionary/src/rpc.rs:391:/// Elements Core-specific RPC methods.
+functionary/src/rpc.rs:491:        self.jsonrpc_query_hex("getnewblockhex", &[])
+functionary/src/rpc.rs:500:        self.jsonrpc_query_hex("getnewblockhex", &args)
+functionary/src/rpc.rs:753:/// An Elements Core client.
+functionary/src/rpc.rs:762:    /// Create a new Elements Core client.
+functionary/src/watchman/config.rs:51:    /// http://url:port of the sidechaind RPC
+functionary/src/watchman/config.rs:52:    pub sidechaind_rpc_url: String,
+functionary/src/watchman/config.rs:53:    /// RPC username for sidechaind
+functionary/src/watchman/config.rs:54:    pub sidechaind_rpc_user: String,
+functionary/src/watchman/config.rs:55:    /// RPC password for sidechaind
+functionary/src/watchman/config.rs:56:    pub sidechaind_rpc_pass: String,
+functionary/src/watchman/mod.rs:183:    /// Handle to sidechaind
+functionary/src/watchman/mod.rs:184:    sidechaind: rpc::Elements,
+functionary/src/watchman/mod.rs:227:        let sidechaind = rpc::Elements::new(
+=== README / docs ===
+no_readme
+=== Docker/CI absence ===
+NO_GITHUB_DIR
+=== bitcoin-images full ===
+Clonage dans 'bitcoin-images-full'...
+bd67783 lightningd: v26.06.6 + PS v7.0.0
+3ae8833 lightningd/peerswap: Add clnrest
+8172948 lightningd: Bump to v25.12.1 + fix deps
+bb21898 lightningd: Bump PS to 5.0.1 + daemons; modernize dep management
+46df1d4 CI: Start logging into Docker Hub using OAT
+5278998 tor: build signed 0.4.9.11 image
+72f2407 chore(bitcoin): v31.0
+26679ef elementsd: Bump to 23.3.3
+b3a79e8 hk(bitcoin): 30.2 upgrade (#4)
+c1f0ecf feat(lightningd): switch to upstream base image (#3)
+63bdadf [waterfalls] bump commit
+e8bc20d Merge pull request #2 from Blockstream/bitcoind-v30.0
+d08115b housekeeping(bitcoind): v30.0
+ddc9b86 housekeeping(bitcoin): version 29.1
+34a2527 fix(bitcoin): make script posix compliant
+aa9fdde bitcoind: 28.2
+7d25c01 bitcoind: 28.1
+c12c87c bitcoind: 28.0
+77724fa feat(waterfalls): switch to rcasetta repo and update commit
+b2f2bad lightningd: Bump CLN to v25.05 and other versions
+2026-08-27 12:51:46 +0000 bd67783 lightningd: v26.06.6 + PS v7.0.0
+2026-08-11 15:52:06 +0000 3ae8833 lightningd/peerswap: Add clnrest
+2026-08-07 11:25:32 +0000 8172948 lightningd: Bump to v25.12.1 + fix deps
+2026-08-06 15:50:14 +0000 bb21898 lightningd: Bump PS to 5.0.1 + daemons; modernize dep management
+2026-08-06 15:49:17 +0000 46df1d4 CI: Start logging into Docker Hub using OAT
+--- tree ---
+.
+./waterfalls
+./tor
+./liquidd-legacy
+./lightningd
+./lightningd/peerswap
+./lightningd/arm
+./lightningd/archive
+./hal-docker
+./elementsd
+./electrsd
+./charged
+./btc-rpc-proxy
+./bitcoind
+./.git
+./.git/logs
+./.git/refs
+./.git/objects
+./.git/info
+./.git/hooks
+--- elementsd Dockerfile + history of VER ---
+commit 26679ef0f14522c0df96033a4e2756eb51317e4a
+Author: nitramiz <martin@blockstream.com>
+Date:   Tue Apr 14 14:10:39 2026 +0000
+
+    elementsd: Bump to 23.3.3
+
+diff --git a/elementsd/build-and-push-to-dockerhub.sh b/elementsd/build-and-push-to-dockerhub.sh
+index 85bd930..b5310d8 100755
+--- a/elementsd/build-and-push-to-dockerhub.sh
++++ b/elementsd/build-and-push-to-dockerhub.sh
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ set -ex
+ 
+-export VER=${VER:-23.3.0}
++export VER=${VER:-23.3.3}
+ docker buildx build --platform linux/amd64,linux/arm64 \
+   --push \
+   --cache-from blockstream/elementsd:latest \
+
+commit ed42315e9310abf361b31347f2f33d6ee3ec51f0
+Author: nitramiz <martin@blockstream.com>
+Date:   Wed Jul 9 16:57:02 2025 +0000
+
+    elementsd: Bump to 23.3.0
+
+diff --git a/elementsd/build-and-push-to-dockerhub.sh b/elementsd/build-and-push-to-dockerhub.sh
+index e6cc625..85bd930 100755
+--- a/elementsd/build-and-push-to-dockerhub.sh
++++ b/elementsd/build-and-push-to-dockerhub.sh
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ set -ex
+ 
+-export VER=${VER:-23.2.5}
++export VER=${VER:-23.3.0}
+ docker buildx build --platform linux/amd64,linux/arm64 \
+   --push \
+   --cache-from blockstream/elementsd:latest \
+
+commit cfb7dc060ae98f1f212d4f4cba2ce79ebb40e107
+Author: Alex Ratner <aratner@blockstream.com>
+Date:   Tue Apr 1 00:34:45 2025 -0700
+
+    elementsd: enable builds from alternate GH repos
+
+diff --git a/elementsd/build-and-push-to-dockerhub.sh b/elementsd/build-and-push-to-dockerhub.sh
+index 3951505..e6cc625 100755
+--- a/elementsd/build-and-push-to-dockerhub.sh
++++ b/elementsd/build-and-push-to-dockerhub.sh
+@@ -7,6 +7,7 @@ docker buildx build --platform linux/amd64,linux/arm64 \
+   --cache-from blockstream/elementsd:latest \
+   --build-arg ELEMENTS_VERSION=${VER} \
+   --build-arg BUILDKIT_INLINE_CACHE=1 \
++  --build-arg GH_REPO \
+   -t blockstream/elementsd:${VER} . || { echo -e "\nSomething broke"; exit 1; }
+ 
+ if [[ $LATEST -eq 1 ]]
+
+commit 59008ef73ee9b4a9fb8073ef6ec98cdb299bb628
+Author: nitramiz <martin@blockstream.com>
+Date:   Tue Jan 28 13:59:20 2025 +0000
+
+    elementsd: Bump to 23.2.5
+
+diff --git a/elementsd/build-and-push-to-dockerhub.sh b/elementsd/build-and-push-to-dockerhub.sh
+index d940bc2..3951505 100755
+--- a/elementsd/build-and-push-to-dockerhub.sh
++++ b/elementsd/build-and-push-to-dockerhub.sh
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ set -ex
+ 
+-export VER=${VER:-23.2.4}
++export VER=${VER:-23.2.5}
+ docker buildx build --platform linux/amd64,linux/arm64 \
+   --push \
+   --cache-from blockstream/elementsd:latest \
+
+commit 854c47e05a3bf1e44da290f105cdc4697623f314
+2026-04-14 14:10:39 +0000 26679ef elementsd: Bump to 23.3.3
+2025-07-09 16:57:02 +0000 ed42315 elementsd: Bump to 23.3.0
+2025-04-01 15:06:21 +0000 cfb7dc0 elementsd: enable builds from alternate GH repos
+2025-01-28 14:05:34 +0000 59008ef elementsd: Bump to 23.2.5
+2025-01-07 12:23:35 +0100 c827c03 multi-platform: fix missing TARGETARCH
+2025-01-06 19:55:44 +0100 854c47e docker buildx: use imagetools to tag
+2024-11-24 12:17:54 +0100 9056784 ARM-ify images + various updates
+2024-09-17 14:09:42 +0000 be3d080 blockstream/elementsd:23.2.3
+2024-08-13 14:26:36 +0000 5bc2538 blockstream/elementsd:23.2.2
+2023-07-25 15:09:19 +0000 218d23d elementsd:22.1.1
+2023-02-12 16:22:23 +0000 b555f0b elementsd:22.1
+2023-01-16 18:23:14 +0000 c59a983 CI: Fix builds for bitcoind, elementsd, lightningd
+2022-11-10 13:50:46 +0000 3a7b3c2 elementsd:22.0.2
+2022-03-07 09:38:01 -0800 974b368 elementsd 0.21.0.2
+2021-12-20 09:25:22 -0800 e31e441 elementsd 0.21.0.1
+2021-11-18 06:51:23 -0800 de277c9 elementsd:0.21.0 bump down glibc
+2021-10-29 18:52:32 +0200 b580c8b devops/tasks#1390: update elements to 0.21.0
+2021-06-10 07:34:03 -0700 c0aa69a elementsd 0.18.1.12
+2021-03-30 08:50:03 -0700 700a11b elementsd 0.18.1.11
+2020-10-16 06:23:27 -0700 11667b9 update elementsd 0.18.1.9
+FROM debian:bookworm-slim
+
+ARG TARGETARCH TARGETOS
+ARG ELEMENTS_VERSION
+ARG GH_REPO=ElementsProject/elements
+
+ENV ELEMENTS_VERSION=$ELEMENTS_VERSION
+ENV GH_REPO=$GH_REPO
+ENV PABLO_PGP_KEY=BD0F3062F87842410B06A0432F656B0610604482
+ENV BYRON_PGP_KEY=710E44C2DAAE938F778744A1DE8F6EA20A661697
+ENV GH_DOWNLOAD=https://github.com/${GH_REPO}/releases/download
+
+ENV GLIBC_VERSION=2.33-r0
+
+RUN apt update \
+  && apt install -qfy ca-certificates wget gnupg bash
+
+RUN if [ "${TARGETARCH}" = "arm64" ]; then \
+    wget ${GH_DOWNLOAD}/elements-${ELEMENTS_VERSION}/elements-${ELEMENTS_VERSION}-aarch64-linux-gnu.tar.gz; \
+  else \
+    wget ${GH_DOWNLOAD}/elements-${ELEMENTS_VERSION}/elements-${ELEMENTS_VERSION}-x86_64-linux-gnu.tar.gz; \
+  fi \
+ && wget ${GH_DOWNLOAD}/elements-${ELEMENTS_VERSION}/SHA256SUMS.asc
+
+RUN gpg --keyserver hkps://keys.openpgp.org --recv-keys ${BYRON_PGP_KEY} ${PABLO_PGP_KEY} \
+  && gpg --output SHA256SUMS --decrypt SHA256SUMS.asc  \
+  && if [ "${TARGETARCH}" = "arm64" ]; then \
+      grep elements-${ELEMENTS_VERSION}-aarch64-linux-gnu.tar.gz SHA256SUMS | sha256sum -c; \
+    else \
+      grep elements-${ELEMENTS_VERSION}-x86_64-linux-gnu.tar.gz SHA256SUMS | sha256sum -c; \
+    fi
+
+RUN mkdir elements \
+  && if [ "${TARGETARCH}" = "arm64" ]; then \
+      tar xzvf elements-${ELEMENTS_VERSION}-aarch64-linux-gnu.tar.gz --strip-components=1 -C elements; \
+    else \
+      tar xzvf elements-${ELEMENTS_VERSION}-x86_64-linux-gnu.tar.gz --strip-components=1 -C elements; \
+    fi \
+  && mkdir /root/.elements \
+  && mv elements/bin/* /usr/local/bin/ \
+  && mv elements/lib/* /usr/local/lib/ \
+  && mv elements/share/* /usr/local/share/
+
+RUN apt-get clean && apt-get autoclean
+--- search functionary/bridge/liquid ---
+bitcoind/run-guix.sh:27:  git clone --branch "${BITCOIN_VERSION}" --depth 1 https://github.com/bitcoin/bitcoin.git bitcoin-src
+lightningd/peerswap/Dockerfile:2:ARG ELEMENTS_VER=23.3.3
+lightningd/peerswap/Dockerfile:29:RUN git clone https://github.com/ElementsProject/lightning.git --depth 1 -b ${CLN_VER} /opt/lightningd
+lightningd/peerswap/Dockerfile:87:RUN git clone https://github.com/ElementsProject/peerswap.git -n $PLUGIN_PATH/ps \
+lightningd/peerswap/build-and-push-to-dockerhub.sh:7:export ELEMENTS_VER=${ELEMENTS_VER:-23.3.3}
+liquidd-legacy/Dockerfile:4:ENV LIQUID_VERSION=2.14.1.24
+liquidd-legacy/Dockerfile:6:WORKDIR /opt/liquid
+liquidd-legacy/Dockerfile:17:RUN wget -O liquid-latest.tar.gz https://liquid-packages.blockstream.com/liquid-binary-repo/gitian/liquid-latest.tar.gz \
+liquidd-legacy/Dockerfile:18:  & wget -O liquid-latest.tar.gz.asc https://liquid-packages.blockstream.com/liquid-binary-repo/gitian/liquid-latest.tar.gz.asc \
+liquidd-legacy/Dockerfile:20:  && gpg --verify liquid-latest.tar.gz.asc \
+liquidd-legacy/Dockerfile:21:  && tar xzvf liquid-latest.tar.gz \
+liquidd-legacy/Dockerfile:22:  && mkdir /root/.liquid \
+liquidd-legacy/Dockerfile:24:  && cp liquid-${LIQUID_VERSION}/bin/* /usr/local/bin/ \
+liquidd-legacy/Dockerfile:25:  && rm -rf liquid* \
+liquidd-legacy/publish.sh:3:docker pull blockstream/liquidd-legacy:latest || true
+liquidd-legacy/publish.sh:4:docker build --cache-from blockstream/liquidd-legacy:latest -t blockstream/liquidd-legacy:latest . || (echo -e "\nSomething broke" && exit 1)
+liquidd-legacy/publish.sh:5:docker push blockstream/liquidd-legacy:latest
+liquidd-legacy/publish.sh:7:SHA=$(docker inspect --format='{{index .RepoDigests 0}}' blockstream/liquidd-legacy:latest)
+lightningd/arm/Dockerfile.armv7:25:RUN git clone https://github.com/ElementsProject/lightning.git -b ${CLN_VERSION} /opt/lightningd 
+lightningd/archive/sauron.Dockerfile:25:RUN git clone https://github.com/ElementsProject/lightning.git -b ${CLN_VERSION} /opt/lightningd 
+lightningd/arm/Dockerfile.armv7-esplora:25:RUN git clone https://github.com/ElementsProject/lightning.git -b ${CLN_VERSION} /opt/lightningd 
+electrsd/Dockerfile:13:RUN curl -Ls https://github.com/RCasatta/electrsd/releases/download/electrs_releases/electrs_linux_esplora_${ELECTRSD_VERSION}_liquid.gz | gunzip > electrs
+electrsd/build-and-push-to-dockerhub.sh:9:    --cache-from blockstream/electrsd-liquid:latest \
+electrsd/build-and-push-to-dockerhub.sh:11:    -t blockstream/electrsd-liquid:$VER \
+electrsd/build-and-push-to-dockerhub.sh:12:    -t blockstream/electrsd-liquid:latest . || `echo -e "\nSomething broke" && exit 1`
+charged/Dockerfile:11:RUN git clone https://github.com/ElementsProject/lightning-charge.git -b ${CHARGED_VERSION} /opt/charged \
+elementsd/build-and-push-to-dockerhub.sh:4:export VER=${VER:-23.3.3}
+elementsd/run-gitian.sh:9:git clone https://github.com/devrandom/gitian-builder.git gitian
+elementsd/run-gitian.sh:10:git clone https://github.com/ElementsProject/elements -b ${ELEMENTS_VERSION} gitian/inputs/elements
+elementsd/run-gitian.sh:19:bin/gbuild --skip-fetch --num-make 2 --memory 4000 --url elements=inputs/elements --commit elements=${ELEMENTS_VERSION} inputs/elements/contrib/gitian-descriptors/gitian-linux.yml
+lightningd/archive/rebalance.Dockerfile:29:RUN git clone https://github.com/ElementsProject/lightning.git --depth 20 -b ${CLN_VERSION} /opt/lightningd 
+lightningd/archive/rebalance.Dockerfile:82:RUN git clone https://github.com/Ride-The-Lightning/c-lightning-REST.git $PLUGIN_PATH/rtl
+waterfalls/Dockerfile:6:ARG WATERFALLS_COMMIT_HASH=master
+waterfalls/Dockerfile:7:ENV WATERFALLS_COMMIT_HASH=$WATERFALLS_COMMIT_HASH
+waterfalls/Dockerfile:10:RUN git clone --no-checkout $WATERFALLS_REPO \
+waterfalls/Dockerfile:12: && git checkout $WATERFALLS_COMMIT_HASH
+waterfalls/build-and-push-to-dockerhub.sh:5:export WATERFALLS_COMMIT_HASH=b8818e1bf21f89e1d64b5077fc35c1b6ff26f37e
+waterfalls/build-and-push-to-dockerhub.sh:11:    --build-arg WATERFALLS_COMMIT_HASH=${WATERFALLS_COMMIT_HASH} \
+waterfalls/build-and-push-to-dockerhub.sh:12:    -t blockstream/waterfalls:$WATERFALLS_COMMIT_HASH \
+waterfalls/build-and-push-to-dockerhub.sh:15:echo "pushed blockstream/waterfalls:$WATERFALLS_COMMIT_HASH"
+total 12
+drwxrwxr-x 13 user user  320 Sep  7 16:08 .
+drwxrwxrwt 23 root   root   4620 Sep  7 16:08 ..
+drwxrwxr-x  7 user user  240 Sep  7 16:08 .git
+-rw-rw-r--  1 user user   49 Sep  7 16:08 .gitignore
+-rw-rw-r--  1 user user 1929 Sep  7 16:08 .gitlab-ci.yml
+-rw-rw-r--  1 user user 1015 Sep  7 16:08 README.md
+drwxrwxr-x  2 user user  220 Sep  7 16:08 bitcoind
+drwxrwxr-x  2 user user  100 Sep  7 16:08 btc-rpc-proxy
+drwxrwxr-x  2 user user  120 Sep  7 16:08 charged
+drwxrwxr-x  2 user user  100 Sep  7 16:08 electrsd
+drwxrwxr-x  2 user user  140 Sep  7 16:08 elementsd
+drwxrwxr-x  2 user user  100 Sep  7 16:08 hal-docker
+drwxrwxr-x  5 user user  200 Sep  7 16:08 lightningd
+drwxrwxr-x  2 user user   80 Sep  7 16:08 liquidd-legacy
+drwxrwxr-x  2 user user  140 Sep  7 16:08 tor
+drwxrwxr-x  2 user user   80 Sep  7 16:08 waterfalls
+=== liquidd-legacy + packages ===
+FROM alpine
+
+ENV GLIBC_VERSION=2.28-r0
+ENV LIQUID_VERSION=2.14.1.24
+
+WORKDIR /opt/liquid
+
+RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
+ && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk \
+ && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-bin-${GLIBC_VERSION}.apk
+
+RUN apk update \
+	&& apk --no-cache add ca-certificates wget gnupg bash \
+  && apk --no-cache add glibc-${GLIBC_VERSION}.apk \
+  && apk --no-cache add glibc-bin-${GLIBC_VERSION}.apk
+
+RUN wget -O liquid-latest.tar.gz https://liquid-packages.blockstream.com/liquid-binary-repo/gitian/liquid-latest.tar.gz \
+  & wget -O liquid-latest.tar.gz.asc https://liquid-packages.blockstream.com/liquid-binary-repo/gitian/liquid-latest.tar.gz.asc \
+  && gpg --keyserver pgp.mit.edu --recv-keys EA3C448BB4A71A00 \
+  && gpg --verify liquid-latest.tar.gz.asc \
+  && tar xzvf liquid-latest.tar.gz \
+  && mkdir /root/.liquid \
+  && apk del wget ca-certificates \
+  && cp liquid-${LIQUID_VERSION}/bin/* /usr/local/bin/ \
+  && rm -rf liquid* \
+  && rm -rf glibc-*
+---
+HTTP/2 404 
+content-type: application/xml; charset=UTF-8
+x-guploader-uploadid: AJjja9al6qVUey8w4L5dLlZSHkz81OuMFg9-TkA8xLWv9c_AJk9-rZ08mpPvlfD1rwIA41vn-1Lbsow
+content-length: 127
+date: Mon, 07 Sep 2026 14:08:59 GMT
+expires: Mon, 07 Sep 2026 14:08:59 GMT
+cache-control: private, max-age=0
+server: UploadServer
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+HTTP/2 404 
+content-type: application/xml; charset=UTF-8
+x-guploader-uploadid: AJjja9aerFZyQkGPg5ObNW0FHphpz57ylWQj95f9e8ywsQgXO5xgIfeUoYkrnNDLdIaIzBpfa4fzgg0
+content-length: 127
+date: Mon, 07 Sep 2026 14:08:59 GMT
+expires: Mon, 07 Sep 2026 14:08:59 GMT
+cache-control: private, max-age=0
+server: UploadServer
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+=== gitlab-ci bitcoin-images ===
+variables:
+  GIT_SUBMODULE_STRATEGY: none
+  CI_DISPOSABLE_ENVIRONMENT: "true"
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_BUILDKIT: 1
+
+default:
+  image: docker:27
+  services:
+    - name: docker:27-dind
+      command: ["dockerd", "--host=tcp://0.0.0.0:2375"]
+      alias: "docker"
+  before_script:
+    - echo "$DOCKERHUB_PW" | docker login -u $DOCKERHUB_USER --password-stdin
+    - docker info
+    - docker buildx create
+      --driver=docker-container
+      --name=buildkit-builder
+      --use
+      --platform linux/amd64,linux/arm64
+  tags:
+    - cloud
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - unknown_failure
+      - stuck_or_timeout_failure
+
+stages:
+  - build_push
+
+build_bitcoind:
+  stage: build_push
+  when: manual
+  only:
+    changes:
+      - bitcoind/**
+  script:
+    - cd bitcoind && sh ./build-and-push-to-dockerhub.sh
+
+build_lightningd:
+  stage: build_push
+  when: manual
+  only:
+    changes:
+      - lightningd/Dockerfile
+      - lightningd/build-and-push-to-dockerhub.sh
+  script:
+    - cd lightningd && sh ./build-and-push-to-dockerhub.sh
+
+build_lightningd_peerswap:
+  stage: build_push
+  when: manual
+  only:
+    changes:
+      - lightningd/peerswap/*
+  script:
+    - cd lightningd/peerswap && sh ./build-and-push-to-dockerhub.sh
+
+build_elementsd:
+  stage: build_push
+  when: manual
+  only:
+    changes:
+      - elementsd/**
+  script:
+    - cd elementsd && sh ./build-and-push-to-dockerhub.sh
+
+build_waterfalls:
+  stage: build_push
+  when: manual
+  only:
+    changes:
+      - waterfalls/**
+  script:
+    - cd waterfalls && sh ./build-and-push-to-dockerhub.sh
+
+build_electrsd:
+  stage: build_push
+  when: manual
+  only:
+    changes:
+      - electrsd/**
+  script:
+    - cd electrsd && sh ./build-and-push-to-dockerhub.sh
+
+build_tor:
+  stage: build_push
+  when: manual
+  only:
+    changes:
+      - tor/**
+  script:
+    - cd tor && sh ./build-and-push-to-dockerhub.sh
+=== functionary submit_block / test_proposed ===
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:519:    fn try_submit_block(&mut self, round_stage: RoundStage, block: &elements::Block) -> Result<(), Error> {
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:521:        if let Some(problem) = log_try!(Error, self.sidechaind.submit_block(block)) {
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:989:            if let Err(e) = self.try_submit_block(round_stage, &block) {
+/tmp/liquid-functionary/functionary/src/blocksigner/mod.rs:1049:                match self.sidechaind.test_proposed_block(&block) {
+/tmp/liquid-functionary/functionary/src/rpc.rs:491:        self.jsonrpc_query_hex("getnewblockhex", &[])
+/tmp/liquid-functionary/functionary/src/rpc.rs:500:        self.jsonrpc_query_hex("getnewblockhex", &args)
+/tmp/liquid-functionary/functionary/src/rpc.rs:504:    fn test_proposed_block(&self, block: &elements::Block) -> Result<(), jsonrpc::Error> {
+/tmp/liquid-functionary/functionary/src/rpc.rs:516:    fn submit_block(&self, block: &elements::Block) -> Result<Option<String>, jsonrpc::Error> {
+            best_blockhash: res.bestblockhash,
+            signblock_script: res.current_signblock_hex,
+            consensus_params: params,
+            epoch_age: res.epoch_age,
+            epoch_length: res.epoch_length,
+            size_on_disk: res.size_on_disk,
+        })
+    }
+
+    /// Get a new generated block.
+    fn new_block(&self) -> Result<elements::Block, jsonrpc::Error> {
+        self.jsonrpc_query_hex("getnewblockhex", &[])
+    }
+
+    /// Get a new generated block.
+    fn new_block_with_commitments(&self, commitments: &[Vec<u8>]) -> Result<elements::Block, jsonrpc::Error> {
+        let hex_commitments: Vec<String> = commitments.into_iter().map(|c| c.as_hex().to_string()).collect();
+
+        let args = Vec::from([0.into(), serde_json::Value::Null, serde_json::Value::from(hex_commitments)]);
+
+        self.jsonrpc_query_hex("getnewblockhex", &args)
+    }
+
+    /// Test a proposed new block.
+    fn test_proposed_block(&self, block: &elements::Block) -> Result<(), jsonrpc::Error> {
+        let acceptnonstd = true;
+        let _ = self.jsonrpc_query::<jsonrpc::serde_json::Value>(
+            "testproposedblock",
+            &[elements::encode::serialize_hex(block).into(), acceptnonstd.into()]
+        )?;
+
+        Ok(())
+    }
+
+    /// Submit a block for broadcasting.
+    /// Returns None on success, Some(errors) on errors.
+    fn submit_block(&self, block: &elements::Block) -> Result<Option<String>, jsonrpc::Error> {
+        let res = self.jsonrpc_query::<jsonrpc::serde_json::Value>(
+            "submitblock",
+            &[elements::encode::serialize_hex(block).into()],
+        )?;
+        Ok(match res {
+            jsonrpc::serde_json::Value::Null => None,
+            jsonrpc::serde_json::Value::String(s) => Some(s),
+            j => {
+                let res = j.to_string();
+                slog!(UnexpectedRpcResponse, daemon: "elements", command: "submitblock",
+                    response: &res
+                );
+                Some(res)
+            }
+        })
+    }
+
+    /// Favor this block over other blocks with the same work.
+    /// Returns None on success, Some(errors) on errors.
+    fn precious_block(&self, hash: elements::BlockHash) -> Result<Option<String>, jsonrpc::Error> {
+        let res = self.jsonrpc_query::<jsonrpc::serde_json::Value>(
+            "preciousblock",
+            &[hash.to_string().into()],
+        )?;
+        Ok(match res {
+            jsonrpc::serde_json::Value::Null => None,
+            jsonrpc::serde_json::Value::String(s) => Some(s),
+            j => {
+                let res = j.to_string();
+                slog!(UnexpectedRpcResponse, daemon: "elements", command: "preciousblock",
+                    response: &res
+                );
+                Some(res)
+            }
+        })
+    }
+
+    /// Send a tx to the network.
+    fn send_tx(&self, tx: &elements::Transaction) -> Result<elements::Txid, jsonrpc::Error> {
+        self.jsonrpc_query("sendrawtransaction", &[elements::encode::serialize_hex(tx).into()])
+    }
+
+    /// Get the active PAK list.
+    fn pak_list(&self) -> Result<PakList, jsonrpc::Error> {
+                    State::Precommitted(_) | State::SentSignature(..) => {
+                        slog!(BlockAtWrongTime, peer: peer,
+                            self_state: Some(format!("self.state == {}", self.state)),
+                            peer_state: None,
+                        );
+                        self.state = State::Error(Error::DuplicateProposal(peer));
+                        return;
+                    }
+                    State::Starting | State::WillPropose => {
+                        slog!(BlockAtWrongTime, peer: peer,
+                            self_state: Some(format!("self.state == {}", self.state)),
+                            peer_state: None,
+                        );
+                        return;
+                    }
+                    State::Error(_) => return,
+                }
+
+                // Send it to the daemon to check it
+                match self.sidechaind.test_proposed_block(&block) {
+                    Ok(_) => {},
+                    Err(jsonrpc::Error::Rpc(jsonrpc::error::RpcError{code, message, ..})) if code == RPC_VERIFY_ALREADY_IN_CHAIN => {
+                        slog!(DuplicateBlock, header: &block.header, error: message.to_string());
+                        return;
+                    }
+                    Err(e) => {
+                        slog!(DaemonRejectBlock, header: &block.header, error: e.to_string());
+                        return;
+                    }
+                }
+
+                // Count master's block as a precommit.
+                let blockhash = block.block_hash();
+                self.peer_mgr.record_precommit(peer, blockhash, elements::BlockHash::all_zeros());
+
+                // Check that we understand the dynafed parameters
+                if let elements::BlockExtData::Dynafed { ref current, ref proposed, .. } = block.header.ext {
+                    let current_root = current.calculate_root();
+                    let current_params = match self.cpe_set.get_params(current_root) {
+                        Some(params) => params,
+                        None => {
+                            slog!(UnknownActiveCpe, peer: Some(peer), root: current_root,);
+                            log!(Debug, "Unknown params: {:?}", current);
+                            return;
+                        }
+                    };
+
+                    if !proposed.is_null() {
+                        let proposed_root = proposed.calculate_root();
+                        if let Some(params) = self.cpe_set.get_params(proposed_root) {
+                            if params.start_height < current_params.start_height {
+
+=== Mission 33 synthesis ===
+liquid-functionary does NOT pin Elements/sidechaind commit
+Public repo stale since 2024; no CI; no Docker for functionary stack
+bitcoin-images elementsd tracks release tags only; last bump 23.3.3 Apr 2026
+Cannot reconstruct Sep 6 functionary sidechaind Elements commit from public artifacts

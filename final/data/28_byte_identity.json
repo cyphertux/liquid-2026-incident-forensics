@@ -1,0 +1,14 @@
+{
+  "convention": "[start, end) offsets into P1",
+  "P1_len": 4234,
+  "P1_0_4166_equals_P0": true,
+  "P1_4166_4199_equals_C0": true,
+  "P1_4199_4232_equals_G": true,
+  "P1_4232_4234_equals_6a43": true,
+  "note_intervals_beyond_4234": "REFUTED if claimed \u2014 P1 has no bytes at [4234,4301)",
+  "S0_equals_6a43_C1_G_6a": true,
+  "S1_equals_6a": true,
+  "SHA256_P0": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+  "SHA256_P1": "6619fa29ce0967ae93baefef0bc6233972b05249a9861a96695a106bbcc098b2",
+  "SHA256_P1_prefix_4166": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a"
+}

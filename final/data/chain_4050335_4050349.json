@@ -1,0 +1,198 @@
+[
+  {
+    "HEIGHT": 4050335,
+    "HASH": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+    "PREVHASH": "3b892680a538bdc4cef5b735176e541d79851cd1834fb32a071d86d01609ffe0",
+    "TIMESTAMP": 1788702730,
+    "UTC": "2026-09-06 13:52:10 UTC",
+    "TX_COUNT": 5,
+    "TXIDS": [
+      "b0e8203b7d6ed53b8e0420242c2720b32ed131ae139798162328138424a60deb",
+      "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5",
+      "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+      "72c64d4d41dcf7f9c925fc37e7d3a91e4cf602dad9644e8e7229f8e4e7e5040e",
+      "9669444c8aa40ce7ac7e27b2b3ef8fd218f0bd60e1c9b9bf3e855de1e74488cc"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050336,
+    "HASH": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+    "PREVHASH": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+    "TIMESTAMP": 1788702790,
+    "UTC": "2026-09-06 13:53:10 UTC",
+    "TX_COUNT": 7,
+    "TXIDS": [
+      "b36f958937d194172c0a6b75b39c1e42bb78e5409d8de8ab3b1acd139714d568",
+      "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+      "09016269fc2b5c2673f51599c8c97027e343df430dc0514fdec8a7ed3fba998a",
+      "c652a1047ff549698b09242a66e20f6e9a044d5c972419342fa552b0856ba674",
+      "efa5e6e63170b9c6ebf502b7dfbb4bb700d5ee639a70aa1caf0cbd67e2af2e3d",
+      "5707d0cedb1fe6976d8b88e794bc2d91260c93b19ca15fc2a15128434737cdc5",
+      "2817e839a351f40c04567081f9ea33ed006dd7e5b8032c810187c64461e48d07"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050337,
+    "HASH": "c212cdcb6b2e68d4f56a7ddfee48bd3c02b2bfbb703b9f4506ac1597a40d38be",
+    "PREVHASH": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+    "TIMESTAMP": 1788702850,
+    "UTC": "2026-09-06 13:54:10 UTC",
+    "TX_COUNT": 6,
+    "TXIDS": null,
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050338,
+    "HASH": "0b998712cb557e04f1780e6285509fd3c6ed94344bdeb9ad9c8f819bfd232250",
+    "PREVHASH": "c212cdcb6b2e68d4f56a7ddfee48bd3c02b2bfbb703b9f4506ac1597a40d38be",
+    "TIMESTAMP": 1788702910,
+    "UTC": "2026-09-06 13:55:10 UTC",
+    "TX_COUNT": 4,
+    "TXIDS": null,
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050339,
+    "HASH": "5ba1ea5defeebca7c4036c9242461be8cfd7e6de055156972c1c87d5b58e52cb",
+    "PREVHASH": "0b998712cb557e04f1780e6285509fd3c6ed94344bdeb9ad9c8f819bfd232250",
+    "TIMESTAMP": 1788702970,
+    "UTC": "2026-09-06 13:56:10 UTC",
+    "TX_COUNT": 3,
+    "TXIDS": null,
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050340,
+    "HASH": "4a308cc2b35e675a8df9cd04e1748625c8200dd169ff40b522b2e10f2ee5526d",
+    "PREVHASH": "5ba1ea5defeebca7c4036c9242461be8cfd7e6de055156972c1c87d5b58e52cb",
+    "TIMESTAMP": 1788703030,
+    "UTC": "2026-09-06 13:57:10 UTC",
+    "TX_COUNT": 2,
+    "TXIDS": null,
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050341,
+    "HASH": "37a4edbe432dd6bb676aa8657e01a7aaaeab1c01e7fc267d02c1dc025f7147fb",
+    "PREVHASH": "4a308cc2b35e675a8df9cd04e1748625c8200dd169ff40b522b2e10f2ee5526d",
+    "TIMESTAMP": 1788703090,
+    "UTC": "2026-09-06 13:58:10 UTC",
+    "TX_COUNT": 4,
+    "TXIDS": null,
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050342,
+    "HASH": "90d1508b879a8f5ed832615785d653b0f2a6c06b485f1950665e93ea13e97aed",
+    "PREVHASH": "37a4edbe432dd6bb676aa8657e01a7aaaeab1c01e7fc267d02c1dc025f7147fb",
+    "TIMESTAMP": 1788703150,
+    "UTC": "2026-09-06 13:59:10 UTC",
+    "TX_COUNT": 2,
+    "TXIDS": null,
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050343,
+    "HASH": "f7add9732519fd2737a1be40a86a96191db0ea126338cc934eb686834ddc98f8",
+    "PREVHASH": "90d1508b879a8f5ed832615785d653b0f2a6c06b485f1950665e93ea13e97aed",
+    "TIMESTAMP": 1788703210,
+    "UTC": "2026-09-06 14:00:10 UTC",
+    "TX_COUNT": 6,
+    "TXIDS": null,
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050344,
+    "HASH": "3a4afa5b5a01119f6ecd8073374fb1418fa220c00b1ac0cd582d6adfc0be6c68",
+    "PREVHASH": "f7add9732519fd2737a1be40a86a96191db0ea126338cc934eb686834ddc98f8",
+    "TIMESTAMP": 1788703270,
+    "UTC": "2026-09-06 14:01:10 UTC",
+    "TX_COUNT": 4,
+    "TXIDS": [
+      "a71abdba308bbc57f3ff950ff619ced2dd2cb52c97eb8c5075c6a5117212ecbc",
+      "9b35b068db0c73556f81ff568b66b0def3939f1f5e6fd1289fb97864f93eda31",
+      "46f117c990580501a5156937a8c8affda551a38b3c0b99d29eb8469ee6beb3d2",
+      "92eef0710dd73076a4f7a4908a8b5be844a6b23661ac8a1958dfb18616e28757"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050345,
+    "HASH": "d5ebce62272c047f89fc98cc8ae54424e6d9e0d2290396b591dab74764cf6340",
+    "PREVHASH": "3a4afa5b5a01119f6ecd8073374fb1418fa220c00b1ac0cd582d6adfc0be6c68",
+    "TIMESTAMP": 1788703330,
+    "UTC": "2026-09-06 14:02:10 UTC",
+    "TX_COUNT": 4,
+    "TXIDS": [
+      "f7e57ee114c0f0479cbdc686d5e29228dfc98ca8ca1df4b4f06a873d7c4444d4",
+      "63f4f77b72fc5ccfc32b620daec0e7ffbd53c06e8d47e6c78258ea1fbf18490d",
+      "97dceb4f1fb3f1f11d2d1ef782c7848685578fb891cef115783547bfdb411b39",
+      "b55e10cd7bfb80ad6125547a41a6994258218bcfcf9f3ea285ad79a9f9c2c2c3"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050346,
+    "HASH": "47c7d0c902746f15dc2651d1b29fdd2fd6b9ce658fbbb2bb88e5cefa8c87003a",
+    "PREVHASH": "d5ebce62272c047f89fc98cc8ae54424e6d9e0d2290396b591dab74764cf6340",
+    "TIMESTAMP": 1788703390,
+    "UTC": "2026-09-06 14:03:10 UTC",
+    "TX_COUNT": 4,
+    "TXIDS": [
+      "3c6029332214e0473efbd323637fb2f8d594428836c9828f335d99a0a6bd1b5d",
+      "8e742e688529af31d26262f28758c190712cbdc7b042825b050f52b620ac595c",
+      "63b39c693f3687107a1064ecd5c79aeb2dcf4ced10dc78e3bb0e6642154ce215",
+      "3f86423c9b433a31b9d285fa9800b030a156b09b6035f9ee0470a938ef97e0fd"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050347,
+    "HASH": "7ab19940d7f68503778959b67dee59c475fabb9b2d445f6ae515dac7923d9222",
+    "PREVHASH": "47c7d0c902746f15dc2651d1b29fdd2fd6b9ce658fbbb2bb88e5cefa8c87003a",
+    "TIMESTAMP": 1788703450,
+    "UTC": "2026-09-06 14:04:10 UTC",
+    "TX_COUNT": 5,
+    "TXIDS": [
+      "3883445edb80e6d907ca4cdbda797bff3a784a37a44dc45e1ec82c23137295d7",
+      "ab137e4ce94f602a808ddebf9fb46db5b081bb5f5caf303149e3e8a8b2c0350d",
+      "f7deeb7cc4c97583308080d8b027f316cc5360cd40c0e4f36136e496df4a3042",
+      "b20191591969567a96e3a4b76e8d7fe7d625ef1912410bbdedb3ae0b6e38ccce",
+      "248365bf2fb3f8fba4e0bb0c82fe8a9f90ad6a8080d62b34704a66bb55a598fb"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050348,
+    "HASH": "ca87fbece5fcfee99a00ee8920d68a35e1f8f2bc9c7b53b1b7e7f9c32aaa83fc",
+    "PREVHASH": "7ab19940d7f68503778959b67dee59c475fabb9b2d445f6ae515dac7923d9222",
+    "TIMESTAMP": 1788703510,
+    "UTC": "2026-09-06 14:05:10 UTC",
+    "TX_COUNT": 3,
+    "TXIDS": [
+      "f6f963bc6edde99eb89dc21265ba07d4b5810e12a1aafcf51c12b3bd549dc32a",
+      "32892440646b3309a71ea5b0f6c87daebcb481f2d2f5434deaea515ef2933814",
+      "fc311bba644074875fa812f52bf1e5f6bbfdb2b82ac791654987e041043b09b5"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  },
+  {
+    "HEIGHT": 4050349,
+    "HASH": "90a8c1ae477530b1e50c30ab7dc709eacab5a68a8b3652c147441508b1244730",
+    "PREVHASH": "ca87fbece5fcfee99a00ee8920d68a35e1f8f2bc9c7b53b1b7e7f9c32aaa83fc",
+    "TIMESTAMP": 1788703570,
+    "UTC": "2026-09-06 14:06:10 UTC",
+    "TX_COUNT": 6,
+    "TXIDS": [
+      "636f41fcbceb9ed29e72833f9abdd87071c773607592646a75f7f5ef6f7ca9e3",
+      "0670cb49e386049fcf03969545ad997a8dc1dd6db6887274f9c298ab394a5be7",
+      "4eee1549c91220002b532400742e362d68dc27c041d8f4ab39c7005cfbf49e68",
+      "27cf559c782baada56d67fd1b928137a8cd299b56c23d9e556ecd8de129bad69",
+      "ce4caece413cd9d444ce7ed9f54e5b328b3da5e4af301aff59a3571f76e988f2",
+      "731f8fdf0428c8ef5f2dc48d9347e458b101be2430f22ca6e5f376fd42e47d8a"
+    ],
+    "SOURCE": "blockstream.info/liquid/api (local JSON capture)"
+  }
+]

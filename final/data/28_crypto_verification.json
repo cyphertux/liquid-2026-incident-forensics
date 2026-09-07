@@ -1,0 +1,14 @@
+{
+  "secp_impl": "Elements-bundled secp256k1 objects build/secp256k1.o (workspace elements/src/secp256k1)",
+  "primer": {
+    "inputs": "P0,C0,G_ser,S0",
+    "secp256k1_rangeproof_verify": 1,
+    "IsUnspendable(S0)": true,
+    "min_value_policy_ok": true
+  },
+  "attack": {
+    "inputs": "P1,C1,G_ser,S1=OP_RETURN",
+    "secp256k1_rangeproof_verify": 0
+  },
+  "log": "final/logs/28_red_team_reproduction.log"
+}

@@ -1,0 +1,24 @@
+{
+  "mission": 33,
+  "functionary_update_procedure_public": {
+    "help_center_2026_08_06": "Describes HSM + server roles; does NOT document Elements version pinning or update pipeline",
+    "must_run_latest_tag": "NOT_STATED in public docs found"
+  },
+  "bridge_vs_functionary": {
+    "functionary_public_code": "blocksigner/watchman + HSM; RPC to sidechaind",
+    "bridge_nodes": "Separate operational role in incident comms; software identity NOT identified in public repos this mission",
+    "shared_sidechaind_version": "UNKNOWN",
+    "patched_bridge_nodes_quote": "Does not name Elements commit"
+  },
+  "production_logs_search": "NOT_FOUND for f24a/71c9/2711/CachingRangeProofChecker debug.log",
+  "arrows": {
+    "SOURCE_to_BUILD": "UNKNOWN for functionary sidechaind",
+    "BUILD_to_BINARY": "UNKNOWN",
+    "BINARY_to_DEPLOYMENT": "UNKNOWN",
+    "DEPLOYMENT_to_NODE": "UNKNOWN",
+    "NODE_to_MEMPOOL": "UNKNOWN",
+    "MEMPOOL_to_CACHE": "UNKNOWN",
+    "CACHE_to_f24a": "lab only (Mission 28)",
+    "f24a_to_4050336": "on-chain inclusion FACT; acceptor UNKNOWN"
+  }
+}

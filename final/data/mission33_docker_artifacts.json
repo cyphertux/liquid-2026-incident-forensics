@@ -1,0 +1,21 @@
+{
+  "mission": 33,
+  "blockstream_elementsd": {
+    "dockerfile_source": "Blockstream/bitcoin-images/elementsd",
+    "method": "wget GitHub release elements-${VER}-*.tar.gz + GPG verify",
+    "default_VER": "23.3.3",
+    "last_bump_commit": "26679ef0f14522c0df96033a4e2756eb51317e4a",
+    "last_bump_date": "2026-04-14",
+    "activity_Aug_Sep_2026_elementsd": "NONE",
+    "gitlab_ci": "manual job build_elementsd on elementsd/** changes",
+    "post_fix_image_before_incident": false,
+    "gitian_allows_branch_or_commit": true,
+    "evidence_gitian_postfix_image_published": false
+  },
+  "liquidd_legacy": {
+    "version": "2.14.1.24",
+    "source": "liquid-packages.blockstream.com (404 on root listing at Mission 33 check)",
+    "relevance_to_2026_functionary": "LEGACY \u2014 not identified as current functionary path"
+  },
+  "peerswap_ELEMENTS_VER": "23.3.3 (CLN plugin image \u2014 not functionary)"
+}

@@ -1,0 +1,36 @@
+{
+  "mission": 32,
+  "public_docker": {
+    "repo": "blockstream/elementsd",
+    "build_system": "Blockstream/bitcoin-images/elementsd",
+    "dockerfile_method": "downloads GitHub release tarball by ELEMENTS_VERSION (default 23.3.3)",
+    "latest_tag_updated": "2026-04-14T14:22:40Z",
+    "latest_equals": "23.3.3 PRE-FIX",
+    "gitian_readme_allows_commit_hash": true,
+    "post_c26d719_docker_tag_found": false,
+    "digest_23_3_3_amd64": "sha256:4f7b939a07e285a02fecb1c5e017f78ebd3bb338417564b543e9a7d3da23cf17"
+  },
+  "liquid_functionary": {
+    "repo": "Blockstream/liquid-functionary",
+    "role": "blocksigner / watchman / HSM tooling",
+    "elements_crate": "0.24.1 (Rust library \u2014 not elementsd consensus cache)",
+    "sidechaind_rpc": "configured via sidechaind_rpc_url \u2014 elementsd version NOT pinned in public repo",
+    "contains_c26d719_or_equivalent": false
+  },
+  "could_production_run_untagged_commit": {
+    "capability_publicly_documented": true,
+    "evidence": "bitcoin-images README: build with tag_or_commit; historical Docker tags with commit suffixes",
+    "evidence_of_actual_Sep6_deploy_of_postfix": "NOT_FOUND"
+  },
+  "incident_comms": {
+    "whitehat_OP_RETURN": "Please fix\u2026 latest commit\u2026 every node patched \u2014 PUBLIC_REPORTING; does not name commit",
+    "bridge_nodes_patched": "reported in secondary sources; no primary naming c26d719 in this search",
+    "public_analyst_narrative": "describes PRE-FIX incomplete keying (missing asset/script) as the bug \u2014 DIFFERENT from Mission28 post-fix framing alias",
+    "forklog_liquid_network_rejected": "PUBLIC_REPORTING \u2014 unpatched node rejected tx; consistent with cold pre-fix OR cold post-fix"
+  },
+  "node_version_forensics": {
+    "getnetworkinfo_dump_for_4050336_acceptor": "NOT_FOUND",
+    "functionary_operator_version_inventory": "NOT_FOUND",
+    "elip203_public_requirement": "nodes >= 23.3.1 by 2026-06-01 \u2014 does not imply post-c26d719"
+  }
+}

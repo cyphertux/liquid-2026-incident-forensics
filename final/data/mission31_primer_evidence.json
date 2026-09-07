@@ -1,0 +1,69 @@
+{
+  "mission": 31,
+  "preimage_sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+  "preimage_len": 4301,
+  "cmp_71c9_vs_f24a": "identical",
+  "cmp_2711_vs_f24a": "identical",
+  "71c9_equals_2711_PCS": true,
+  "candidates": {
+    "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411": {
+      "vout": 0,
+      "height": 4050335,
+      "timestamp_utc": "2026-09-06 13:52:10",
+      "mined": true,
+      "levels": {
+        "A_exact_alias": "CONFIRMED",
+        "B_primer_verifies": "CONFIRMED",
+        "C_temporal_before_f24a": "CONFIRMED",
+        "D_mempool_on_acceptor": "UNKNOWN",
+        "E_cache_populated": "UNKNOWN",
+        "F_same_node_accepted_f24a": "UNKNOWN",
+        "G_causal_chain": "UNKNOWN"
+      },
+      "mempool_eligibility": {
+        "was_mined": true,
+        "implies_some_miner_accepted": true,
+        "proves_functionary_mempool": false,
+        "time_gap_to_f24a_sec": 60,
+        "broadcast_evidence": "UNKNOWN \u2014 no public relay logs found",
+        "functionary_saw_it": "UNKNOWN",
+        "cache_populated": "UNKNOWN"
+      },
+      "reach_matrix": {
+        "Was tx valid?": "STRONGLY SUPPORTED (mined + lab verify TRUE)",
+        "Was tx mined?": "FACT",
+        "When?": "4050335 / 2026-09-06 13:52:10 UTC",
+        "Could it have entered mempool before f24a?": "TEMPORALLY COMPATIBLE (HYPOTHESIS); not proven for any specific node",
+        "Was it broadcast?": "UNKNOWN (no primary relay artifact)",
+        "Evidence a Liquid node saw it?": "INFERENCE \u2014 at least the block producer assembled it; which nodes unknown",
+        "Evidence a functionary saw it?": "UNKNOWN",
+        "Evidence it populated cache?": "UNKNOWN"
+      }
+    },
+    "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5": {
+      "vout": 0,
+      "height": 4050335,
+      "timestamp_utc": "2026-09-06 13:52:10",
+      "mined": true,
+      "note": "byte-identical (P,C,S) to 71c9 out0",
+      "levels": {
+        "A_exact_alias": "CONFIRMED",
+        "B_primer_verifies": "CONFIRMED",
+        "C_temporal_before_f24a": "CONFIRMED",
+        "D_mempool_on_acceptor": "UNKNOWN",
+        "E_cache_populated": "UNKNOWN",
+        "F_same_node_accepted_f24a": "UNKNOWN",
+        "G_causal_chain": "UNKNOWN"
+      }
+    }
+  },
+  "highest_level_reached": "C",
+  "cache_lifetime_source": {
+    "structure": "CuckooCache process-global rangeProofCache",
+    "default_rangeproof_budget_bytes": 8388608,
+    "erase_on_connect_Get": "marks reclaimable; does not immediately delete (Mission 28)",
+    "restart_clears": true,
+    "eviction": "lazy on insert pressure / epoch aging \u2014 FACT from cuckoocache.h",
+    "survival_60s_estimate": "TEMPORALLY PLAUSIBLE under low insert pressure \u2014 NOT historical proof"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "mission": "71c9_2711_priming_test",
+  "old_cache_key_algorithm": "entry = salted_SHA256(proof || value_commitment); asset and script NOT included pre-c26d719",
+  "fingerprint_note": "Process salt omitted. Fingerprint SHA256(proof||commitment) is equal across txs IFF salted keys collide in the same process.",
+  "txs": {
+    "71c9": {
+      "txid": "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+      "block_height": 4050335,
+      "block_hash": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+      "block_time": 1788702730,
+      "block_time_utc": "2026-09-06T13:52:10+00:00",
+      "index_in_block": 2,
+      "provenance": "data/*.bs.json Blockstream Liquid API capture; final/hex extracts"
+    },
+    "2711": {
+      "txid": "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5",
+      "block_height": 4050335,
+      "block_hash": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+      "block_time": 1788702730,
+      "block_time_utc": "2026-09-06T13:52:10+00:00",
+      "index_in_block": 1,
+      "provenance": "data/*.bs.json Blockstream Liquid API capture; final/hex extracts"
+    },
+    "f24a": {
+      "txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+      "block_height": 4050336,
+      "block_hash": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+      "block_time": 1788702790,
+      "block_time_utc": "2026-09-06T13:53:10+00:00"
+    }
+  },
+  "entries": {
+    "f24a:1": {
+      "proof_sha256": "6619fa29ce0967ae93baefef0bc6233972b05249a9861a96695a106bbcc098b2",
+      "commitment": "086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8",
+      "old_key_fingerprint_sha256_proof_concat_commit": "86bc93c9c3eb514e71c5748e2318fe6ca8a41d1254f9e9258edeb69f158c37cc",
+      "proof_len": 4234
+    },
+    "71c9:out0": {
+      "proof_sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+      "commitment": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "old_key_fingerprint_sha256_proof_concat_commit": "47b9fde7d8539c3544e4481c0edeaa66f4f1b85c17530dafb4d04f35b72d55f5",
+      "proof_len": 4166,
+      "equals_f24a_out1_key": false,
+      "equals_f24a_P1": false,
+      "equals_f24a_C1": false
+    },
+    "71c9:out1": {
+      "proof_sha256": "801d9259a2d767f17e3c2b62ae359101c6cd59f68a14b820821b841126f1bf28",
+      "commitment": "0810244e8b1eb1a55185383d257154cf32d2ac7ae33d72274142ddeb93825955f8",
+      "old_key_fingerprint_sha256_proof_concat_commit": "cbcdbddafa87e4ef44894e27b9963502953e5891083873cbe6f7ee4211efd28e",
+      "proof_len": 4174,
+      "equals_f24a_out1_key": false,
+      "equals_f24a_P1": false,
+      "equals_f24a_C1": false
+    },
+    "2711:out0": {
+      "proof_sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+      "commitment": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "old_key_fingerprint_sha256_proof_concat_commit": "47b9fde7d8539c3544e4481c0edeaa66f4f1b85c17530dafb4d04f35b72d55f5",
+      "proof_len": 4166,
+      "equals_f24a_out1_key": false,
+      "equals_f24a_P1": false,
+      "equals_f24a_C1": false
+    },
+    "2711:out1": {
+      "proof_sha256": "7b369ad0c40baef4408b152e26edf71b74f208f2033c355cb80cd6f55c480ccc",
+      "commitment": "09715bd303c33ce700e9d8ed62abfec82516480c5e8f5457ab0337acff1c11f08e",
+      "old_key_fingerprint_sha256_proof_concat_commit": "ee4023249223224ea6fa5de2304cd6733f5a96a25d47ae3e10695001b247ff23",
+      "proof_len": 4174,
+      "equals_f24a_out1_key": false,
+      "equals_f24a_P1": false,
+      "equals_f24a_C1": false
+    }
+  },
+  "collisions": {
+    "71c9_out0_vs_2711_out0": true,
+    "any_vs_f24a_out1": false
+  },
+  "scenario_log": "final/logs/priming_71c9_2711_f24a.log",
+  "scenario_result": "ALL_SCENARIOS_f24a_REJECT",
+  "verdict": "PRIMING_HYPOTHESIS_REFUTED",
+  "classification": "NOT_PRIMING_OF_P1_C1"
+}

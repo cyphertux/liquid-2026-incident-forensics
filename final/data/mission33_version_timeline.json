@@ -1,0 +1,76 @@
+{
+  "mission": 33,
+  "events": [
+    {
+      "date": "2024-04-19",
+      "what": "liquid-functionary v2.4.1 (last tagged branch tip)",
+      "class": "PUBLIC_REPO"
+    },
+    {
+      "date": "2024-06-11",
+      "what": "liquid-functionary last GitHub push (API)",
+      "class": "PUBLIC_REPO"
+    },
+    {
+      "date": "2026-04-14",
+      "what": "bitcoin-images elementsd bump to 23.3.3 / Docker latest",
+      "class": "PUBLIC_DOCKER",
+      "post_fix": false
+    },
+    {
+      "date": "2026-06-01",
+      "what": "ELIP-203 requires Elements >= 23.3.1",
+      "class": "PUBLIC_COORDINATION",
+      "post_fix": false
+    },
+    {
+      "date": "2026-08-06",
+      "what": "Help Center functionary FAQ updated \u2014 no Elements pin",
+      "class": "DOCS"
+    },
+    {
+      "date": "2026-09-01",
+      "what": "c26d719 on master",
+      "class": "ELEMENTS",
+      "post_fix": true
+    },
+    {
+      "date": "2026-09-02/03",
+      "what": "6253d7e / 212c43f on 23.x / 23.3.x",
+      "class": "ELEMENTS",
+      "post_fix": true
+    },
+    {
+      "date": "2026-09-04",
+      "what": "23.3.x / 23.x / master tips post-fix (Mission 32)",
+      "class": "ELEMENTS",
+      "post_fix": true
+    },
+    {
+      "date": "2026-09-06T13:52Z",
+      "what": "4050335 primers",
+      "class": "ON-CHAIN"
+    },
+    {
+      "date": "2026-09-06T13:53Z",
+      "what": "4050336 f24a",
+      "class": "ON-CHAIN"
+    },
+    {
+      "date": "2026-09-06",
+      "what": "No public liquid-functionary / elementsd Docker change",
+      "class": "NEGATIVE"
+    },
+    {
+      "date": "2026-09-07",
+      "what": "Whitehat/patch negotiation (public reporting)",
+      "class": "PUBLIC_REPORTING"
+    }
+  ],
+  "plausible_path_postfix_to_4050336": {
+    "source_existed": true,
+    "functionary_build_of_that_source": "UNKNOWN",
+    "deployment": "UNKNOWN",
+    "status": "NOT_ESTABLISHED"
+  }
+}

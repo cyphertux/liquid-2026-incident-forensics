@@ -1,0 +1,19 @@
+L-BTC generator 0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d
+fee commitment (explicit 58) 09118f5365192ef32379842b3d9ea61fdd120f655bc7376de41826e7cba4030fe2
+
+TALLY full (in0 vs out0+out1+out2+fee58) => 1
+TALLY without out1 (in0 vs out0+out2+fee58) => 0
+TALLY in0 vs out1 alone => 0
+input asset gen (blinded) 0abc38a76bc56788e46f7c911f7863aa4926e2718fd3823166fe5f7bd66f1278df
+out0 value commit 08360f95ce0a63e76daab6a05616103ba7462a9af7db0697e9c8fa6a65aba103f8
+out1 value commit C1 086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8
+out2 value commit 08dc50cfb1c9b0b512b446cd80d8bbe81f5ace540f59780d6fad773fa9204d8d35
+out2 asset commit 000000000000000054414c4c5920776974686f7574206f7574312028696e302076
+out2 asset gen 0b0957be4cbd0d1cc30d2742988f84f931f4f47d4f8b81e40dc1db42cabf4aae7b
+
+generator_parse input asset => 1
+generator_parse out2 asset => 1
+L-BTC gen already generated => 1
+out2_asset == in_asset? 0
+out2_asset == L-BTC gen? 0
+surjection_verify out2 vs [in_asset] => 1 (slen=67)

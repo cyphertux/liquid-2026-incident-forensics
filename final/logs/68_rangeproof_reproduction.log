@@ -1,0 +1,19 @@
+=== Mission 26 reproduction ===
+Q0 proof_len=4166
+OLD_KEY fingerprint Q0||CQ 0b3d63ecbefc37612cf6d5aa33b4d418c20e8c193f8e9e76e7c359b780fb0732
+OLD_KEY fingerprint P0||C0 574509557a1a47add1e7a42d8866bf765c4369407fd517e5f55879f8cc0e4e72
+OLD_KEY fingerprint P1||C1 7fe1549fb4ce9e626e7629d15dd226c75a5a1a1bea9185dfae43e05deba6555c
+Q0_key==f24a_key? 0
+P0_key==f24a_key? 0
+Q0_key==P0_key? 0
+Q0 secp256k1_rangeproof_verify => 1 (script=3 bytes)
+f24a:1 secp256k1_rangeproof_verify => 0
+SCENARIO Q0(store)->f24a: keys differ => CACHE MISS; crypto fails => REJECT
+SCENARIO P0(store)->f24a: keys differ => CACHE MISS; crypto fails => REJECT
+VERDICT: 68-family and P0-family do NOT prime f24a (P1,C1)
+24:RESULT f24a:1 REJECT | cache entries=3
+33:RESULT f24a:1 REJECT | cache entries=0
+45:RESULT f24a:1 REJECT | cache entries=2
+59:RESULT f24a:1 REJECT | cache entries=2
+79:RESULT f24a:1 REJECT | cache entries=3
+100:RESULT f24a:1 REJECT | cache entries=3

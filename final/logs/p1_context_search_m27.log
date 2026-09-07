@@ -1,0 +1,17 @@
+=== P1/C1 contexts ===
+P1+C1+L+OP_RETURN => 0 (plen=4234 slen=1)
+P1+C1+L+71c9script => 0 (plen=4234 slen=69)
+P1+C1+L+empty => 0 (plen=4234 slen=0)
+P1+C1+L+OP_TRUE => 0 (plen=4234 slen=1)
+P1+C1+L+6a0100 => 0 (plen=4234 slen=3)
+=== truncated / related ===
+P1[:4166]+C1+L+6a => 0 (plen=4166 slen=1)
+P0+C1+L+6a => 0 (plen=4166 slen=1)
+P0+C1+L+71c9script => 0 (plen=4166 slen=69)
+P0+C0+L+71c9script (known good) => 1 (plen=4166 slen=69)
+P1+C0+L+71c9script => 0 (plen=4234 slen=69)
+P1[:4166]=P0 +C0 +71c9script => 1 (plen=4166 slen=69)
+P1+C1+GEN_as_asset+6a => 0 (plen=4234 slen=1)
+P0+C0+GEN_as_asset+71c9script => 1 (plen=4166 slen=69)
+=== Q0 sanity ===
+Q0+CQ+real => 1 (plen=4166 slen=3)

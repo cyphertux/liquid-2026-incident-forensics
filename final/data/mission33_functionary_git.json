@@ -1,0 +1,30 @@
+{
+  "mission": 33,
+  "repo": "https://github.com/Blockstream/liquid-functionary",
+  "default_branch": "master",
+  "head_master": {
+    "sha": "d3ccee17d92758afe6f6efac9d4153fa4f09c9a6",
+    "date": "2024-03-22",
+    "msg": "Version 2.4.0"
+  },
+  "branch_master_2_4_1": {
+    "sha": "ee77c89f775dca2d915196d256a63b4c3387e882",
+    "date": "2024-04-19",
+    "msg": "Version 2.4.1"
+  },
+  "pushed_at_api": "2024-06-11T15:15:25Z",
+  "commits_2026": [],
+  "submodules": null,
+  "github_actions": null,
+  "dockerfile": null,
+  "elements_cpp_pin": null,
+  "rust_elements_crate": {
+    "name": "elements",
+    "version": "0.24.1",
+    "source": "crates.io",
+    "checksum": "dd6b8388053196e6b2702a45418078a654680ce9e1fd91799f51f67a40118ff5"
+  },
+  "sidechaind_relationship": "external RPC client (sidechaind_rpc_url); Elements Core methods getnewblockhex/testproposedblock/submitblock",
+  "contains_c26d719_or_ComputeEntryRangeProof": false,
+  "conclusion": "Public liquid-functionary cannot identify Elements commit compiled into sidechaind"
+}

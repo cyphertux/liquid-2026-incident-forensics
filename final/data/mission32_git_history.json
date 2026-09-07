@@ -1,0 +1,76 @@
+{
+  "mission": 32,
+  "patch_signature": {
+    "text": "hasher.Write(proof).Write(commitment).Write(asset_commitment).Write(scriptPubKey)",
+    "function": "SignatureCache::ComputeEntryRangeProof",
+    "files": [
+      "src/script/sigcache.cpp",
+      "src/script/sigcache.h"
+    ],
+    "framing": "NONE",
+    "tests_in_c26d719": "none added in that commit (PR1592 LLM-scan bundle)"
+  },
+  "equivalent_commits": [
+    {
+      "hash": "c26d719c29a40da280a825b25657e9c3d8bc7d99",
+      "branch": "master",
+      "author_date": "2026-08-03",
+      "commit_date": "2026-09-01",
+      "note": "original"
+    },
+    {
+      "hash": "6253d7e103655ec015097de1505b5f3785ff6447",
+      "branch": "elements-23.x",
+      "commit_date": "2026-09-02",
+      "note": "cherry-pick; in 23.x tip before incident"
+    },
+    {
+      "hash": "212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7",
+      "branch": "elements-23.3.x",
+      "commit_date": "2026-09-03T10:36:30-07:00",
+      "note": "cherry-pick; ALREADY ancestor of 23.3.x tip on 2026-09-04; PR#1599 merge commit is later (2026-09-06T17:21Z) but patch content predated incident"
+    }
+  ],
+  "pickaxe": "Only these three commits introduce the Write(asset_commitment)...Write(scriptPubKey) signature in ElementsProject/elements",
+  "tags_containing_any_equivalent": [],
+  "branch_tips_at_incident_2026_09_06_1352Z": {
+    "master": {
+      "rev": "c7e856fab1b0c4d37005e25c0940184d812a26a0",
+      "post_fix_unframed": true,
+      "via": "c26d719"
+    },
+    "elements-23.x": {
+      "rev": "323fc71625755917a54a5759875939805eee53c1",
+      "post_fix_unframed": true,
+      "via": "6253d7e103"
+    },
+    "elements-23.3.x": {
+      "rev": "6c2c5626bafed503c673ec6f83be9bfec861d26f",
+      "post_fix_unframed": true,
+      "via": "212c43f475"
+    },
+    "elements-29.x": {
+      "rev": "d7789ac2e82a403e6bd9004ebe46b04deaa743f9",
+      "post_fix_unframed": false,
+      "note": "still 2-arg as of tip checked"
+    }
+  },
+  "release_tags": {
+    "elements-23.3.3": {
+      "post_fix": false,
+      "date": "2026-04-13"
+    },
+    "elements-23.3.4rc1": {
+      "post_fix": false
+    },
+    "elements-29.4.1rc1": {
+      "post_fix": false
+    }
+  },
+  "correction_vs_mission31_emphasis": "PR#1599 merge is post-incident, but 212c43f content was already on elements-23.3.x by 2026-09-03/04. Do not equate 'PR merge after incident' with 'patch absent from 23.3.x before incident'.",
+  "forks_checked": {
+    "marcusmmmz/elements-drivechain": "PRE-FIX 2-arg",
+    "lavaio/lava": "API incomplete / not confirmed post-fix",
+    "Blockstream/liquid-functionary": "Rust HSM/blocksigner; no CachingRangeProofChecker; depends on external sidechaind"
+  }
+}
