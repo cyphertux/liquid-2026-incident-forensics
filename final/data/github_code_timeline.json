@@ -1,0 +1,195 @@
+{
+  "title": "GitHub/code timeline — rangeproof cache binding",
+  "timezone": "UTC",
+  "scope": "ElementsProject/elements + ConcatenaLabs/Sequentia PR#198",
+  "patch": {
+    "from": "ComputeEntryRangeProof(proof, value_commitment)",
+    "to": "ComputeEntryRangeProof(proof, value_commitment, asset_commitment, scriptPubKey)",
+    "files_elements": ["src/script/sigcache.cpp", "src/script/sigcache.h"],
+    "advisory_framing_in_elements": null
+  },
+  "events": [
+    {
+      "t": "2026-04-13T16:21:46Z",
+      "kind": "release",
+      "what": "elements-23.3.3 published (pre-fix)",
+      "id": "elements-23.3.3",
+      "post_fix": false
+    },
+    {
+      "t": "2026-07-01T00:00:00Z",
+      "kind": "tag",
+      "what": "elements-23.3.4rc1 tip (pre-fix); exact tagger time not re-audited here",
+      "id": "elements-23.3.4rc1",
+      "post_fix": false,
+      "note": "date approximate to tip/tag era from mission32"
+    },
+    {
+      "t": "2026-08-03T10:53:50Z",
+      "kind": "author_date",
+      "what": "AuthorDate of rangeproof cache bind fix",
+      "id": "c26d719c29a40da280a825b25657e9c3d8bc7d99",
+      "author": "Byron Hambly / delta1"
+    },
+    {
+      "t": "2026-09-01T09:39:02Z",
+      "kind": "commit",
+      "what": "CommitDate c26d719 on PR branch",
+      "id": "c26d719c29a40da280a825b25657e9c3d8bc7d99",
+      "branch": "master (via PR)"
+    },
+    {
+      "t": "2026-09-01T10:04:36Z",
+      "kind": "pr_open",
+      "what": "PR #1592 blind/blindpsbt fixes (LLM scans)",
+      "id": "ElementsProject/elements#1592",
+      "url": "https://github.com/ElementsProject/elements/pull/1592"
+    },
+    {
+      "t": "2026-09-01T13:46:32Z",
+      "kind": "review",
+      "what": "tomt1664 ACK c26d719 tested locally",
+      "id": "ElementsProject/elements#1592"
+    },
+    {
+      "t": "2026-09-01T14:38:01Z",
+      "kind": "pr_merge",
+      "what": "Merge #1592 → master",
+      "id": "31e8f27f4b",
+      "pr": 1592
+    },
+    {
+      "t": "2026-09-02T15:14:36Z",
+      "kind": "commit",
+      "what": "Cherry-pick onto elements-23.x",
+      "id": "6253d7e103655ec015097de1505b5f3785ff6447",
+      "branch": "elements-23.x",
+      "committer": "Tom Trevethan"
+    },
+    {
+      "t": "2026-09-02T15:46:40Z",
+      "kind": "pr_open",
+      "what": "PR #1595 elements-23.x backports",
+      "id": "ElementsProject/elements#1595",
+      "url": "https://github.com/ElementsProject/elements/pull/1595"
+    },
+    {
+      "t": "2026-09-03T16:09:18Z",
+      "kind": "review",
+      "what": "delta1 APPROVED #1595",
+      "id": "ElementsProject/elements#1595"
+    },
+    {
+      "t": "2026-09-03T17:13:42Z",
+      "kind": "pr_merge",
+      "what": "Merge #1595 → elements-23.x",
+      "pr": 1595
+    },
+    {
+      "t": "2026-09-03T17:36:30Z",
+      "kind": "commit",
+      "what": "Cherry-pick onto elements-23.3.x",
+      "id": "212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7",
+      "branch": "elements-23.3.x",
+      "committer": "Pablo Greco",
+      "note": "content on 23.3.x before incident; before PR#1599 merge"
+    },
+    {
+      "t": "2026-09-04T19:36:51Z",
+      "kind": "pr_open",
+      "what": "PR #1599 cherry picks for 23.3.4rc2 prep",
+      "id": "ElementsProject/elements#1599",
+      "url": "https://github.com/ElementsProject/elements/pull/1599"
+    },
+    {
+      "t": "2026-09-05T17:55:25Z",
+      "kind": "review",
+      "what": "tomt1664 ACK #1599",
+      "id": "ElementsProject/elements#1599"
+    },
+    {
+      "t": "2026-09-06T13:53:10Z",
+      "kind": "onchain_marker",
+      "what": "Liquid block 4050336 / f24a (not a git event)",
+      "id": "4050336"
+    },
+    {
+      "t": "2026-09-06T17:20:37Z",
+      "kind": "review",
+      "what": "delta1 ACK #1599",
+      "id": "ElementsProject/elements#1599"
+    },
+    {
+      "t": "2026-09-06T17:21:03Z",
+      "kind": "pr_merge",
+      "what": "Merge #1599 → elements-23.3.x (after incident)",
+      "id": "3b3f01eac9",
+      "pr": 1599
+    },
+    {
+      "t": "2026-09-07T13:07:30Z",
+      "kind": "commit",
+      "what": "Sequentia: same binding + regression tests",
+      "id": "3f0cf381404f",
+      "repo": "ConcatenaLabs/Sequentia"
+    },
+    {
+      "t": "2026-09-07T13:12:12Z",
+      "kind": "pr_open",
+      "what": "Sequentia PR #198",
+      "id": "ConcatenaLabs/Sequentia#198",
+      "url": "https://github.com/ConcatenaLabs/Sequentia/pull/198",
+      "user": "albertodeluigi"
+    },
+    {
+      "t": "2026-09-07T13:23:41Z",
+      "kind": "pr_merge",
+      "what": "Merge Sequentia #198 → master",
+      "id": "2b73be63904c3a40f19bb1a1364354ccb8ae1e96",
+      "merged_by": "albertodeluigi"
+    }
+  ],
+  "equivalent_commits": [
+    {
+      "hash": "c26d719c29a40da280a825b25657e9c3d8bc7d99",
+      "branch": "master",
+      "tests_added": false
+    },
+    {
+      "hash": "6253d7e103655ec015097de1505b5f3785ff6447",
+      "branch": "elements-23.x",
+      "tests_added": false
+    },
+    {
+      "hash": "212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7",
+      "branch": "elements-23.3.x",
+      "tests_added": false
+    },
+    {
+      "hash": "3f0cf381404f",
+      "repo": "ConcatenaLabs/Sequentia",
+      "branch": "master",
+      "tests_added": true,
+      "test": "rangeproof_cache_binding_test"
+    }
+  ],
+  "branch_tips_near_incident_2026_09_06_1352Z": {
+    "master": {"rev": "c7e856fab1b0c4d37005e25c0940184d812a26a0", "post_fix": true, "via": "c26d719"},
+    "elements-23.x": {"rev": "323fc71625755917a54a5759875939805eee53c1", "post_fix": true, "via": "6253d7e103"},
+    "elements-23.3.x": {"rev": "6c2c5626bafed503c673ec6f83be9bfec861d26f", "post_fix": true, "via": "212c43f475"},
+    "elements-29.x": {"rev": "d7789ac2e82a403e6bd9004ebe46b04deaa743f9", "post_fix": false}
+  },
+  "unverified": [
+    "elements-23.3.4rc2 tag/release existence",
+    "functionary deployed binary at 4050336",
+    "historical exploit path == incomplete cache keying"
+  ],
+  "sources": [
+    "final/34_timeline_factual_audit.md",
+    "final/data/mission32_git_history.json",
+    "https://github.com/ElementsProject/elements/pull/1592",
+    "https://github.com/ElementsProject/elements/pull/1595",
+    "https://github.com/ElementsProject/elements/pull/1599",
+    "https://github.com/ConcatenaLabs/Sequentia/pull/198"
+  ]
+}
