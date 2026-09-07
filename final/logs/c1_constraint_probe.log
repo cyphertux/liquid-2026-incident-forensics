@@ -1,0 +1,8 @@
+G_L 0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d
+no_hit: C1 != commit(v,r=0,G_L) for v in [0,100000]
+tally_with_C1=1 tally_without_C1=0
+rangeproof_info ok=1 exp=0 mant=52 min=0 max=4503599627370495 plen=4234
+rangeproof_verify L-BTC+OP_RETURN => 0
+constraint_extractable_on_v1: NO (need DLOG or openings)
+sign_of_v1: non determinable
+in_range_v1: non determinable from tally; unproven by P1

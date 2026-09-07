@@ -1,0 +1,33 @@
+commit 212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7
+Author: Byron Hambly <bhambly@blockstream.com>
+Date:   Mon Aug 3 12:53:50 2026 +0200
+
+    fix: range proof cache bind to asset and scriptpubkey
+    
+    (cherry picked from commit 6253d7e103655ec015097de1505b5f3785ff6447)
+
+diff --git a/src/script/sigcache.cpp b/src/script/sigcache.cpp
+index 865c7e9e2c..9f7bb9592b 100644
+--- a/src/script/sigcache.cpp
++++ b/src/script/sigcache.cpp
+@@ -72,9 +72,9 @@ public:
+     }
+ 
+     // ELEMENTS:
+-    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {
++    void ComputeEntryRangeProof(uint256& entry, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment, const std::vector<unsigned char>& asset_commitment, const CScript& scriptPubKey) {
+         CSHA256 hasher = m_salted_hasher_range_proof;
+-        hasher.Write(proof.data(), proof.size()).Write(commitment.data(), commitment.size()).Finalize(entry.begin());
++        hasher.Write(proof.data(), proof.size()).Write(commitment.data(), commitment.size()).Write(asset_commitment.data(), asset_commitment.size()).Write(scriptPubKey.data(), scriptPubKey.size()).Finalize(entry.begin());
+     }
+     void ComputeEntrySurjectionProof(uint256& entry, const uint256 &hash, const std::vector<unsigned char>& proof, const std::vector<unsigned char>& commitment) {
+         CSHA256 hasher = m_salted_hasher_surjection_proof;
+@@ -176,7 +176,7 @@ void InitSurjectionproofCache()
+ bool CachingRangeProofChecker::VerifyRangeProof(const std::vector<unsigned char>& vchRangeProof, const std::vector<unsigned char>& vchValueCommitment, const std::vector<unsigned char>& vchAssetCommitment, const CScript& scriptPubKey, const secp256k1_context* secp256k1_ctx_verify_amounts) const
+ {
+     uint256 entry;
+-    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment);
++    rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment, vchAssetCommitment, scriptPubKey);
+ 
+     if (rangeProofCache.Get(entry, !store)) {
+         return true;

@@ -1,0 +1,56 @@
+
+======== OLD cache: A then B (exploit path) ========
+baseline crypto A=1 B=0 (expect 1 and 0)
+OLD keys equal? 1 (expect 1)
+NEW keys equal? 0 (expect 0)
+OLD key A=970b8cb842972c3cebb19bdb72d3996437428f38cf201e04846e37d05f4ac49c
+NEW key A=3626cba1e3a6bbbc8cafdebdb3141eadaf166a623ba8788d14ebfaffe755223e
+NEW key B=fff6c5b8e216bb5dc05914dce6322e9a7c52dada8d0f13ce8604898d72c2ddf5
+verify(A): crypto=1 cache_miss (mode=OLD)
+verify(B): CACHE_HIT -> TRUE (mode=OLD)
+results: first=1 (hit=0) second=1 (hit=1)
+
+======== NEW cache: A then B (fixed path) ========
+baseline crypto A=1 B=0 (expect 1 and 0)
+OLD keys equal? 1 (expect 1)
+NEW keys equal? 0 (expect 0)
+OLD key A=970b8cb842972c3cebb19bdb72d3996437428f38cf201e04846e37d05f4ac49c
+NEW key A=3626cba1e3a6bbbc8cafdebdb3141eadaf166a623ba8788d14ebfaffe755223e
+NEW key B=fff6c5b8e216bb5dc05914dce6322e9a7c52dada8d0f13ce8604898d72c2ddf5
+verify(A): crypto=1 cache_miss (mode=NEW)
+verify(B): crypto=0 cache_miss (mode=NEW)
+results: first=1 (hit=0) second=0 (hit=0)
+
+======== OLD cache: B then A (inverse) ========
+baseline crypto A=1 B=0 (expect 1 and 0)
+OLD keys equal? 1 (expect 1)
+NEW keys equal? 0 (expect 0)
+OLD key A=970b8cb842972c3cebb19bdb72d3996437428f38cf201e04846e37d05f4ac49c
+NEW key A=3626cba1e3a6bbbc8cafdebdb3141eadaf166a623ba8788d14ebfaffe755223e
+NEW key B=fff6c5b8e216bb5dc05914dce6322e9a7c52dada8d0f13ce8604898d72c2ddf5
+verify(B): crypto=0 cache_miss (mode=OLD)
+verify(A): crypto=1 cache_miss (mode=OLD)
+results: first=0 (hit=0) second=1 (hit=0)
+
+======== NEW cache: B then A (inverse) ========
+baseline crypto A=1 B=0 (expect 1 and 0)
+OLD keys equal? 1 (expect 1)
+NEW keys equal? 0 (expect 0)
+OLD key A=970b8cb842972c3cebb19bdb72d3996437428f38cf201e04846e37d05f4ac49c
+NEW key A=3626cba1e3a6bbbc8cafdebdb3141eadaf166a623ba8788d14ebfaffe755223e
+NEW key B=fff6c5b8e216bb5dc05914dce6322e9a7c52dada8d0f13ce8604898d72c2ddf5
+verify(B): crypto=0 cache_miss (mode=NEW)
+verify(A): crypto=1 cache_miss (mode=NEW)
+results: first=0 (hit=0) second=1 (hit=0)
+
+======== primed vs unprimed subprocesses ========
+UNPRIMED verify(B): crypto=0 cache_miss (mode=OLD)
+UNPRIMED_OLD_RESULT=0 hit=0
+PRIMED verify(A): crypto=1 cache_miss (mode=OLD)
+PRIMED verify(B): CACHE_HIT -> TRUE (mode=OLD)
+PRIMED_OLD_RESULT=1 hit=1
+PRIMED_NEW verify(A): crypto=1 cache_miss (mode=NEW)
+PRIMED_NEW verify(B): crypto=0 cache_miss (mode=NEW)
+PRIMED_NEW_RESULT=0 hit=0
+subprocess exit codes: unprimed_old=0 primed_old=0 primed_new=0
+Interpretation: unprimed rejects B (nonzero), primed_old accepts B (zero), primed_new rejects B (nonzero)

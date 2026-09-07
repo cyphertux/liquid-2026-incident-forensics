@@ -1,0 +1,74 @@
+# =============================================================================
+# Liquid 2026 incident forensics — publication .gitignore
+# Ignore local / generated / external / bulky paths only.
+# Do NOT ignore forensic evidence (final/, data/, artifacts/, *.md, *.json, *.hex).
+# =============================================================================
+
+# --- Upstream clones (rebuild/clone from documented URLs) ---
+elements/
+secp256k1-zkp/
+
+# --- Dependencies ---
+node_modules/
+tools/node_modules/
+
+# --- Build / compile outputs ---
+build/
+dist/
+target/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.elf
+*.exe
+
+# Host-built harness binaries (no extension; rebuild from tests/ / final/scripts/*.c)
+final/scripts/batch_context_search
+final/scripts/cache_repro
+final/scripts/elements_cache_harness
+final/scripts/verify_one
+final/scripts/verify_rangeproof
+final/scripts/search_contexts
+final/scripts/rp_info
+final/scripts/pedersen_tally_f24a
+final/scripts/c1_constraint_probe
+final/scripts/surjection_f24a
+
+# --- Secrets / local env (keep example templates if ever added) ---
+.env
+.env.*
+!.env.example
+
+# --- Ephemeral / OS / IDE ---
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# --- Ephemeral logs outside evidence packs ---
+# Keep published harness outputs under logs/ and final/logs/.
+*.log
+!logs/*.log
+!final/logs/*.log
+
+# --- Misc local noise ---
+*.bak
+*.orig
+.cache/

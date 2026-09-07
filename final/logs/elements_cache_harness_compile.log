@@ -1,0 +1,16 @@
+tests/elements_cache_harness.c: In function ‘try_f24a’:
+tests/elements_cache_harness.c:136:128: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  136 |   f=fopen("data/out1_rangeproof.hex","r"); if(!f)return; fseek(f,0,SEEK_END); n=ftell(f); fseek(f,0,SEEK_SET); ph=malloc(n+1); fread(ph,1,n,f); ph[n]=0; fclose(f);
+      |                                                                                                                                ^~~~~~~~~~~~~~~
+tests/elements_cache_harness.c:138:114: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  138 |   f=fopen("data/out1_commitment.hex","r"); fseek(f,0,SEEK_END); n=ftell(f); fseek(f,0,SEEK_SET); ch=malloc(n+1); fread(ch,1,n,f); ch[n]=0; fclose(f);
+      |                                                                                                                  ^~~~~~~~~~~~~~~
+tests/elements_cache_harness.c:140:109: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  140 |   f=fopen("data/out1_asset.hex","r"); fseek(f,0,SEEK_END); n=ftell(f); fseek(f,0,SEEK_SET); ah=malloc(n+1); fread(ah,1,n,f); ah[n]=0; fclose(f);
+      |                                                                                                             ^~~~~~~~~~~~~~~
+tests/elements_cache_harness.c:142:110: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  142 |   f=fopen("data/out1_script.hex","r"); fseek(f,0,SEEK_END); n=ftell(f); fseek(f,0,SEEK_SET); sh=malloc(n+1); fread(sh,1,n,f); sh[n]=0; fclose(f);
+      |                                                                                                              ^~~~~~~~~~~~~~~
+tests/elements_cache_harness.c:155:27: warning: ignoring return value of ‘secp256k1_generator_generate’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  155 |   if(asset_raw[0]==0x01){ secp256k1_generator_generate(ctx,&gen,asset_raw+1); secp256k1_generator_serialize(ctx,asset_ser,&gen); }
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

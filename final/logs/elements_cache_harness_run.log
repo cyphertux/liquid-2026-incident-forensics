@@ -1,0 +1,22 @@
+
+== OLD A->B (exploit) ==
+A: ret=1 hit=0 crypto=1
+B: ret=1 hit=1 crypto=-1
+
+== NEW A->B (fixed) ==
+A: ret=1 hit=0 crypto=1
+B: ret=0 hit=0 crypto=0
+
+== OLD B->A ==
+B: ret=0 hit=0 crypto=0
+A: ret=1 hit=0 crypto=1
+
+== NEW B->A ==
+B: ret=0 hit=0 crypto=0
+A: ret=1 hit=0 crypto=1
+
+== f24a P1/C1 Elements-flow mode=OLD ==
+clean cache verify f24a out1: ret=0 hit=0 crypto=0
+
+== f24a P1/C1 Elements-flow mode=NEW ==
+clean cache verify f24a out1: ret=0 hit=0 crypto=0
