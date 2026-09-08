@@ -9,7 +9,7 @@
 | Whitehat | [`bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte`](https://mempool.space/address/bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte) |
 | Hop financement | [`bc1qgslsydz56d0ed6827hdemfmk5w2f6ldyc6wt7p`](https://mempool.space/address/bc1qgslsydz56d0ed6827hdemfmk5w2f6ldyc6wt7p) |
 
-L’adresse victime **n’émet aucun OP_RETURN**. Les réponses on-chain utiles partent de l’adresse ops (`security@` / PGP signés).
+L’adresse victime **n’émet aucun OP_RETURN**. Les réponses utiles sont (a) l’adresse ops `bc1qn8mgs…`, et/ou (b) tout OP_RETURN **vers** le whitehat avec **bonne signature PGP** `security@blockstream.com` (même hors adresse ops habituelle).
 
 ## Graphe
 
@@ -23,7 +23,7 @@ flowchart LR
   V -->|"~3996 BTC peg-out"| H
   H -->|"3995.99999857 BTC"| W
   W -->|"3400 BTC return"| V
-  O -.->|"OP_RETURN replies"| W
+  O -.->|"OP_RETURN (+ PGP security@ via UTXO jetable)"| W
   W -.->|"OP_RETURN + dust"| V
 ```
 
@@ -46,6 +46,8 @@ flowchart LR
 | 13 | 2026-09-07 18:35:17 UTC | 965962 | Message whitehat | Message PGP (chiffré) post-retour | [`e56af6b9f8…`](https://mempool.space/tx/e56af6b9f889b0e7ed342508eaab2f997fafbb61d64c892bbf306a0014722596) |
 | 14 | 2026-09-07 18:35:17 UTC | 965962 | Message whitehat | Message PGP (chiffré) post-retour #2 | [`fcd06c1bcb…`](https://mempool.space/tx/fcd06c1bcb38e4c3eaf71c1137d7bdf935363ae3c14b590d5d1a501e326d2b99) |
 | 15 | 2026-09-07 21:03:23 UTC | 965973 | Message whitehat | :( | [`d7e8837c51…`](https://mempool.space/tx/d7e8837c51cc625c2c6365d371d376b035209fa01434d4933971d6428d6d6d52) |
+| 16 | 2026-09-08 00:11:40 UTC | 965992 | Message ops (PGP) | Electrum BIE1 chiffré + clearsign security@ → whitehat | [`9a041c868f…`](https://mempool.space/tx/9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b) |
+| 17 | 2026-09-08 06:02:24 UTC | 966023 | Message ops (PGP) | Electrum BIE1 chiffré + clearsign security@ → whitehat #2 | [`57bd5c9be3…`](https://mempool.space/tx/57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6) |
 
 ## Détail
 
@@ -239,11 +241,6 @@ More details about the vuln fix:
   - vout0: **598.49955894 BTC** → `bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte`
   - vout1: **3400.00000000 BTC** → `bc1qdlld6antmv4xug242ed83q7k4rqw50cwfns38szx4qu2f4jwaxxsuhwxxr`
 
-## Filtre
-
-- **Inclus:** from whitehat · peg-out from wallet victime · OP_RETURN from adresse ops
-- **Exclus:** spam tiers / fausse demande 3900+bounty
-
 ### 13. 2026-09-07 18:35:17 UTC · bloc 965962 — Message PGP (chiffré) post-retour
 - **Type:** Message whitehat
 - **From:** `bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte`
@@ -273,4 +270,35 @@ More details about the vuln fix:
   - vout0: OP_RETURN `:(`
   - vout1: **0.00001000 BTC** → victime
   - vout2: **598.49960884 BTC** → whitehat (change)
-- **Note:** Dernier message de dialogue au rescan 2026-09-08 ; ops toujours silencieux depuis « Bridge nodes are patched ».
+- **Note:** Dernier message **whitehat** au moment du rescan initial ; la suite dialogue ops reprend via PGP (événements 16–17).
+
+### 16. 2026-09-08 00:11:40 UTC · bloc 965992 — Message ops PGP (Electrum BIE1) post-`:(`
+- **Type:** Message ops (PGP) — **pas** émis par l’adresse whitehat
+- **From (vin):** `bc1q4sswp4a6mwa6c85w2flx7fuckran6rq5renlue` (UTXO jetable)
+- **To (dust):** `bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte`
+- **Tx:** [`9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b`](https://mempool.space/tx/9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b)
+- **Attribution:** `gpg --verify` → **GOODSIG** `Blockstream Security Reporting <security@blockstream.com>`
+- **Message:** PGP SIGNED MESSAGE (SHA256) dont le corps est un ciphertext Electrum BIE1 (`QklFM…`) — clair non récupérable sans clé whitehat
+- Sorties:
+  - vout0: **0.00001000 BTC** → whitehat
+  - vout1: OP_RETURN (PGP)
+  - vout2: change → `bc1qaxtmz47pjv6qajue2p5xxssx84ug3a695g3g73`
+
+### 17. 2026-09-08 06:02:24 UTC · bloc 966023 — Message ops PGP #2
+- **Type:** Message ops (PGP)
+- **From (vin):** `bc1qaxtmz47pjv6qajue2p5xxssx84ug3a695g3g73` (change de #16)
+- **To (dust):** whitehat `bc1ql4mfu…`
+- **Tx:** [`57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6`](https://mempool.space/tx/57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6)
+- **Attribution:** **GOODSIG** `security@blockstream.com` (même empreinte)
+- **Message:** idem pattern PGP clearsign + `QklFM…` (payload plus long)
+- Sorties:
+  - vout0: change → `bc1qfncc9jjcxkp4w24ukz5nw2gc4x4cghz2pr6sz3`
+  - vout1: **0.00001000 BTC** → whitehat
+  - vout2: OP_RETURN (PGP)
+
+## Filtre
+
+- **Inclus:** from whitehat · peg-out from wallet victime · OP_RETURN from adresse ops `bc1qn8mgs…` · OP_RETURN **to** whitehat with **gpg GOODSIG** `security@blockstream.com` (fingerprint `1176 542D…6844 A2D6`), même si le vin n’est pas l’adresse ops habituelle
+- **Exclus:** spam tiers / memecoins / fausse demande 3900+bounty / messages sans GOODSIG security@
+- **Règle machine:** [`filter_rule.json`](filter_rule.json)
+

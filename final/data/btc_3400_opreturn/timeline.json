@@ -3,12 +3,12 @@
     "victim_federation_wallet": "bc1qdlld6antmv4xug242ed83q7k4rqw50cwfns38szx4qu2f4jwaxxsuhwxxr",
     "victim_note": "P2WSH Liquid/federation BTC wallet: source of peg-out UTXOs and destination of 3400 BTC return. Emits 0 OP_RETURN.",
     "blockstream_ops_responder": "bc1qn8mgsmxx42j3fflqfkh0cqhdd6mj4h9q2mfqym",
-    "responder_note": "Sends on-chain OP_RETURN replies (security@, PGP signed). Not the custody wallet.",
+    "responder_note": "Usual on-chain OP_RETURN address bc1qn8mgs…. Also: clearsigned security@ messages may be funded from throwaway UTXOs; include when gpg GOODSIG matches blockstream.com/pgp.txt.",
     "whitehat": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
     "funding_hop": "bc1qgslsydz56d0ed6827hdemfmk5w2f6ldyc6wt7p"
   },
-  "filter_rule": "Whitehat-from + victim peg-out consolidation + OP_RETURN from ops responder address only. Third-party spam excluded.",
-  "event_count": 12,
+  "filter_rule": "Include: (1) from whitehat; (2) victim peg-out consolidation; (3) OP_RETURN from ops address bc1qn8mgs…; (4) OP_RETURN to whitehat with valid PGP clearsign by security@blockstream.com (fingerprint 1176542DA98E71E133722EF74AC8CC886844A2D6), even if funding UTXO is not the usual ops address. Exclude: third-party spam / memecoins / begging without that PGP GOODSIG.",
+  "event_count": 17,
   "events": [
     {
       "time_utc": "2026-09-06 14:28:56 UTC",
@@ -460,6 +460,166 @@
       "filter": "from_whitehat_or_large_funding_only",
       "role": "whitehat",
       "to_address": "bc1qdlld6antmv4xug242ed83q7k4rqw50cwfns38szx4qu2f4jwaxxsuhwxxr"
+    },
+    {
+      "time_utc": "2026-09-07 18:35:17 UTC",
+      "block_height": 965962,
+      "confirmed": true,
+      "kind": "WHITEHAT_MSG",
+      "role": "whitehat",
+      "from_address": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
+      "title": "Message PGP (chiffré) post-retour",
+      "txid": "e56af6b9f889b0e7ed342508eaab2f997fafbb61d64c892bbf306a0014722596",
+      "url": "https://mempool.space/tx/e56af6b9f889b0e7ed342508eaab2f997fafbb61d64c892bbf306a0014722596",
+      "op_returns": [
+        {
+          "vout": 0,
+          "text": "[PGP MESSAGE chiffré — omis]",
+          "cleartext": null
+        }
+      ],
+      "filter": "from_whitehat_or_large_funding_only"
+    },
+    {
+      "time_utc": "2026-09-07 18:35:17 UTC",
+      "block_height": 965962,
+      "confirmed": true,
+      "kind": "WHITEHAT_MSG",
+      "role": "whitehat",
+      "from_address": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
+      "title": "Message PGP (chiffré) post-retour #2",
+      "txid": "fcd06c1bcb38e4c3eaf71c1137d7bdf935363ae3c14b590d5d1a501e326d2b99",
+      "url": "https://mempool.space/tx/fcd06c1bcb38e4c3eaf71c1137d7bdf935363ae3c14b590d5d1a501e326d2b99",
+      "op_returns": [
+        {
+          "vout": 0,
+          "text": "[PGP MESSAGE chiffré — omis]",
+          "cleartext": null
+        }
+      ],
+      "filter": "from_whitehat_or_large_funding_only"
+    },
+    {
+      "time_utc": "2026-09-07 21:03:23 UTC",
+      "block_height": 965973,
+      "confirmed": true,
+      "kind": "WHITEHAT_MSG",
+      "role": "whitehat",
+      "from_address": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
+      "title": ":(",
+      "txid": "d7e8837c51cc625c2c6365d371d376b035209fa01434d4933971d6428d6d6d52",
+      "url": "https://mempool.space/tx/d7e8837c51cc625c2c6365d371d376b035209fa01434d4933971d6428d6d6d52",
+      "op_returns": [
+        {
+          "vout": 0,
+          "text": ":(",
+          "cleartext": ":("
+        }
+      ],
+      "filter": "from_whitehat_or_large_funding_only"
+    },
+    {
+      "time_utc": "2026-09-08 00:11:40 UTC",
+      "block_height": 965992,
+      "confirmed": true,
+      "kind": "OPS_MSG_PGP",
+      "role": "blockstream_ops_pgp",
+      "from_address": "bc1q4sswp4a6mwa6c85w2flx7fuckran6rq5renlue",
+      "to_address": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
+      "title": "Message ops post-:( #1 — PGP clearsign security@ + Electrum BIE1 ciphertext (QklFM…) → whitehat",
+      "txid": "9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b",
+      "url": "https://mempool.space/tx/9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b",
+      "fee_sats": 3828,
+      "op_returns": [
+        {
+          "vout": 1,
+          "text": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nQklFMQKQdGWlGzMsZ0E/mNhmVKEd44B5KUe+xKzBPrhGkgAPLhlFBAsrENaIjkANEAKJSiaqoIVmZTcxgpOIVcU+oga7o/fgu2BbhuMOIH59LK/eOqjT+K+UWy3invQqgmSWgzG/k77enCEk6KA45Lw1pSbL9l4/VYE/YqGZvvddsHc8uhgQyWGtasAPJ+P20yVdR5Y=\n-----BEGIN PGP SIGNATURE-----\n\niQJPBAEBCAA5FiEEEXZULamOceEzci73SsjMiGhEotYFAmqfRnkbFIAAAAAABAAO\nbWFudTIsMi41KzEuMTIsMCwzAAoJEErIzIhoRKLWQI0P/i7zUMoEX6dBA2MKqqFQ\ndisFLvLRE9jlvGWQSgCyEAlw8SCSwFxbPcKAQmGGSN1/9P2+OK5sMiPQJCYxujQr\n/xkLzUhqTOAMRmU8xs1bA/oOFHCWNQ8OontylQIiBL5fstxneNpgrMQSxSMJJQE4\nCOvlr6ABzxHXovABFztWkmTcEZdRvvjvf6P2SvUcsMKoTjCq34APY0AA1WO8sxSD\nw3OPS328P8zxm/bekBM/2qArbvksMOnvZkJiDEqUeXi0RCrsv95Cuis1Pv/q/ZiN\nev8YiweUPVIeJ2zozxRvkaYkHHrICIdOooevZ84hZOx/X3dTsoSTxa39PLkaO3Kd\n4PFMXVK1i7OocXU9/lTWYtga+rfDcEptvv+vKuM2JY2fdE8nt3iN660xpa0WG6sQ\nC9jtoEftBrOXMNL5L6yjyKikqZNKM93lDNjQUg0jZbf/Ko3C/b4dNbRbJetlKGU0\n+60XQvEdyJzCdQ0gy9X2pDjZACPb4OpnLWmhkMJm70k5sra+4wFl2vToS9IQx3aR\nrRTk8pJlguVXeaRu+Xs8wroIXY5R0BirLz6RNtXp/ZmnYe8WMOzeBp1Cc5XiZ1fg\n7odH+7EWXZr5PnzQLC3pnlJYG1tgk9Tx+V6uXwwXFB2hwabEk8rfj3JQQOW3Jt3M\nCAV95yh//8ZZMDOD/VwEl2SK\n=dqPe\n-----END PGP SIGNATURE-----\n",
+          "cleartext": null,
+          "pgp_goodsig": "Blockstream Security Reporting <security@blockstream.com>",
+          "pgp_fingerprint": "1176542DA98E71E133722EF74AC8CC886844A2D6",
+          "payload_prefix": "QklFM (Electrum BIE1)"
+        }
+      ],
+      "vout": [
+        {
+          "n": 0,
+          "btc": 1e-05,
+          "type": "v0_p2wpkh",
+          "address": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte"
+        },
+        {
+          "n": 1,
+          "btc": 0.0,
+          "type": "op_return",
+          "address": null
+        },
+        {
+          "n": 2,
+          "btc": 0.00055172,
+          "type": "v0_p2wpkh",
+          "address": "bc1qaxtmz47pjv6qajue2p5xxssx84ug3a695g3g73"
+        }
+      ],
+      "filter": "pgp_goodsig_security_at_blockstream_to_whitehat",
+      "attribution": {
+        "onchain_spender_is_whitehat": false,
+        "onchain_spender_is_usual_ops_addr": false,
+        "pgp_signer": "security@blockstream.com",
+        "pgp_verify": "GOODSIG",
+        "direction": "to_whitehat_dust"
+      }
+    },
+    {
+      "time_utc": "2026-09-08 06:02:24 UTC",
+      "block_height": 966023,
+      "confirmed": true,
+      "kind": "OPS_MSG_PGP",
+      "role": "blockstream_ops_pgp",
+      "from_address": "bc1qaxtmz47pjv6qajue2p5xxssx84ug3a695g3g73",
+      "to_address": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
+      "title": "Message ops post-:( #2 — PGP clearsign security@ + Electrum BIE1 ciphertext (QklFM…) → whitehat",
+      "txid": "57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6",
+      "url": "https://mempool.space/tx/57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6",
+      "fee_sats": 6648,
+      "op_returns": [
+        {
+          "vout": 2,
+          "text": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\n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\n-----BEGIN PGP SIGNATURE-----\n\niQJPBAEBCAA5FiEEEXZULamOceEzci73SsjMiGhEotYFAmqfoQEbFIAAAAAABAAO\nbWFudTIsMi41KzEuMTIsMCwzAAoJEErIzIhoRKLWH+IP/jUlL5Uh3hnb44TfYXT/\n/iG9tclXKiMQaJeBzLfBNyD2mHKwKpDXDR4jW1pozVFeH3Nouj7592IRLgfoEHtN\nu0hmpbtPdPoyEewpNYp68okit06ze9FkoAI4M2j49ctVLX0wJsKLNFaj1tOXdnft\nTxNUURl3LpF1U1au+y4Wyg5fEf5PHuGVYCT16VVPq73KHjiKNL9pUvUwg2+yvSzj\nhyDAX3Wx3Me1xkR4T9ouNNcHqe2dtwuZJshS7UUdW+JNUvPNDaVtl6LxZgrXK8+O\nnJ4eHe+wtPRRCWffYnq+iGOogpWTYNgHnn+cL1Mdnmo9LAhpwnmVuqgG9EPZn/OH\n2U3Kz5OzITqep+XVlhW+H6tRqROyncEchBxquCl4SWnMp1F4RE00vctaLgAhXcvM\no86qNB5Fni8UQEdQNPaofCN4QKJFyBhFj6v9DobdsW3Q9HTiD0dLMwJUmNJ+ZuzF\np1b22yX5tfPuJ/UnDSE1Vb8hXVIURHUwZQj4v/jMuvSS9Ke3awkcllwVmciLBlbz\nqC4MAMF4sgfuAFN8kUoglmmvbCd9u8jAyqhVHdYHCnMmhiVXAtjkA/peBUv1T0Ps\nbJtRT/Md6aaT7jSXWBYY3g5M4tFUpQY4xOtSA3jhCjwwlG7rUM4JCLd+Nqt7ZopO\nO0J+IKYDZR3sq/HDT1lMFmM3\n=UC0P\n-----END PGP SIGNATURE-----\n",
+          "cleartext": null,
+          "pgp_goodsig": "Blockstream Security Reporting <security@blockstream.com>",
+          "pgp_fingerprint": "1176542DA98E71E133722EF74AC8CC886844A2D6",
+          "payload_prefix": "QklFM (Electrum BIE1)"
+        }
+      ],
+      "vout": [
+        {
+          "n": 0,
+          "btc": 0.00047524,
+          "type": "v0_p2wpkh",
+          "address": "bc1qfncc9jjcxkp4w24ukz5nw2gc4x4cghz2pr6sz3"
+        },
+        {
+          "n": 1,
+          "btc": 1e-05,
+          "type": "v0_p2wpkh",
+          "address": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte"
+        },
+        {
+          "n": 2,
+          "btc": 0.0,
+          "type": "op_return",
+          "address": null
+        }
+      ],
+      "filter": "pgp_goodsig_security_at_blockstream_to_whitehat",
+      "attribution": {
+        "onchain_spender_is_whitehat": false,
+        "onchain_spender_is_usual_ops_addr": false,
+        "pgp_signer": "security@blockstream.com",
+        "pgp_verify": "GOODSIG",
+        "direction": "to_whitehat_dust"
+      }
     }
-  ]
+  ],
+  "pgp_ops_fingerprint": "1176542DA98E71E133722EF74AC8CC886844A2D6"
 }

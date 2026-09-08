@@ -1,0 +1,11 @@
+{
+  "updated_at_utc": "2026-09-08T08:30:27.287787+00:00",
+  "filter_rule": "Include: (1) from whitehat; (2) victim peg-out consolidation; (3) OP_RETURN from ops address bc1qn8mgs\u2026; (4) OP_RETURN to whitehat with valid PGP clearsign by security@blockstream.com (fingerprint 1176542DA98E71E133722EF74AC8CC886844A2D6), even if funding UTXO is not the usual ops address. Exclude: third-party spam / memecoins / begging without that PGP GOODSIG.",
+  "include_pgp_ops_even_if_not_usual_addr": true,
+  "pgp_fingerprint": "1176542DA98E71E133722EF74AC8CC886844A2D6",
+  "pgp_uid": "Blockstream Security Reporting <security@blockstream.com>",
+  "whitelist_txids_ops_pgp_post_frown": [
+    "9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b",
+    "57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6"
+  ]
+}

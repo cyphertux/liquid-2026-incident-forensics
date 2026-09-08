@@ -1,7 +1,7 @@
 {
-  "scanned_at": "2026-09-08T06:05:54.951417+00:00",
+  "scanned_at": "2026-09-08T08:30:27.288027+00:00",
   "previous_scan": "2026-09-07T21:03:55Z",
-  "last_known_dialogue_height": 965973,
+  "last_known_dialogue_height": 966023,
   "address_stats": {
     "whitehat": {
       "chain_stats": {
@@ -68,13 +68,40 @@
       }
     }
   },
-  "new_dialogue": [],
+  "new_dialogue": [
+    {
+      "txid": "9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b",
+      "height": 965992,
+      "time": "2026-09-08 00:11:40 UTC",
+      "kind": "OPS_MSG_PGP",
+      "from": "bc1q4sswp4a6mwa6c85w2flx7fuckran6rq5renlue",
+      "to": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
+      "msg_preview": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nQklFMQKQdGWlGzMsZ0E/mNhmVKEd44B5KUe+xKzBPrhGkgAPLhlFBAsrENaIjkANEAKJSia",
+      "pgp_goodsig": true,
+      "pgp_signer": "security@blockstream.com",
+      "filter": "pgp_goodsig_security_at_blockstream_to_whitehat",
+      "note": "Promoted from spam_to_whitehat_after after PGP verify"
+    },
+    {
+      "txid": "57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6",
+      "height": 966023,
+      "time": "2026-09-08 06:02:24 UTC",
+      "kind": "OPS_MSG_PGP",
+      "from": "bc1qaxtmz47pjv6qajue2p5xxssx84ug3a695g3g73",
+      "to": "bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte",
+      "msg_preview": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nQklFMQPNOw3hlzDFylCBsGxLRxPiuismpMZXaXy/0O7gMpRVhB1DYU73H6pzViAzoq59rmM",
+      "pgp_goodsig": true,
+      "pgp_signer": "security@blockstream.com",
+      "filter": "pgp_goodsig_security_at_blockstream_to_whitehat",
+      "note": "Promoted from spam_to_whitehat_after after PGP verify"
+    }
+  ],
   "spam_to_whitehat_after": [
     {
       "txid": "ff9d97897ad44ee3b01c6b7ae7cb714a7b550819e30f84ecd627c643b89cb87a",
       "height": 966023,
       "time": "2026-09-08 06:02:24 UTC",
-      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n\ud83d\ude80 Coming soon: L"
+      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n🚀 Coming soon: L"
     },
     {
       "txid": "4df75c172709dc8e22bd0a4625f6032398ce0aaf7221e1563c8f70b27340aab6",
@@ -83,22 +110,16 @@
       "msg": "hello"
     },
     {
-      "txid": "57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6",
-      "height": 966023,
-      "time": "2026-09-08 06:02:24 UTC",
-      "msg": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nQklFMQPNOw3hlzDFylCBsGxLRxPiuismpMZXaXy/0O7gMpRVhB1"
-    },
-    {
       "txid": "b90bdb3a8f65c2f0fcd25d8e7087370b56928a1364f898592b01291b1806734f",
       "height": 966020,
       "time": "2026-09-08 05:38:09 UTC",
-      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n\ud83d\ude80 Coming soon: L"
+      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n🚀 Coming soon: L"
     },
     {
       "txid": "f7efcd0d7ed89a95b0d5c0b2c5c1be18c413edfcf4aaeebb28584ca905dc8550",
       "height": 966020,
       "time": "2026-09-08 05:38:09 UTC",
-      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n\ud83d\ude80 Coming soon: L"
+      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n🚀 Coming soon: L"
     },
     {
       "txid": "84e4a57eec39a287fefe4839fe45da66df355ad8fa419d3398e517edcc6b23fd",
@@ -152,19 +173,13 @@
       "txid": "b0899c7da046913962d552a69758de6997687ba684318c9b8e284a42fe194f2e",
       "height": 965996,
       "time": "2026-09-08 01:19:17 UTC",
-      "msg": "\ud83c\udf81Crack\u2192hex\u2192bip39\u2192$Bound(Runes):553821a2a20570cacc28da8838520674"
+      "msg": "🎁Crack→hex→bip39→$Bound(Runes):553821a2a20570cacc28da8838520674"
     },
     {
       "txid": "1bbef51229e8c264094920bc3ed85d517b9ff3929e62db8ca74c3f72d87dff6b",
       "height": 965994,
       "time": "2026-09-08 00:43:32 UTC",
       "msg": "Memecoin Whitehat | Pump.fun CA: CqcPgSNzxG6NVnE38xwtmWQ4mR6rapoP6YKVhmM7pump"
-    },
-    {
-      "txid": "9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b",
-      "height": 965992,
-      "time": "2026-09-08 00:11:40 UTC",
-      "msg": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nQklFMQKQdGWlGzMsZ0E/mNhmVKEd44B5KUe+xKzBPrhGkgAPLhl"
     },
     {
       "txid": "8420f649ae9e5188810ee3d9529308006999363f3be187bb0e49a3daecd67dbc",
@@ -176,7 +191,7 @@
       "txid": "d747428312a6c208c52212bb4c3cf33c8f3ab506f7e6bf6a7a2c20093a736ec6",
       "height": 965986,
       "time": "2026-09-07 23:19:22 UTC",
-      "msg": "Wish for 0.1 BTC to kick\u2011off my crypto journey, appreciate any support."
+      "msg": "Wish for 0.1 BTC to kick‑off my crypto journey, appreciate any support."
     },
     {
       "txid": "c23411dd444752acaea3fa6dce87f1085aab1fc589681d3ade23b3c9a04488dd",
@@ -212,5 +227,7 @@
         "Please contact me on Telegram at @MRBOND_1; we can help you with laundering."
       ]
     }
-  ]
+  ],
+  "filter_rule": "Include: (1) from whitehat; (2) victim peg-out consolidation; (3) OP_RETURN from ops address bc1qn8mgs…; (4) OP_RETURN to whitehat with valid PGP clearsign by security@blockstream.com (fingerprint 1176542DA98E71E133722EF74AC8CC886844A2D6), even if funding UTXO is not the usual ops address. Exclude: third-party spam / memecoins / begging without that PGP GOODSIG.",
+  "note": "Reclassified 2 txs as ops PGP dialogue; 18 remain spam_to_whitehat_after"
 }

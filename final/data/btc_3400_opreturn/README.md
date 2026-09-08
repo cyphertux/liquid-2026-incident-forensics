@@ -30,3 +30,7 @@
 ## Chronologie
 
 Voir [`CHRONOLOGY.md`](CHRONOLOGY.md) et [`timeline.json`](timeline.json).
+
+## Filtre dialogue
+
+Voir [`filter_rule.json`](filter_rule.json) — inclut les msgs PGP `security@` post-`:(` même hors adresse ops habituelle.
