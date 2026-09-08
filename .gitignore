@@ -81,3 +81,11 @@ final/data/elementsd_lab/bin/
 final/data/elementsd_lab/nodeA/
 final/data/elementsd_lab/nodeB/
 /tmp/elements-*.tar.gz
+
+# Mission 40 build/runtime artifacts
+mission40/build/
+mission40/build-framed/
+mission40/build_provenance.json
+mission40/results/
+mission40/nodeA/regtest/
+mission40/nodeB/regtest/

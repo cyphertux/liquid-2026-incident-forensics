@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "P0_len": 4166,
+  "P1_len": 4234,
+  "S0_len": 69,
+  "S1_len": 1,
+  "G_hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+  "preimage_len": 4301,
+  "preimage_sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+  "unframed_key_sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+  "framed_key_A": "a16625e7f3af8966aeca5040a8048a18b19731c415f7faebea4bd81caffa485c",
+  "framed_key_B": "1c08e5a5b0db006b01699b2e8f7223d3511285065625588572bc5374992284cb",
+  "A_wire_hex": "016d521c38ec1ea15734ae22b7c46064412829c0d0579f0a713d1c04ede979026f",
+  "constructions": {
+    "P1": "P0||C0||G||6a||43",
+    "S0": "6a||43||C1||G||6a"
+  }
+}

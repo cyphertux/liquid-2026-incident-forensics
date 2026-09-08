@@ -1,0 +1,7 @@
+# Immutable commit for Mission 40 (Elements 23.3.x post-#1599)
+# Contains 212c43f (rangeproof cache bind) and unframed 4-field key.
+RECOMMENDED_COMMIT=3b3f01eac966afb266cd205b3a2cb87c8c1e4534
+MINIMAL_FIX_COMMIT=212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7
+MASTER_EQUIVALENT_ANCESTOR=c26d719c29a40da280a825b25657e9c3d8bc7d99
+EXPECTED_WRITE_SNIPPET=hasher.Write(proof.data(), proof.size()).Write(commitment.data(), commitment.size()).Write(asset_commitment.data(), asset_commitment.size()).Write(scriptPubKey.data(), scriptPubKey.size()).Finalize(entry.begin());
+REJECT_IF_VERSION_CONTAINS=23.3.3

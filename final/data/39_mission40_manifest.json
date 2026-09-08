@@ -1,0 +1,41 @@
+{
+  "mission": 39,
+  "verdict": "NOT READY — missing valid regtest primer.hex + alias_block.hex producers embedding exact Mission 28 bytes",
+  "d_declared": false,
+  "recommended_commit": "3b3f01eac966afb266cd205b3a2cb87c8c1e4534",
+  "minimal_fix_commit": "212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7",
+  "cache_formula": "SHA256(salt||proof||value_commitment||asset_commitment||scriptPubKey) unframed",
+  "fixture_check": "PASS — see mission40/expected/fixture_check.json",
+  "ready": {
+    "commit_pin": true,
+    "build_script": true,
+    "fixture_verifier": true,
+    "nodeA_nodeB_configs": true,
+    "instrumentation_script": true,
+    "framed_control_script": true,
+    "run_orchestrator": true,
+    "verify_D_checklist": true,
+    "4050336_mapping": true,
+    "protocol_doc": true
+  },
+  "not_ready": {
+    "post_fix_elementsd_binary": true,
+    "primer_hex_artifact": true,
+    "alias_block_hex_artifact": true,
+    "end_to_end_ConnectBlock_run": true
+  },
+  "scripts": [
+    "scripts/mission40_build.sh",
+    "scripts/mission40_instrument.sh",
+    "scripts/mission40_apply_framed.sh",
+    "scripts/mission40_verify_fixtures.py",
+    "scripts/mission40_run.sh",
+    "scripts/mission40_verify_D.sh",
+    "scripts/mission40_make_alias_block.sh"
+  ],
+  "paths": {
+    "mission40": "mission40/",
+    "mapping": "final/data/40_4050336_mapping.json",
+    "readiness": "final/39_mission40_readiness.md"
+  }
+}

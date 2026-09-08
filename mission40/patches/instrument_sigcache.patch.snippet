@@ -1,0 +1,84 @@
+diff --git a/src/script/sigcache.cpp b/src/script/sigcache.cpp
+index 0000000000..1111111111 100644
+--- a/src/script/sigcache.cpp
++++ b/src/script/sigcache.cpp
+@@ -103,10 +103,16 @@ bool CachingTransactionSignatureChecker::VerifySchnorrSignature(Span<const unsig
+ 
+ // TODO: de-globalise
+ 
+ // ELEMENTS CACHES
+ namespace {
+     static SignatureCache rangeProofCache;
+     static SignatureCache surjectionProofCache;
++    static uint64_t g_rp_cache_ops = 0;
+ }
++
++// Mission 40 instrumentation — lab only. Logs HIT/MISS/SET without dumping full proofs.
++#ifndef MISSION40_RP_CACHE_LOG
++#define MISSION40_RP_CACHE_LOG 1
++#endif
+ // To be called once in AppInit2/TestingSetup to initialize the rangeproof cache
+ bool InitRangeproofCache(size_t max_size_bytes)
+ {
+     auto setup_results = rangeProofCache.setup_bytes(max_size_bytes);
+     if (!setup_results) return false;
+     const auto [num_elems, approx_size_bytes] = *setup_results;
+     LogPrintf("Using %zu MiB out of %zu Mib requested for rangeproof cache, able to store %zu elements\n",
+             approx_size_bytes >> 20, max_size_bytes >> 20, num_elems);
++#if MISSION40_RP_CACHE_LOG
++    LogPrintf("MISSION40 CACHE CREATE rangeProofCache elems=%zu bytes≈%zu\n", num_elems, approx_size_bytes);
++#endif
+     return true;
+ }
+ 
+ bool CachingRangeProofChecker::VerifyRangeProof(const std::vector<unsigned char>& vchRangeProof, const std::vector<unsigned char>& vchValueCommitment, const std::vector<unsigned char>& vchAssetCommitment, const CScript& scriptPubKey, const secp256k1_context* secp256k1_ctx_verify_amounts) const
+ {
+     uint256 entry;
+     rangeProofCache.ComputeEntryRangeProof(entry, vchRangeProof, vchValueCommitment, vchAssetCommitment, scriptPubKey);
+ 
++#if MISSION40_RP_CACHE_LOG
++    ++g_rp_cache_ops;
++    LogPrintf("MISSION40 CACHE GET op=%llu key=%s proof_len=%zu script_len=%zu store=%d\n",
++              (unsigned long long)g_rp_cache_ops, entry.ToString().substr(0, 16),
++              vchRangeProof.size(), scriptPubKey.size(), (int)store);
++#endif
++
+     if (rangeProofCache.Get(entry, !store)) {
++#if MISSION40_RP_CACHE_LOG
++        LogPrintf("MISSION40 CACHE HIT key=%s crypto=SKIPPED erase=%d\n",
++                  entry.ToString().substr(0, 16), (int)(!store));
++#endif
+         return true;
+     }
+ 
++#if MISSION40_RP_CACHE_LOG
++    LogPrintf("MISSION40 CACHE MISS key=%s → native crypto\n", entry.ToString().substr(0, 16));
++#endif
++
+     if (vchRangeProof.size() == 0) {
+         return false;
+     }
+@@ -153,6 +175,9 @@ bool CachingRangeProofChecker::VerifyRangeProof(const std::vector<unsigned char>
+     if (!secp256k1_rangeproof_verify(secp256k1_ctx_verify_amounts, &min_value, &max_value, &commit, vchRangeProof.data(), vchRangeProof.size(), scriptPubKey.size() ? &scriptPubKey.front() : nullptr, scriptPubKey.size(), &tag)) {
++#if MISSION40_RP_CACHE_LOG
++        LogPrintf("MISSION40 CRYPTO FALSE key=%s\n", entry.ToString().substr(0, 16));
++#endif
+         return false;
+     }
+@@ -162,9 +187,15 @@ bool CachingRangeProofChecker::VerifyRangeProof(const std::vector<unsigned char>
+     if (min_value == 0 && !scriptPubKey.IsUnspendable()) {
++#if MISSION40_RP_CACHE_LOG
++        LogPrintf("MISSION40 CRYPTO POLICY_REJECT min0 spendable key=%s\n", entry.ToString().substr(0, 16));
++#endif
+         return false;
+     }
+ 
+     if (store) {
+         rangeProofCache.Set(entry);
++#if MISSION40_RP_CACHE_LOG
++        LogPrintf("MISSION40 CACHE SET key=%s crypto=TRUE\n", entry.ToString().substr(0, 16));
++#endif
+     }
+ 
+     return true;
+ }

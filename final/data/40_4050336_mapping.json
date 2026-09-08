@@ -1,0 +1,57 @@
+{
+  "purpose": "Mission 40 comparison between lab alias and historical f24a/4050336",
+  "historical": {
+    "block_height": 4050336,
+    "block_time_utc": "2026-09-06 13:53:10",
+    "block_hash": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+    "alias_txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+    "alias_vout_focus": 1,
+    "primer_candidate_txid": "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+    "primer_vout_focus": 0,
+    "note": "Primer role of 71c9 is lab-compatible with Mission 28 byte alias; historical mempool/cache presence on an acceptor is UNPROVEN"
+  },
+  "lab_fields": {
+    "P0_len": 4166,
+    "C0_len": 33,
+    "G_len": 33,
+    "S0_len": 69,
+    "P1_len": 4234,
+    "C1_len": 33,
+    "S1_len": 1,
+    "G_hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+    "constructions": {
+      "P1": "P0||C0||G||6a||43",
+      "S0": "6a||43||C1||G||6a"
+    },
+    "fixture_files": {
+      "P0": "mission40/fixtures/P0.hex",
+      "C0": "mission40/fixtures/C0.hex",
+      "S0": "mission40/fixtures/S0.hex",
+      "P1": "mission40/fixtures/P1.hex",
+      "C1": "mission40/fixtures/C1.hex",
+      "S1": "mission40/fixtures/S1.hex",
+      "A_wire": "mission40/fixtures/A_wire.hex",
+      "tx_71c9": "mission40/fixtures/tx_71c9.hex",
+      "tx_f24a": "mission40/fixtures/tx_f24a.hex"
+    }
+  },
+  "injection_into_regtest": {
+    "can_submit_mainnet_tx_hex_as_is": false,
+    "why": [
+      "Wrong chain magic / consensus params vs Liquid mainnet",
+      "Prevouts / UTXO set not present on regtest",
+      "Pegged asset / genesis mismatch",
+      "Scripts and federations differ"
+    ],
+    "transforms_that_would_be_needed": [
+      "Rebuild transactions with regtest genesis pegged asset and valid prevouts",
+      "Re-blind or surgically replace rangeproof+commit+script fields with P*/C*/S* while keeping balance/surjection valid \u2014 generally requires matching blinds or regenerating companion proofs"
+    ],
+    "what_would_be_lost_by_transforms": [
+      "Exact historical wtxid/txid",
+      "Exact surjection proofs and other witnesses unless regenerated",
+      "Bit-identity with on-chain f24a beyond the rangeproof locus fields retained"
+    ],
+    "recommended_mission40_path": "Prefer mechanism D test with exact Mission 28 field bytes inside newly constructed valid regtest confidential txs; keep f24a comparison as separate field-level mapping (this file), not as submitblock of mainnet hex"
+  }
+}

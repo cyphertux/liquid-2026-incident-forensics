@@ -1,0 +1,59 @@
+FIXTURE CHECK OK
+{
+  "ok": true,
+  "P0_len": 4166,
+  "P1_len": 4234,
+  "S0_len": 69,
+  "S1_len": 1,
+  "G_hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+  "preimage_len": 4301,
+  "preimage_sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+  "unframed_key_sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+  "framed_key_A": "a16625e7f3af8966aeca5040a8048a18b19731c415f7faebea4bd81caffa485c",
+  "framed_key_B": "1c08e5a5b0db006b01699b2e8f7223d3511285065625588572bc5374992284cb",
+  "A_wire_hex": "016d521c38ec1ea15734ae22b7c46064412829c0d0579f0a713d1c04ede979026f",
+  "constructions": {
+    "P1": "P0||C0||G||6a||43",
+    "S0": "6a||43||C1||G||6a"
+  }
+}
+
+=== commit pin ===
+# Immutable commit for Mission 40 (Elements 23.3.x post-#1599)
+# Contains 212c43f (rangeproof cache bind) and unframed 4-field key.
+RECOMMENDED_COMMIT=3b3f01eac966afb266cd205b3a2cb87c8c1e4534
+MINIMAL_FIX_COMMIT=212c43f475fc202b5b9e6dbb1f1c616e1a06a6f7
+MASTER_EQUIVALENT_ANCESTOR=c26d719c29a40da280a825b25657e9c3d8bc7d99
+EXPECTED_WRITE_SNIPPET=hasher.Write(proof.data(), proof.size()).Write(commitment.data(), commitment.size()).Write(asset_commitment.data(), asset_commitment.size()).Write(scriptPubKey.data(), scriptPubKey.size()).Finalize(entry.begin());
+REJECT_IF_VERSION_CONTAINS=23.3.3
+=== scripts ===
+-rwxrwxr-x 1 root root 2393 Sep  8 09:49 scripts/mission40_apply_framed.sh
+-rwxrwxr-x 1 root root 4733 Sep  8 09:48 scripts/mission40_build.sh
+-rwxrwxr-x 1 root root 3239 Sep  8 09:49 scripts/mission40_instrument.sh
+-rwxrwxr-x 1 root root 6609 Sep  8 09:50 scripts/mission40_run.sh
+-rwxrwxr-x 1 root root 4252 Sep  8 09:50 scripts/mission40_verify_D.sh
+-rwxrwxr-x 1 root root 2971 Sep  8 09:48 scripts/mission40_verify_fixtures.py
+=== mission40 tree ===
+mission40/patches/instrument_sigcache.patch.snippet
+mission40/expected/fixture_check.json
+mission40/nodeA/ports.env
+mission40/nodeA/elements.conf
+mission40/PROTOCOL.md
+mission40/COMMIT.txt
+mission40/fixtures/P1.hex
+mission40/fixtures/A_wire.hex
+mission40/fixtures/S1.hex
+mission40/fixtures/C1.hex
+mission40/fixtures/tx_f24a.hex
+mission40/fixtures/C0.hex
+mission40/fixtures/P0.hex
+mission40/fixtures/tx_71c9.hex
+mission40/fixtures/S0.hex
+mission40/nodeB/ports.env
+mission40/nodeB/elements.conf
+
+=== MISSION 39 VERDICT ===
+NOT READY — missing valid regtest primer.hex + alias_block.hex producers embedding exact Mission 28 bytes
+D not declared.
+Fixture check: PASS
+Recommended commit: 3b3f01eac966afb266cd205b3a2cb87c8c1e4534
