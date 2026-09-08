@@ -1,0 +1,28 @@
+=== Mission 38 elementsd lab log ===
+date: 2026-09-08T07:41:03Z
+binary: elements-23.3.3-aarch64-linux-gnu (PRE-FIX release)
+source tip studied: c7e856fab1b0c4d37005e25c0940184d812a26a0
+
+=== elementsd -version ===
+Elements Core version v23.3.3
+Copyright (C) 2009-2026 The Elements Project developers
+Copyright (C) 2009-2026 The Bitcoin Core developers
+
+Please contribute if you find Elements Core useful. Visit
+<https://elementsproject.org/> for further information about the software.
+The source code is available from
+<https://github.com/ElementsProject/elements>.
+
+=== Node A debug.log (cache init) ===
+31:2026-09-08T07:40:21Z Using 8 MiB out of 16/4 requested for signature cache, able to store 262144 elements
+32:2026-09-08T07:40:21Z Using 8 MiB out of 16/4 requested for script execution cache, able to store 262144 elements
+33:2026-09-08T07:40:21Z Using 8 MiB out of 8/4 requested for rangeproof cache, able to store 262144 elements
+34:2026-09-08T07:40:21Z Using 8 MiB out of 8/4 requested for surjectionproof cache, able to store 262144 elements
+49:2026-09-08T07:40:21Z Cache configuration:
+
+=== BARRIERS ===
+1. No post-c26d719 elementsd binary available as release (23.3.3 is PRE-FIX).
+2. Cannot compile elementsd here (no cmake/autoconf; no sudo for deps).
+3. Mission 28 fixtures are Liquid mainnet output fragments; injecting into ConnectBlock requires full valid confidential txs + UTXO — not done.
+4. Therefore Tests 1-10 for POST-FIX ConnectBlock: NOT EXECUTED on real elementsd.
+5. Verdict D: NOT DECLARED.

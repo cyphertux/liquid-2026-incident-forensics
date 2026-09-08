@@ -75,3 +75,9 @@ venv/
 
 # Local Liquid API scan working cache (Mission 26); curated results live in final/data/*occurrences*.json
 final/data/scan_cache/
+
+# Mission 38 local Elements binaries (do not commit)
+final/data/elementsd_lab/bin/
+final/data/elementsd_lab/nodeA/
+final/data/elementsd_lab/nodeB/
+/tmp/elements-*.tar.gz

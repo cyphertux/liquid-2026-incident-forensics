@@ -1,0 +1,57 @@
+{
+  "mission": 38,
+  "scanned_at": "2026-09-08T07:41:03.243281+00:00",
+  "verdict": "C",
+  "d_declared": false,
+  "e_declared": false,
+  "central_question": "Can two identical elementsd instances diverge on the same block solely due to rangeproof cache state (Mission 28 alias)?",
+  "answer": "NOT DEMONSTRATED \u2014 blocked before ConnectBlock experiment on post-fix binary",
+  "source_studied": {
+    "repo": "ElementsProject/elements",
+    "commit": "c7e856fab1b0c4d37005e25c0940184d812a26a0",
+    "note": "post-c26d719 unframed key formula"
+  },
+  "elementsd_run": {
+    "version": "v23.3.3",
+    "arch": "aarch64-linux-gnu",
+    "post_fix": false,
+    "started_regtest": true,
+    "rangeproof_cache_init_log": "Using 8 MiB out of 8/4 requested for rangeproof cache, able to store 262144 elements"
+  },
+  "cache_architecture_from_code": {
+    "rangeProofCache": "static SignatureCache in sigcache.cpp anonymous namespace \u2014 process-global",
+    "TODO": "de-globalise comment present in source",
+    "InitRangeproofCache": "AppInit / TestingSetup once",
+    "shared_mempool_and_connectblock": true,
+    "persisted_to_disk": false,
+    "ConnectBlock_store": "fCacheResults=fJustCheck \u2192 false when connecting \u2192 consult only, no Set",
+    "erase": "Get(entry, erase=true) marks reclaimable via cuckoocache; entry remains findable until eviction"
+  },
+  "d_checklist": {
+    "same_build_post_fix": false,
+    "same_config": "N/A",
+    "same_block": "N/A",
+    "same_utxo": "N/A",
+    "nodeA_hot": "N/A",
+    "nodeB_cold": "N/A",
+    "same_ConnectBlock_path": "CODE yes / RUNTIME post-fix no",
+    "diff_only_cache": "N/A",
+    "A_accept": "N/A",
+    "B_reject": "N/A",
+    "no_later_equalizing_check": "N/A",
+    "reproducible": false
+  },
+  "barriers": [
+    "No post-fix elementsd release binary (23.3.3 PRE-FIX)",
+    "Cannot compile Elements in this environment (missing cmake/autoconf; no root for deps)",
+    "Cannot inject Mission 28 Liquid output fragments into a valid ConnectBlock without reconstructing full confidential transactions + UTXO/scripts/surjection",
+    "Docker path previously blocked (Mission 06)"
+  ],
+  "what_was_proven": [
+    "Real elementsd InitRangeproofCache runs (log line captured)",
+    "Static process-global rangeProofCache architecture from source (same instance CachingRangeProofChecker uses)",
+    "Mission 37 locus remains the ConnectBlock amount path in source",
+    "D criteria checklist incomplete \u2192 D not declared"
+  ],
+  "relation_to_37": "Mission 37 remains strongest experimental result (C). Mission 38 does not upgrade to D."
+}
