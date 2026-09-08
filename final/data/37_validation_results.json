@@ -1,0 +1,77 @@
+{
+  "mission": 37,
+  "scanned_at": "2026-09-08T07:28:41.475629+00:00",
+  "verdict": "C",
+  "verdict_nuance": "C established at CheckTxInputs/VerifyAmounts/CRangeCheck locus under ConnectBlock cacheStore semantics; two-node divergence at that locus (D-like) demonstrated; full elementsd ConnectBlock/ActivateBestChain NOT executed; E not claimed",
+  "scenarios": {
+    "A": {
+      "ret": 1,
+      "hit": 0,
+      "crypto": 1
+    },
+    "B": {
+      "ret": 0,
+      "hit": 0,
+      "crypto": 0
+    },
+    "C": {
+      "ret": 1,
+      "hit": 1,
+      "crypto": -1
+    },
+    "D": {
+      "ret": 1,
+      "hit": 1,
+      "crypto": -1
+    }
+  },
+  "same_tx_alias": {
+    "ret": 1,
+    "hit": 1,
+    "crypto": -1
+  },
+  "two_nodes": {
+    "A": {
+      "result": "ACCEPT",
+      "hit": 1,
+      "crypto": -1
+    },
+    "B": {
+      "result": "REJECT",
+      "hit": 0,
+      "crypto": 0
+    },
+    "divergence_rangeproof_locus": true
+  },
+  "framed_control": {
+    "ret": 0,
+    "hit": 0,
+    "crypto": 0
+  },
+  "code_path": {
+    "ConnectBlock": "validation.cpp ~3041-3045 CheckTxInputs(..., fCacheResults=fJustCheck)",
+    "CheckTxInputs": "consensus/tx_verify.cpp:250 VerifyAmounts(..., cacheStore)",
+    "VerifyAmounts": "confidential_validation.cpp:388 QueueCheck CRangeCheck",
+    "CRangeCheck": "confidential_validation.cpp:61-70 CachingRangeProofChecker(store).VerifyRangeProof",
+    "VerifyRangeProof": "script/sigcache.cpp:131-170 Get then maybe crypto then maybe Set"
+  },
+  "other_unframed_caches": [
+    {
+      "fn": "ComputeEntryECDSA",
+      "pattern": "hash32||pubkey||sig",
+      "note": "variable pubkey+sig; separate mission if pursued"
+    },
+    {
+      "fn": "ComputeEntrySchnorr",
+      "pattern": "hash32||xonly||sig",
+      "note": "variable lengths"
+    },
+    {
+      "fn": "ComputeEntrySurjectionProof",
+      "pattern": "wtxid32||proof||commitment",
+      "note": "proof variable; follow-up mission candidate"
+    }
+  ],
+  "full_elementsd_connectblock": false,
+  "historical_e": false
+}

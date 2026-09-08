@@ -1,0 +1,8 @@
+final/scripts/37_validation_path_harness.c: In function ‘main’:
+final/scripts/37_validation_path_harness.c:159:3: warning: ignoring return value of ‘secp256k1_generator_generate’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  159 |   secp256k1_generator_generate(ctx,&gen,Awire+1);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+final/scripts/37_validation_path_harness.c: In function ‘read_hex’:
+final/scripts/37_validation_path_harness.c:38:24: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   38 |   char *t=malloc(n+1); fread(t,1,n,f); t[n]=0; fclose(f);
+      |                        ^~~~~~~~~~~~~~

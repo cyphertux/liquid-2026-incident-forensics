@@ -1,0 +1,143 @@
+{
+  "mission": 36,
+  "scanned_at": "2026-09-08T07:12:18.939681+00:00",
+  "question": "After c26d719 and #1592/#1595/#1599/#198, can two distinct rangeproof contexts still share a cache key via ambiguous unframed serialization?",
+  "formulas": {
+    "pre_c26d719": "SHA256(salt || proof || value_commitment)  # unframed, 2 fields",
+    "c26d719": "SHA256(salt || proof || value_commitment || asset_commitment || scriptPubKey)  # unframed, 4 fields",
+    "after_1592_merge": "identical to c26d719",
+    "6253d7e_23x": "identical to c26d719",
+    "212c43f_233x": "identical to c26d719",
+    "after_1599_merge_233x": "identical to c26d719",
+    "origin_elements_23_3_x_HEAD": "identical to c26d719",
+    "origin_master_HEAD": "identical to c26d719",
+    "sequentia_198": "identical Write chain; adds tests only (no framing)",
+    "length_prefix": false,
+    "separators": false,
+    "canonical_structured_encode": false
+  },
+  "mission28_recheck": {
+    "tuple_A": {
+      "P0_len": 4166,
+      "C0_len": 33,
+      "G_len": 33,
+      "S0_len": 69
+    },
+    "tuple_B": {
+      "P1_len": 4234,
+      "C1_len": 33,
+      "G_len": 33,
+      "S1_len": 1
+    },
+    "preimage_A_len": 4301,
+    "preimage_B_len": 4301,
+    "preimages_byte_identical": true,
+    "preimage_sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+    "unframed_keys_equal_zero_salt": true,
+    "unframed_key_hex": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+    "framed_keys_equal": false,
+    "framed_key_A": "a16625e7f3af8966aeca5040a8048a18b19731c415f7faebea4bd81caffa485c",
+    "framed_key_B": "1c08e5a5b0db006b01699b2e8f7223d3511285065625588572bc5374992284cb",
+    "tuples_logically_distinct": true,
+    "random_salts_1000_unframed_equal": 1000,
+    "random_salts_1000_framed_equal": 0,
+    "same_salt_framed_equal_200": 0
+  },
+  "fuzz": {
+    "family_absorb_CA_hits": 5,
+    "family_examples": [
+      {
+        "family": "absorb_CA_into_proof",
+        "P_len": 35,
+        "mid_len": 7,
+        "Ss_len": 4,
+        "pre_len": 178,
+        "unframed_equal": true,
+        "framed_equal": false,
+        "example_i": 0
+      },
+      {
+        "family": "absorb_CA_into_proof",
+        "P_len": 0,
+        "mid_len": 7,
+        "Ss_len": 0,
+        "pre_len": 139,
+        "unframed_equal": true,
+        "framed_equal": false,
+        "example_i": 1
+      },
+      {
+        "family": "absorb_CA_into_proof",
+        "P_len": 31,
+        "mid_len": 19,
+        "Ss_len": 2,
+        "pre_len": 184,
+        "unframed_equal": true,
+        "framed_equal": false,
+        "example_i": 2
+      },
+      {
+        "family": "absorb_CA_into_proof",
+        "P_len": 16,
+        "mid_len": 7,
+        "Ss_len": 3,
+        "pre_len": 158,
+        "unframed_equal": true,
+        "framed_equal": false,
+        "example_i": 3
+      },
+      {
+        "family": "absorb_CA_into_proof",
+        "P_len": 5,
+        "mid_len": 15,
+        "Ss_len": 14,
+        "pre_len": 166,
+        "unframed_equal": true,
+        "framed_equal": false,
+        "example_i": 4
+      }
+    ],
+    "exhaustive_two_field_collisions_sample": [
+      {
+        "A": "",
+        "B": "61",
+        "A2": "61",
+        "B2": "",
+        "concat": "61"
+      },
+      {
+        "A": "",
+        "B": "62",
+        "A2": "62",
+        "B2": "",
+        "concat": "62"
+      },
+      {
+        "A": "",
+        "B": "6161",
+        "A2": "61",
+        "B2": "61",
+        "concat": "6161"
+      },
+      {
+        "A": "",
+        "B": "6161",
+        "A2": "6161",
+        "B2": "",
+        "concat": "6161"
+      },
+      {
+        "A": "",
+        "B": "6162",
+        "A2": "61",
+        "B2": "62",
+        "concat": "6162"
+      }
+    ],
+    "exhaustive_two_field_count_capped": 20,
+    "random_10k_map_same_pre_diff_tuple": 0,
+    "fixed33_multi_parse_rate_2000": 1.0,
+    "note": "With |C|=|A|=33 fixed, any preimage longer than 66 bytes admits multiple (P,C,A,S) parses \u2014 structural, not SHA-256 collision."
+  },
+  "verdict_structural": "B"
+}

@@ -1,0 +1,160 @@
+========== MISSION 37 VALIDATION-PATH HARNESS ==========
+Fixtures: primer=71c9:0  alias=f24a:1  G=ser(explicit L-BTC)
+
+########## SCENARIO A: primer mempool (store=true) ##########
+TRACE AcceptToMemoryPool / mempool validation
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(primer) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = TRUE
+     → Cache SET
+     → ACCEPT
+RESULT A: ret=1 hit=0 crypto=1 set=1
+
+########## SCENARIO B: alias alone cold ConnectBlock store=false ##########
+TRACE ConnectBlock(fJustCheck=false) cold
+  → Consensus::CheckTxInputs(cacheStore=0)
+  → VerifyAmounts(..., store_result=0)
+  → CRangeCheck(alias) store=0
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = FALSE
+     → REJECT (crypto)
+RESULT B: ret=0 hit=0 crypto=0 => REJECT
+
+########## SCENARIO C: primer mempool → alias ConnectBlock ##########
+TRACE AcceptToMemoryPool
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(primer) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = TRUE
+     → Cache SET
+     → ACCEPT
+--- then same process ConnectBlock alias ---
+TRACE ConnectBlock(fJustCheck=false) primed
+  → Consensus::CheckTxInputs(cacheStore=0)
+  → VerifyAmounts(..., store_result=0)
+  → CRangeCheck(alias) store=0
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache HIT (native verification SKIPPED)
+     → ACCEPT
+RESULT C: ret=1 hit=1 crypto=-1 => ACCEPT (bypassed crypto=YES)
+
+########## SCENARIO D: same locus via CheckTxInputs (transaction validation) ##########
+TRACE CheckTxInputs mempool
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(primer) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = TRUE
+     → Cache SET
+     → ACCEPT
+TRACE CheckTxInputs mempool warm
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(alias) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache HIT (native verification SKIPPED)
+     → ACCEPT
+RESULT D (alias in mempool after primer): ret=1 hit=1 crypto=-1
+
+########## ORDERING: alias → primer (mempool) ##########
+TRACE mempool first
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(alias) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = FALSE
+     → REJECT (crypto)
+alias first RESULT: ret=0 crypto=0
+TRACE mempool second
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(primer) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = TRUE
+     → Cache SET
+     → ACCEPT
+primer second RESULT: ret=1 hit=0 crypto=1
+
+########## ORDERING: same-tx both checks sequential (primer then alias) ##########
+TRACE same tx VerifyAmounts
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(primer-out) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = TRUE
+     → Cache SET
+     → ACCEPT
+TRACE same tx VerifyAmounts
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(alias-out) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache HIT (native verification SKIPPED)
+     → ACCEPT
+same-tx alias RESULT: ret=1 hit=1 crypto=-1
+
+########## TWO NODES: same alias ConnectBlock ##########
+--- Node A primes primer in mempool ---
+TRACE NodeA mempool
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(primer) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = TRUE
+     → Cache SET
+     → ACCEPT
+--- Node A ConnectBlock alias ---
+TRACE NodeA ConnectBlock
+  → Consensus::CheckTxInputs(cacheStore=0)
+  → VerifyAmounts(..., store_result=0)
+  → CRangeCheck(alias) store=0
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache HIT (native verification SKIPPED)
+     → ACCEPT
+--- Node B cold ConnectBlock alias ---
+TRACE NodeB ConnectBlock
+  → Consensus::CheckTxInputs(cacheStore=0)
+  → VerifyAmounts(..., store_result=0)
+  → CRangeCheck(alias) store=0
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = FALSE
+     → REJECT (crypto)
+NODE_A_CONNECT_ALIAS: ACCEPT (hit=1 crypto=-1)
+NODE_B_CONNECT_ALIAS: REJECT (hit=0 crypto=0)
+DIVERGENCE_ON_RANGEPROOF_LOCUS: YES
+
+########## FRAMED CONTROL: primer then alias ##########
+TRACE mempool framed
+  → Consensus::CheckTxInputs(cacheStore=1)
+  → VerifyAmounts(..., store_result=1)
+  → CRangeCheck(primer) store=1
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = TRUE
+     → Cache SET
+     → ACCEPT
+TRACE ConnectBlock framed
+  → Consensus::CheckTxInputs(cacheStore=0)
+  → VerifyAmounts(..., store_result=0)
+  → CRangeCheck(alias) store=0
+  → CachingRangeProofChecker::VerifyRangeProof
+     → Cache MISS
+     → native secp256k1_rangeproof_verify = FALSE
+     → REJECT (crypto)
+FRAMED RESULT: ret=0 hit=0 crypto=0 => REJECT
+
+========== END HARNESS ==========
+NOTE: This simulates CheckTxInputs→VerifyAmounts→CRangeCheck→CachingRangeProofChecker.
+It does NOT run full elementsd ConnectBlock/ActivateBestChain (UTXO, scripts, surjection, etc.).
