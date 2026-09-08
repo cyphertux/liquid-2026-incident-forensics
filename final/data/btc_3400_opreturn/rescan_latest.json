@@ -1,0 +1,216 @@
+{
+  "scanned_at": "2026-09-08T06:05:54.951417+00:00",
+  "previous_scan": "2026-09-07T21:03:55Z",
+  "last_known_dialogue_height": 965973,
+  "address_stats": {
+    "whitehat": {
+      "chain_stats": {
+        "funded_txo_count": 206,
+        "funded_txo_sum": 2638499173635,
+        "spent_txo_count": 176,
+        "spent_txo_sum": 2578649186655,
+        "tx_count": 206
+      },
+      "mempool_stats": {
+        "funded_txo_count": 1,
+        "funded_txo_sum": 320,
+        "spent_txo_count": 0,
+        "spent_txo_sum": 0,
+        "tx_count": 1
+      }
+    },
+    "victim": {
+      "chain_stats": {
+        "funded_txo_count": 608,
+        "funded_txo_sum": 2335886323878,
+        "spent_txo_count": 516,
+        "spent_txo_sum": 1976139125852,
+        "tx_count": 581
+      },
+      "mempool_stats": {
+        "funded_txo_count": 0,
+        "funded_txo_sum": 0,
+        "spent_txo_count": 0,
+        "spent_txo_sum": 0,
+        "tx_count": 0
+      }
+    },
+    "ops": {
+      "chain_stats": {
+        "funded_txo_count": 4,
+        "funded_txo_sum": 8495,
+        "spent_txo_count": 4,
+        "spent_txo_sum": 8495,
+        "tx_count": 8
+      },
+      "mempool_stats": {
+        "funded_txo_count": 0,
+        "funded_txo_sum": 0,
+        "spent_txo_count": 0,
+        "spent_txo_sum": 0,
+        "tx_count": 0
+      }
+    },
+    "hop": {
+      "chain_stats": {
+        "funded_txo_count": 1,
+        "funded_txo_sum": 399601834922,
+        "spent_txo_count": 1,
+        "spent_txo_sum": 399601834922,
+        "tx_count": 2
+      },
+      "mempool_stats": {
+        "funded_txo_count": 0,
+        "funded_txo_sum": 0,
+        "spent_txo_count": 0,
+        "spent_txo_sum": 0,
+        "tx_count": 0
+      }
+    }
+  },
+  "new_dialogue": [],
+  "spam_to_whitehat_after": [
+    {
+      "txid": "ff9d97897ad44ee3b01c6b7ae7cb714a7b550819e30f84ecd627c643b89cb87a",
+      "height": 966023,
+      "time": "2026-09-08 06:02:24 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n\ud83d\ude80 Coming soon: L"
+    },
+    {
+      "txid": "4df75c172709dc8e22bd0a4625f6032398ce0aaf7221e1563c8f70b27340aab6",
+      "height": 966023,
+      "time": "2026-09-08 06:02:24 UTC",
+      "msg": "hello"
+    },
+    {
+      "txid": "57bd5c9be33276f6a80dc723a9ef064b09b29972b82c9684da051d110f6ef0f6",
+      "height": 966023,
+      "time": "2026-09-08 06:02:24 UTC",
+      "msg": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nQklFMQPNOw3hlzDFylCBsGxLRxPiuismpMZXaXy/0O7gMpRVhB1"
+    },
+    {
+      "txid": "b90bdb3a8f65c2f0fcd25d8e7087370b56928a1364f898592b01291b1806734f",
+      "height": 966020,
+      "time": "2026-09-08 05:38:09 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n\ud83d\ude80 Coming soon: L"
+    },
+    {
+      "txid": "f7efcd0d7ed89a95b0d5c0b2c5c1be18c413edfcf4aaeebb28584ca905dc8550",
+      "height": 966020,
+      "time": "2026-09-08 05:38:09 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: 7712UwV6etYahMWcHZpi6LXumqCbj5f4Y9H7G3Wspump\n\n    \n\ud83d\ude80 Coming soon: L"
+    },
+    {
+      "txid": "84e4a57eec39a287fefe4839fe45da66df355ad8fa419d3398e517edcc6b23fd",
+      "height": 966020,
+      "time": "2026-09-08 05:38:09 UTC",
+      "msg": "reveal plaintext negotiations\nfunctionaries have patched\nno danger remains\nif at impasse let public "
+    },
+    {
+      "txid": "b7ab4f67497f3f79128e9a6a88f56093bbd3f12f5ccca2726ffea02d0474eba4",
+      "height": 966019,
+      "time": "2026-09-08 05:16:47 UTC",
+      "msg": "hate begging, but losing mind, missed uni trade @ $2.7 now $7, need to help fam"
+    },
+    {
+      "txid": "acc3700b0eef7fb85fe194617b775a076663dc5ba9102baed9cf1973839971e0",
+      "height": 966016,
+      "time": "2026-09-08 03:52:27 UTC",
+      "msg": "dental amalgam is 50% elemental mercury, in toddler mouths, chronic neurotoxin"
+    },
+    {
+      "txid": "e14b0178a0828d0902a850bb88063c4cf4d5f7e785ec3d29087599c88bf861ee",
+      "height": 966014,
+      "time": "2026-09-08 03:31:49 UTC",
+      "msg": "also 9/11 was a false flag operation, research wtc7, wtc7 fairbanks alaska study"
+    },
+    {
+      "txid": "e645dde9864fde5790ecd43647138fbec7e14f687b0795a4dc88ecbd011560f4",
+      "height": 966013,
+      "time": "2026-09-08 03:26:19 UTC",
+      "msg": "my family near homeless, 1 year of rent would be appreciated"
+    },
+    {
+      "txid": "bbd4354aebf29b295e93404120ba5706549bc0ca6a6ed875c1a323ce4de7b0fa",
+      "height": 966012,
+      "time": "2026-09-08 03:19:04 UTC",
+      "msg": "dental amalgam poisons children, i was poisoned and have autism"
+    },
+    {
+      "txid": "d021acdfa020effda1dda92534f766f239f890a8c482a745e8fe6a2719dea8ec",
+      "height": 965997,
+      "time": "2026-09-08 01:28:46 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: CqcPgSNzxG6NVnE38xwtmWQ4mR6rapoP6YKVhmM7pump"
+    },
+    {
+      "txid": "1cd5a2e7556031ec338cecd87d43784e9c8e3fb6d13777c9f0f967eb2b1f7b62",
+      "height": 965997,
+      "time": "2026-09-08 01:28:46 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: CqcPgSNzxG6NVnE38xwtmWQ4mR6rapoP6YKVhmM7pump"
+    },
+    {
+      "txid": "b0899c7da046913962d552a69758de6997687ba684318c9b8e284a42fe194f2e",
+      "height": 965996,
+      "time": "2026-09-08 01:19:17 UTC",
+      "msg": "\ud83c\udf81Crack\u2192hex\u2192bip39\u2192$Bound(Runes):553821a2a20570cacc28da8838520674"
+    },
+    {
+      "txid": "1bbef51229e8c264094920bc3ed85d517b9ff3929e62db8ca74c3f72d87dff6b",
+      "height": 965994,
+      "time": "2026-09-08 00:43:32 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: CqcPgSNzxG6NVnE38xwtmWQ4mR6rapoP6YKVhmM7pump"
+    },
+    {
+      "txid": "9a041c868fc4029601e4b248f21cc786e43405e4ca7d6bdb2c339aeb0f576a9b",
+      "height": 965992,
+      "time": "2026-09-08 00:11:40 UTC",
+      "msg": "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nQklFMQKQdGWlGzMsZ0E/mNhmVKEd44B5KUe+xKzBPrhGkgAPLhl"
+    },
+    {
+      "txid": "8420f649ae9e5188810ee3d9529308006999363f3be187bb0e49a3daecd67dbc",
+      "height": 965991,
+      "time": "2026-09-07 23:55:02 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: CqcPgSNzxG6NVnE38xwtmWQ4mR6rapoP6YKVhmM7pump"
+    },
+    {
+      "txid": "d747428312a6c208c52212bb4c3cf33c8f3ab506f7e6bf6a7a2c20093a736ec6",
+      "height": 965986,
+      "time": "2026-09-07 23:19:22 UTC",
+      "msg": "Wish for 0.1 BTC to kick\u2011off my crypto journey, appreciate any support."
+    },
+    {
+      "txid": "c23411dd444752acaea3fa6dce87f1085aab1fc589681d3ade23b3c9a04488dd",
+      "height": 965977,
+      "time": "2026-09-07 21:53:37 UTC",
+      "msg": "Memecoin Whitehat | Pump.fun CA: CqcPgSNzxG6NVnE38xwtmWQ4mR6rapoP6YKVhmM7pump"
+    },
+    {
+      "txid": "252809bcab686ed2693b5306c58290e04d6bf6199ba3eeea33cd646b5ea100d2",
+      "height": 965974,
+      "time": "2026-09-07 21:08:39 UTC",
+      "msg": "Gift 8.5 odd BTC. No more, no less. bc1q83ap6zfzhyrw7vnscp6u935cjz3rm0zrcjsk5h"
+    }
+  ],
+  "other_activity_after": [
+    {
+      "name": "victim",
+      "txid": "84e4a57eec39a287fefe4839fe45da66df355ad8fa419d3398e517edcc6b23fd",
+      "height": 966020,
+      "time": "2026-09-08 05:38:09 UTC",
+      "spent": false,
+      "msgs": [
+        "reveal plaintext negotiations\nfunctionaries have patched\nno danger remains\nif at impasse let public judge"
+      ]
+    },
+    {
+      "name": "victim",
+      "txid": "2bf2b02f472c588fc6fff8179a9bd60b6de7ddab752fd4d76ebcb4afc29d9081",
+      "height": 965994,
+      "time": "2026-09-08 00:43:32 UTC",
+      "spent": false,
+      "msgs": [
+        "Please contact me on Telegram at @MRBOND_1; we can help you with laundering."
+      ]
+    }
+  ]
+}

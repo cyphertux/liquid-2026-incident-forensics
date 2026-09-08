@@ -43,6 +43,9 @@ flowchart LR
 | 10 | 2026-09-07 12:43:33 UTC | 965930 | Message whitehat | plz confirm again that we are sending the coins back to bc1qdlld6antmv4xug242ed8… | [`0256e33797…`](https://mempool.space/tx/0256e33797ab173a5df1f2cd9689a81241f385dabb7e998e06ce78855ff19016) |
 | 11 | 2026-09-07 15:31:46 UTC | 965948 | Message whitehat | Message PGP (chiffré) | [`4656114340…`](https://mempool.space/tx/4656114340749ba4aade1affcb2625a1dac37214b32b7d7c242af2ca9fe6d690) |
 | 12 | 2026-09-07 16:09:25 UTC | 965950 | Retour fonds | Retour exact 3400 BTC | [`a6d697a252…`](https://mempool.space/tx/a6d697a25266ce3c78774fd1d75f896b7af522ada209b0f6228ea497bc49a46d) |
+| 13 | 2026-09-07 18:35:17 UTC | 965962 | Message whitehat | Message PGP (chiffré) post-retour | [`e56af6b9f8…`](https://mempool.space/tx/e56af6b9f889b0e7ed342508eaab2f997fafbb61d64c892bbf306a0014722596) |
+| 14 | 2026-09-07 18:35:17 UTC | 965962 | Message whitehat | Message PGP (chiffré) post-retour #2 | [`fcd06c1bcb…`](https://mempool.space/tx/fcd06c1bcb38e4c3eaf71c1137d7bdf935363ae3c14b590d5d1a501e326d2b99) |
+| 15 | 2026-09-07 21:03:23 UTC | 965973 | Message whitehat | :( | [`d7e8837c51…`](https://mempool.space/tx/d7e8837c51cc625c2c6365d371d376b035209fa01434d4933971d6428d6d6d52) |
 
 ## Détail
 
@@ -241,3 +244,33 @@ More details about the vuln fix:
 - **Inclus:** from whitehat · peg-out from wallet victime · OP_RETURN from adresse ops
 - **Exclus:** spam tiers / fausse demande 3900+bounty
 
+### 13. 2026-09-07 18:35:17 UTC · bloc 965962 — Message PGP (chiffré) post-retour
+- **Type:** Message whitehat
+- **From:** `bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte`
+- **Tx:** [`e56af6b9f889b0e7ed342508eaab2f997fafbb61d64c892bbf306a0014722596`](https://mempool.space/tx/e56af6b9f889b0e7ed342508eaab2f997fafbb61d64c892bbf306a0014722596)
+- **Message:** PGP MESSAGE chiffré (corps omis — illisible sans clé)
+- Sorties:
+  - vout0: OP_RETURN
+  - vout1: **0.00001000 BTC** → victime `bc1qdlld6…`
+  - vout2: **598.49954242 BTC** → whitehat (change)
+
+### 14. 2026-09-07 18:35:17 UTC · bloc 965962 — Message PGP (chiffré) post-retour #2
+- **Type:** Message whitehat
+- **From:** `bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte`
+- **Tx:** [`fcd06c1bcb38e4c3eaf71c1137d7bdf935363ae3c14b590d5d1a501e326d2b99`](https://mempool.space/tx/fcd06c1bcb38e4c3eaf71c1137d7bdf935363ae3c14b590d5d1a501e326d2b99)
+- **Message:** PGP MESSAGE chiffré (corps omis)
+- Sorties:
+  - vout0: OP_RETURN
+  - vout1: **0.00001000 BTC** → victime
+  - vout2: **598.49957160 BTC** → whitehat (change)
+
+### 15. 2026-09-07 21:03:23 UTC · bloc 965973 — `:(`
+- **Type:** Message whitehat
+- **From:** `bc1ql4mfu6aundtkksxklfajs2h3t9nzcd6gyqjlte`
+- **Tx:** [`d7e8837c51cc625c2c6365d371d376b035209fa01434d4933971d6428d6d6d52`](https://mempool.space/tx/d7e8837c51cc625c2c6365d371d376b035209fa01434d4933971d6428d6d6d52)
+- **Message:** `:(`
+- Sorties:
+  - vout0: OP_RETURN `:(`
+  - vout1: **0.00001000 BTC** → victime
+  - vout2: **598.49960884 BTC** → whitehat (change)
+- **Note:** Dernier message de dialogue au rescan 2026-09-08 ; ops toujours silencieux depuis « Bridge nodes are patched ».
