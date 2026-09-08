@@ -1,0 +1,53 @@
+{
+  "txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+  "block_height": 4050336,
+  "block_hash": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+  "outputs": [
+    {
+      "n": 0,
+      "scriptPubKey_hex": "0014f5906a8572cf826a9d737ce1bc6a19a066868630",
+      "scriptPubKey_type": "witness_v0_keyhash",
+      "asset": "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d",
+      "valuecommitment": "08360f95ce0a63e76daab6a05616103ba7462a9af7db0697e9c8fa6a65aba103f8",
+      "value": null
+    },
+    {
+      "n": 1,
+      "scriptPubKey_hex": "6a",
+      "scriptPubKey_type": "nulldata",
+      "asset": "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d",
+      "valuecommitment": "086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8",
+      "value": null
+    },
+    {
+      "n": 2,
+      "scriptPubKey_hex": "0014f5906a8572cf826a9d737ce1bc6a19a066868630",
+      "scriptPubKey_type": "witness_v0_keyhash",
+      "asset": null,
+      "valuecommitment": "08dc50cfb1c9b0b512b446cd80d8bbe81f5ace540f59780d6fad773fa9204d8d35",
+      "value": null
+    },
+    {
+      "n": 3,
+      "scriptPubKey_hex": "",
+      "scriptPubKey_type": "fee",
+      "asset": "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d",
+      "valuecommitment": null,
+      "value": 5.8e-07
+    }
+  ],
+  "mission28": {
+    "vout_focus": 1,
+    "P1": "mission40/fixtures/P1.hex",
+    "C1": "mission40/fixtures/C1.hex",
+    "S1": "mission40/fixtures/S1.hex",
+    "G": "mission40/fixtures/G.hex",
+    "A_wire": "mission40/fixtures/A_wire.hex",
+    "note": "S1=OP_RETURN (0x6a) is the historical f24a:1 scriptPubKey \u2014 FACT from decoderawtransaction"
+  },
+  "regtest_injection": {
+    "direct": false,
+    "why": "Same blockers as EXACT alias; do not mutate f24a bytes to force fit"
+  },
+  "DO_NOT_MODIFY_F24A": true
+}

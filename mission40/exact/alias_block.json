@@ -1,0 +1,26 @@
+{
+  "classification": "FACT",
+  "version": "EXACT_FIXTURE_LIQUID_MAINNET_BLOCK",
+  "NOT_REGTEST": true,
+  "height": 4050336,
+  "block_hash": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+  "previous_block_hash": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+  "merkle_root": "f9a463b60d33a58d2dc9106218f070590f91d5baaf746ef9d27a7b2bf4af104b",
+  "timestamp": 1788702790,
+  "size": 144681,
+  "tx_count": 7,
+  "weight": 170412,
+  "contains_txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+  "tx_raw_offset_in_block": 1802,
+  "serialization": "Elements/Liquid raw block from Blockstream API /raw",
+  "regtest_connectblock": "INCOMPATIBLE \u2014 wrong chain; prevouts/federation/genesis differ",
+  "txids": [
+    "b36f958937d194172c0a6b75b39c1e42bb78e5409d8de8ab3b1acd139714d568",
+    "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+    "09016269fc2b5c2673f51599c8c97027e343df430dc0514fdec8a7ed3fba998a",
+    "c652a1047ff549698b09242a66e20f6e9a044d5c972419342fa552b0856ba674",
+    "efa5e6e63170b9c6ebf502b7dfbb4bb700d5ee639a70aa1caf0cbd67e2af2e3d",
+    "5707d0cedb1fe6976d8b88e794bc2d91260c93b19ca15fc2a15128434737cdc5",
+    "2817e839a351f40c04567081f9ea33ed006dd7e5b8032c810187c64461e48d07"
+  ]
+}

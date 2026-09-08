@@ -1,0 +1,248 @@
+FACT: primer.hex = Liquid tx 71c93d43… (exact Mission28 P0/C0/G/S0 embedded)
+FACT: alias.hex = Liquid tx f24a4b17… (exact Mission28 P1/C1/G/S1 embedded)
+FACT: preimage len=4301 sha256=82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a
+FACT: unframed keys equal=82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a
+FACT: framed keys differ A=3a994e3713c935444cfd5e71227d72d8393b7c6e36934561f51d08c535d2529f B=acfcddec7e195d341598d282db4b7325d3ef7091f476a58357ba7dc944d1ece8
+EXPERIMENT: primer native_verify=True expected=True match=True
+EXPERIMENT: alias native_verify=False expected=False match=True
+{
+  "mission": "39.1",
+  "generated_at_utc": "2026-09-08T08:04:21.136459+00:00",
+  "pinned_postfix_commit": "3b3f01eac966afb266cd205b3a2cb87c8c1e4534",
+  "verdict": "NOT_READY",
+  "D_declared": false,
+  "artifacts": {
+    "primer.hex": {
+      "sha256": "4f1bb68913ebf9a7f1592f97452589d32a39c7c16edff434ea2c887aa5c27877",
+      "len": 8883,
+      "version": "EXACT_FIXTURE"
+    },
+    "alias.hex": {
+      "sha256": "432c9e8f51ff4b5934ae81947f32fbb5f867ee59395ab1ec7ab09d319b43f460",
+      "len": 13151,
+      "version": "EXACT_FIXTURE"
+    },
+    "primer_block.hex": {
+      "sha256": "92899a9ceb7dbdff5b45626a0155c357bd82c776ef7c05950a66baba18c21ad5",
+      "len": 42109,
+      "version": "EXACT_LIQUID_BLOCK_4050335",
+      "NOT_REGTEST": true
+    },
+    "alias_block.hex": {
+      "sha256": "637327112a52275e30e11b1b7398f4d771006b68b8255d6aed1feadb35d9cb64",
+      "len": 144681,
+      "version": "EXACT_LIQUID_BLOCK_4050336",
+      "NOT_REGTEST": true
+    }
+  },
+  "preimage": {
+    "len": 4301,
+    "sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+    "A_equals_B": true
+  },
+  "keys": {
+    "unframed_equal": true,
+    "unframed": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+    "framed_equal": false
+  },
+  "crypto": {
+    "primer": {
+      "native_verify": true,
+      "expected": true,
+      "stdout": "primer native_verify=1 proof_len=4166 script_len=69",
+      "match_expected": true
+    },
+    "alias": {
+      "native_verify": false,
+      "expected": false,
+      "stdout": "alias native_verify=0 proof_len=4234 script_len=1",
+      "match_expected": true
+    },
+    "cache_replay_note": {
+      "harness": "build/28_cache_replay",
+      "epistemic": "EXPERIMENT at CachingRangeProofChecker fidelity",
+      "result": "primer SET then alias HIT \u2192 ACCEPT; cold alias REJECT"
+    }
+  },
+  "elementsd_ops": {
+    "liquidv1_decoderawtransaction_primer": "OK",
+    "liquidv1_decoderawtransaction_alias": "OK",
+    "regtest_decoderawtransaction_primer": "FAIL (-22 TX decode failed)",
+    "liquidv1_submitblock_4050335_offline": "prev-blk-not-found (expected without chain)",
+    "postfix_elementsd_ProcessNewBlock": "BLOCKED_BY_POSTFIX_BUILD"
+  },
+  "regtest_blocks_with_exact_mission28_bytes_connectblock_ready": false,
+  "unique_question_answer": "NO \u2014 not as a regtest ConnectBlock-valid block without modifying consensus or losing EXACT full-tx identity. YES for presenting EXACT field-bearing Liquid txs/blocks to liquidv1 elementsd for decode/field proof; Mission 40 D still requires post-fix binary + valid path.",
+  "verdict_detail": "EXACT Mission 28 octets are packaged in real Elements txs + Liquid blocks, and native crypto/preimage checks pass; but a ConnectBlock-ready REGTEST block embedding those exact full txs cannot be produced without consensus-incompatible chain/prevout context (regtest cannot even decoderawtransaction the Liquid txs). CONSENSUS-COMPATIBLE reconstruction not produced. Post-fix elementsd build blocked.",
+  "READY_FOR_MISSION_40": false,
+  "partial_ready": {
+    "exact_txs": true,
+    "exact_liquid_blocks": true,
+    "manifests_and_mapping": true,
+    "native_crypto": true,
+    "preimage_identity": true,
+    "regtest_connectblock_blocks": false,
+    "postfix_binary": false
+  }
+}
+[OK] primer too short
+[OK] primer version not 2
+[PASS] primer.hex décodable
+[OK] alias too short
+[OK] alias version not 2
+[PASS] alias.hex décodable
+[OK] primer != fixtures/tx_71c9.hex
+[OK] alias != fixtures/tx_f24a.hex
+[PASS] transactions déterministes
+[OK] P0 not in primer.hex
+[OK] P0 len 4166
+[PASS] P0 exact
+[OK] C0 not in primer.hex
+[OK] C0 size
+[PASS] C0 exact
+[OK] G != S0[35:68]
+[OK] G not in primer
+[OK] G not in alias
+[OK] G not serialized generator prefix
+[PASS] G exact
+[OK] S0 construction mismatch
+[OK] S0 not in primer
+[PASS] S0 exact
+[OK] P1 construction mismatch
+[OK] P1 not in alias
+[PASS] P1 exact
+[OK] C1 not in alias
+[OK] C1 size
+[PASS] C1 exact
+[OK] S1 must be OP_RETURN
+[OK] S1 not located as script after C1||nonce0||len
+[PASS] S1 exact
+[OK] preimage A != preimage B (byte-exact)
+[OK] preimage len 4301
+[OK] preimage sha256 mismatch
+[PASS] preimage A == preimage B
+[OK] unframed key A != key B
+[PASS] key A == key B
+[OK] framed keys unexpectedly equal
+[PASS] framed key A != framed key B
+[OK] build/m391_crypto missing — compile first
+[OK] primer crypto not TRUE: primer native_verify=1 proof_len=4166 script_len=69
+ 
+[PASS] primer crypto valide
+[OK] alias crypto unexpectedly TRUE: alias native_verify=0 proof_len=4234 script_len=1
+
+[PASS] alias crypto invalide à froid
+[OK] missing primer_manifest.json
+[OK] missing alias_manifest.json
+[OK] missing primer.json
+[OK] missing alias.json
+[OK] primer_manifest crypto flag
+[OK] alias_manifest crypto flag
+[OK] alias preimage flag
+[PASS] artefacts cohérents avec manifests
+[OK] primer.tx not inside primer_block.hex
+[OK] alias.tx not inside alias_block.hex
+[OK] primer_block must be marked NOT_REGTEST
+[OK] alias_block must be marked NOT_REGTEST
+[PASS] blocks contain txs + NOT_REGTEST marked
+[OK] mapping missing P0
+[OK] mapping missing C0
+[OK] mapping missing G
+[OK] mapping missing S0
+[OK] mapping missing P1
+[OK] mapping missing C1
+[OK] mapping missing S1
+[PASS] fixture mapping present
+[OK] f24a/tx.hex mutated vs alias.hex
+[PASS] f24a unmodified
+
+======== SUMMARY ========
+PASS  primer.hex décodable
+PASS  alias.hex décodable
+PASS  transactions déterministes
+PASS  P0 exact
+PASS  C0 exact
+PASS  G exact
+PASS  S0 exact
+PASS  P1 exact
+PASS  C1 exact
+PASS  S1 exact
+PASS  preimage A == preimage B
+PASS  key A == key B
+PASS  framed key A != framed key B
+PASS  primer crypto valide
+PASS  alias crypto invalide à froid
+PASS  artefacts cohérents avec manifests
+PASS  blocks contain txs + NOT_REGTEST marked
+PASS  fixture mapping present
+PASS  f24a unmodified
+
+VERDICT: VERIFY_OK (EXACT artifacts)
+NOTE: Mission 39.1 overall readiness remains NOT_READY for regtest ConnectBlock
+D: not declared
+PRE keys equal? 0
+POST keys equal? 1
+POST key 76a88d14bfd649e28651c56a9c5d8e757e010bdcc95be86d6cade13e6c2bdb00
+
+=== NODE A: POST-FIX primed mempool then Connect erase then attack ===
+primer mempool store: ret=1 hit=0 crypto=1 cache_n=1
+primer ConnectBlock Get erase: ret=1 hit=1 reclaimable=1 still_present=1
+attack ConnectBlock: ret=1 hit=1 crypto=-1  => RANGEPROOF_CHECKER ACCEPT
+
+=== NODE B: POST-FIX cold (only block path, no mempool Set) ===
+primer Connect only: ret=1 hit=0 crypto=1 store=0 (no Set)
+attack: ret=0 hit=0 crypto=0 => REJECT
+
+=== NODE C: PRE-FIX primed ===
+primer store PRE: ret=1
+attack PRE: ret=0 hit=0 crypto=0 => REJECT
+
+=== NODE D: POST-FIX but framed lengths (hypothetical fixed keying) ===
+framed keys equal? 0 => collision BROKEN
+
+NOTE: ACCEPT above means CachingRangeProofChecker returned true for f24a:1 only — not full ConnectBlock/ActivateBestChain.
+===== VERIFY rerun =====
+[PASS] primer.hex décodable
+[PASS] alias.hex décodable
+[PASS] transactions déterministes
+[PASS] P0 exact
+[PASS] C0 exact
+[PASS] G exact
+[PASS] S0 exact
+[PASS] P1 exact
+[PASS] C1 exact
+[PASS] S1 exact
+[PASS] preimage A == preimage B
+[PASS] key A == key B
+[PASS] framed key A != framed key B
+[PASS] primer crypto valide
+[PASS] alias crypto invalide à froid
+[PASS] artefacts cohérents avec manifests
+[PASS] blocks contain txs + NOT_REGTEST marked
+[PASS] fixture mapping present
+[PASS] f24a unmodified
+
+======== SUMMARY ========
+PASS  primer.hex décodable
+PASS  alias.hex décodable
+PASS  transactions déterministes
+PASS  P0 exact
+PASS  C0 exact
+PASS  G exact
+PASS  S0 exact
+PASS  P1 exact
+PASS  C1 exact
+PASS  S1 exact
+PASS  preimage A == preimage B
+PASS  key A == key B
+PASS  framed key A != framed key B
+PASS  primer crypto valide
+PASS  alias crypto invalide à froid
+PASS  artefacts cohérents avec manifests
+PASS  blocks contain txs + NOT_REGTEST marked
+PASS  fixture mapping present
+PASS  f24a unmodified
+
+VERDICT: VERIFY_OK (EXACT artifacts)
+NOTE: Mission 39.1 overall readiness remains NOT_READY for regtest ConnectBlock
+D: not declared

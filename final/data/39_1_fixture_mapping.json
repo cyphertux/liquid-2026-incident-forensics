@@ -1,0 +1,163 @@
+{
+  "mission": "39.1",
+  "epistemic_note": "compatible means byte-injectable into an Elements CTransaction field without changing cryptographic meaning of that field",
+  "fields": [
+    {
+      "Mission28_field": "P0",
+      "Elements_field": "CTxOutWitness.vRangeproof (vout0) / secp256k1 rangeproof blob",
+      "source_fixture": "mission40/fixtures/P0.hex",
+      "exact_byte_range_in_primer_tx": [
+        470,
+        4636
+      ],
+      "size": 4166,
+      "encoding": "raw rangeproof bytes; length-prefixed in witness stack serialization",
+      "endianness": "N/A (opaque blob)",
+      "serialization": "Elements CTxOutWitness",
+      "crypto_context": "secp256k1_rangeproof_verify(commit=C0, gen=G, extra_commit=S0)",
+      "relation_to_asset_generator": "verified against G (serialized generator of explicit L-BTC)",
+      "compatible": true,
+      "reason": "Already present bit-exactly in Liquid tx 71c9 witness; Elements decodes on liquidv1"
+    },
+    {
+      "Mission28_field": "C0",
+      "Elements_field": "CTxOut.nValue (confidential Pedersen commitment, 33 bytes)",
+      "source_fixture": "mission40/fixtures/C0.hex",
+      "exact_byte_range_in_primer_tx": [
+        81,
+        114
+      ],
+      "size": 33,
+      "encoding": "secp256k1_pedersen_commitment_serialize; prefix 0x08/0x09",
+      "endianness": "secp encoding",
+      "serialization": "CConfidentialValue",
+      "crypto_context": "commitment for rangeproof P0",
+      "relation_to_asset_generator": "Pedersen commit under generator G",
+      "compatible": true,
+      "reason": "Direct CTxOut field; found at offset in 71c9"
+    },
+    {
+      "Mission28_field": "G",
+      "Elements_field": "asset_commitment argument to ComputeEntryRangeProof / CRangeCheck (serialized generator)",
+      "source_fixture": "mission40/fixtures/G.hex",
+      "exact_byte_range_in_primer_tx": [
+        151,
+        184
+      ],
+      "size": 33,
+      "encoding": "secp256k1_generator_serialize; prefix 0x0a/0x0b",
+      "endianness": "secp encoding",
+      "serialization": "NOT the wire nAsset when asset is explicit",
+      "crypto_context": "For explicit asset, confidential_validation derives G via generator_generate(asset_id) then serialize",
+      "relation_to_asset_generator": "G IS the asset generator serialization",
+      "compatible": true,
+      "reason": "Embedded inside S0 OP_RETURN payload and equals derived generator from A_wire; used as cache/crypto asset_commitment"
+    },
+    {
+      "Mission28_field": "S0",
+      "Elements_field": "CTxOut.scriptPubKey (vout0)",
+      "source_fixture": "mission40/fixtures/S0.hex",
+      "exact_byte_range_in_primer_tx": [
+        116,
+        185
+      ],
+      "size": 69,
+      "encoding": "Bitcoin script bytes: OP_RETURN OP_PUSH67 || C1||G||OP_RETURN",
+      "endianness": "script byte order",
+      "serialization": "CScript in CTxOut",
+      "crypto_context": "extra_commit to rangeproof; also unframed cache tail",
+      "relation_to_asset_generator": "contains G bytes at S0[35:68]",
+      "compatible": true,
+      "reason": "Exact scriptPubKey of 71c9 vout0 (nulldata)"
+    },
+    {
+      "Mission28_field": "P1",
+      "Elements_field": "CTxOutWitness.vRangeproof (vout1)",
+      "source_fixture": "mission40/fixtures/P1.hex",
+      "exact_byte_range_in_alias_tx": [
+        4670,
+        8904
+      ],
+      "size": 4234,
+      "encoding": "raw rangeproof; structurally P0||C0||G||6a||43",
+      "endianness": "N/A",
+      "serialization": "CTxOutWitness",
+      "crypto_context": "secp verify vs C1,G,S1 \u2192 FALSE",
+      "relation_to_asset_generator": "same G",
+      "compatible": true,
+      "reason": "Exact f24a:1 rangeproof bytes"
+    },
+    {
+      "Mission28_field": "C1",
+      "Elements_field": "CTxOut.nValue confidential commitment (vout1)",
+      "source_fixture": "mission40/fixtures/C1.hex",
+      "exact_byte_range_in_alias_tx": [
+        171,
+        204
+      ],
+      "size": 33,
+      "encoding": "Pedersen commitment serialize",
+      "endianness": "secp",
+      "serialization": "CConfidentialValue",
+      "crypto_context": "alias commitment",
+      "relation_to_asset_generator": "under G",
+      "compatible": true,
+      "reason": "Exact f24a:1 value commitment"
+    },
+    {
+      "Mission28_field": "S1",
+      "Elements_field": "CTxOut.scriptPubKey (vout1)",
+      "source_fixture": "mission40/fixtures/S1.hex",
+      "exact_byte_range_in_alias_tx": [
+        206,
+        207
+      ],
+      "size": 1,
+      "encoding": "single opcode 0x6a (OP_RETURN)",
+      "endianness": "N/A",
+      "serialization": "CScript",
+      "crypto_context": "extra_commit for alias rangeproof",
+      "relation_to_asset_generator": "none beyond cache concatenation",
+      "compatible": true,
+      "reason": "Exact f24a:1 scriptPubKey is OP_RETURN; FACT from elementsd decoderawtransaction"
+    },
+    {
+      "Mission28_field": "A_wire",
+      "Elements_field": "CTxOut.nAsset wire (explicit 0x01||asset_id)",
+      "source_fixture": "mission40/fixtures/A_wire.hex",
+      "exact_byte_range_in_primer_tx": [
+        48,
+        81
+      ],
+      "size": 33,
+      "encoding": "0x01 || 32-byte asset id (display often reversed vs internal)",
+      "endianness": "wire order as in tx",
+      "serialization": "CConfidentialAsset",
+      "crypto_context": "NOT written raw into post-fix cache key; converted to G first when explicit",
+      "relation_to_asset_generator": "generator_generate(A_wire[1:]) == G",
+      "compatible": true,
+      "reason": "Present in both txs; cache uses G not A_wire"
+    },
+    {
+      "Mission28_field": "full_tx_71c9 / full_tx_f24a",
+      "Elements_field": "CTransaction (full)",
+      "source_fixture": "mission40/fixtures/tx_*.hex",
+      "exact_byte_range": "entire file",
+      "size": {
+        "primer": 8883,
+        "alias": 13151
+      },
+      "encoding": "Elements wire including confidential outs + witness",
+      "endianness": "Elements serialization",
+      "serialization": "CTransaction",
+      "crypto_context": "full tx also has surjections, other outs, vins",
+      "relation_to_asset_generator": "n/a",
+      "compatible": false,
+      "reason": "INCOMPATIBLE with regtest ConnectBlock without prevouts/chain params; EXACT fields inside are still valid Liquid txs (liquidv1 decode OK). Do not silently rewrite."
+    }
+  ],
+  "dual_version_policy": {
+    "EXACT_FIXTURE": "mission40/exact/ and top-level primer.hex/alias.hex/blocks \u2014 Liquid historical bytes",
+    "CONSENSUS_COMPATIBLE_RECONSTRUCTION": "mission40/consensus_compatible/ \u2014 NOT_PRODUCED"
+  }
+}

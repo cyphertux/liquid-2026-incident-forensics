@@ -1,0 +1,51 @@
+{
+  "classification": "FACT",
+  "version": "EXACT_FIXTURE",
+  "chain": "liquidv1",
+  "txid": "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+  "wtxid": "e4ea83c9fa329a619dd724313f62a145f83b0f69ad53411cbdfe4761e6c0260c",
+  "size": 8883,
+  "version_n": 2,
+  "vout_focus": 0,
+  "vout": [
+    {
+      "n": 0,
+      "scriptPubKey_hex": "6a43086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d80a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d6a",
+      "scriptPubKey_type": "nulldata",
+      "asset": "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d",
+      "valuecommitment": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "value": null
+    },
+    {
+      "n": 1,
+      "scriptPubKey_hex": "0014f5906a8572cf826a9d737ce1bc6a19a066868630",
+      "scriptPubKey_type": "witness_v0_keyhash",
+      "asset": null,
+      "valuecommitment": "0810244e8b1eb1a55185383d257154cf32d2ac7ae33d72274142ddeb93825955f8",
+      "value": null
+    },
+    {
+      "n": 2,
+      "scriptPubKey_hex": "",
+      "scriptPubKey_type": "fee",
+      "asset": "6f0279e9ed041c3d710a9f57d0c02928416460c4b722ae3457a11eec381c526d",
+      "valuecommitment": null,
+      "value": 5.8e-07
+    }
+  ],
+  "mission28_fields_in_vout0": {
+    "P0_len": 4166,
+    "C0": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+    "G": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+    "S0": "6a43086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d80a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d6a",
+    "A_wire": "016d521c38ec1ea15734ae22b7c46064412829c0d0579f0a713d1c04ede979026f",
+    "byte_offsets_in_tx": {
+      "P0_in_primer_tx": 470,
+      "C0_in_primer_tx": 81,
+      "G_in_primer_tx": 151,
+      "S0_in_primer_tx": 116,
+      "A_wire_in_primer_tx": 48
+    }
+  },
+  "note": "Rangeproof bytes live in witness; offset given is absolute in full raw tx serialization."
+}

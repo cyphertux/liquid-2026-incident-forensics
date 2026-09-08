@@ -1,0 +1,26 @@
+{
+  "classification": "FACT",
+  "version": "EXACT_FIXTURE_LIQUID_MAINNET_BLOCK",
+  "NOT_REGTEST": true,
+  "height": 4050335,
+  "block_hash": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+  "previous_block_hash": "3b892680a538bdc4cef5b735176e541d79851cd1834fb32a071d86d01609ffe0",
+  "merkle_root": "26ea7d08683d0f3a9c6767b219bc15ea93b4805dab0725858a25429a086c167c",
+  "timestamp": 1788702730,
+  "size": 42109,
+  "tx_count": 5,
+  "contains_txid": "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+  "tx_raw_offset_in_block": 10680,
+  "serialization": "Elements/Liquid raw block from Blockstream API /raw",
+  "regtest_connectblock": "INCOMPATIBLE \u2014 wrong chain; prevouts/federation/genesis differ",
+  "signblock": "present in Liquid dynafed block witness (see raw header region)",
+  "weight": 52177,
+  "txids": [
+    "b0e8203b7d6ed53b8e0420242c2720b32ed131ae139798162328138424a60deb",
+    "271147100a94f6337b6c3db39b30c92d5b97ed91597307b6f721f73a15187ec5",
+    "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+    "72c64d4d41dcf7f9c925fc37e7d3a91e4cf602dad9644e8e7229f8e4e7e5040e",
+    "9669444c8aa40ce7ac7e27b2b3ef8fd218f0bd60e1c9b9bf3e855de1e74488cc"
+  ],
+  "tx_order_note": "see txids; primer 71c93d43 is present in block"
+}

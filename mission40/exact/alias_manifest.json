@@ -1,0 +1,45 @@
+{
+  "artifact": "alias",
+  "version": "EXACT_FIXTURE",
+  "epistemic": "FACT",
+  "source_txid": "f24a4b179b5cc7e88b25a763911f7cbdf2bf45d1d1b5ab611e94461cef0a183f",
+  "source_block_height": 4050336,
+  "source_block_hash": "e1d9a2aae69e0fc3ca18f7f7f84e0615e92a5e3b5000d66c10c34043346da0d5",
+  "fields": {
+    "P1": {
+      "len": 4234,
+      "sha256": "6619fa29ce0967ae93baefef0bc6233972b05249a9861a96695a106bbcc098b2",
+      "fixture": "mission40/fixtures/P1.hex",
+      "tx_offset": 4670
+    },
+    "C1": {
+      "len": 33,
+      "hex": "086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d8",
+      "fixture": "mission40/fixtures/C1.hex",
+      "tx_offset": 171
+    },
+    "G": {
+      "len": 33,
+      "hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+      "tx_offset": 8869
+    },
+    "S1": {
+      "len": 1,
+      "hex": "6a",
+      "fixture": "mission40/fixtures/S1.hex",
+      "tx_offset": 206
+    }
+  },
+  "construction": {
+    "P1": "P0||C0||G||6a||43",
+    "S0": "6a||43||C1||G||6a"
+  },
+  "preimage": {
+    "len": 4301,
+    "sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a",
+    "byte_identical_to_primer": true
+  },
+  "native_crypto_expected": false,
+  "regtest_connectblock_injectable": false,
+  "hex_path": "mission40/alias.hex"
+}

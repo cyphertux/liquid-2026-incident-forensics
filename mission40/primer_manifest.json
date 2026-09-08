@@ -1,0 +1,50 @@
+{
+  "artifact": "primer",
+  "version": "EXACT_FIXTURE",
+  "epistemic": "FACT",
+  "source_txid": "71c93d4339fe8328981a2ec0dd23808d1ff104dc4c4cbcfc5c06fb2bb622f411",
+  "source_block_height": 4050335,
+  "source_block_hash": "aad24e4fb64ca8adf4961667da87820cd48e553957ac64e75de7cdb298b5d66b",
+  "fields": {
+    "P0": {
+      "len": 4166,
+      "sha256": "0e018e2b9345483472c95cfb7589bba4b55b8b072bf1a81ac38e4c7ae8e8509a",
+      "fixture": "mission40/fixtures/P0.hex",
+      "tx_offset": 470
+    },
+    "C0": {
+      "len": 33,
+      "hex": "09d6c6150e95e576d288dcc890bf48518119c6f227ea1be6f9a932792dbee683f5",
+      "fixture": "mission40/fixtures/C0.hex",
+      "tx_offset": 81,
+      "elements_field": "CTxOut.nValue confidential commitment"
+    },
+    "G": {
+      "len": 33,
+      "hex": "0a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d",
+      "fixture": "mission40/fixtures/G.hex",
+      "tx_offset": 151,
+      "note": "serialized generator (0x0a\u2026), NOT wire explicit asset; equals secp256k1_generator_serialize(generate(L-BTC))"
+    },
+    "S0": {
+      "len": 69,
+      "hex": "6a43086f5d67160fc4b477954fb09ef321e5b589d7a07740a1a6df494ed2335b1d01d80a0a488de4899d0ae757f6cf8368663184d164106111ed9eaecf510e35282ddc6d6a",
+      "fixture": "mission40/fixtures/S0.hex",
+      "tx_offset": 116,
+      "elements_field": "CTxOut.scriptPubKey"
+    },
+    "A_wire": {
+      "len": 33,
+      "hex": "016d521c38ec1ea15734ae22b7c46064412829c0d0579f0a713d1c04ede979026f",
+      "tx_offset": 48,
+      "elements_field": "CTxOut.nAsset wire (0x01||asset_id)"
+    }
+  },
+  "preimage": {
+    "len": 4301,
+    "sha256": "82b0b8ccf8c743171f2bc8d80bb9982a81cfca583e8dfbe65563cf095e99c01a"
+  },
+  "native_crypto_expected": true,
+  "regtest_connectblock_injectable": false,
+  "hex_path": "mission40/primer.hex"
+}
